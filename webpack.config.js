@@ -80,10 +80,10 @@ module.exports = {
     },
   },
   // https://webpack.docschina.org/concepts/mode/#mode-production
-  optimization:{
+  optimization: {
     // minimize:false
   },
-  target:'web',
+  target: 'web',
   devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
