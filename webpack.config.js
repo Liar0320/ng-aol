@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-03 13:19:07
+ * @Last Modified time: 2020-03-03 18:11:27
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -94,8 +94,7 @@ module.exports = {
   },
   plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
   externals: {
-    // jquery: 'jQuery',
-    // angular: 'angular',
-    // ol: '/^ol/',
+    jquery: 'jQuery',
+    angular: 'angular',
   },
 };

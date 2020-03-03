@@ -1,15 +1,11 @@
-function p() {
-  return new Promise(resolve => {
-    resolve('done');
-  });
-}
+import angular from 'angular';
 
-async function test() {
-  const a = await p();
-
-  console.log(a);
-
-  return a;
-}
-
-test();
+angular.module('app', []).run([
+  '$log',
+  /**
+   * @param {ng.ILogService} $log
+   */
+  $log => {
+    $log.log('项目启动');
+  },
+]);
