@@ -1,5 +1,12 @@
 module.exports = {
   root: true,
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: './webpack.config.js',
+      },
+    },
+  },
   env: {
     es6: true,
     browser: true,

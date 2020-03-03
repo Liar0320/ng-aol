@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2019-12-26 13:00:17
+ * @Last Modified time: 2020-03-03 13:19:07
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -76,12 +76,11 @@ module.exports = {
     extensions: ['.json', '.js', '.jsx'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      ngol: path.resolve(__dirname, 'src/component/ol'),
     },
   },
   // https://webpack.docschina.org/concepts/mode/#mode-production
   optimization: {
-    // minimize:false
+    minimize: false,
   },
   target: 'web',
   devtool: 'source-map',
@@ -94,4 +93,9 @@ module.exports = {
     open: true,
   },
   plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
+  externals: {
+    // jquery: 'jQuery',
+    // angular: 'angular',
+    // ol: '/^ol/',
+  },
 };
