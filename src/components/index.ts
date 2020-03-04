@@ -4,7 +4,7 @@ import mapComponent from './map.component';
 import viewComponent from './view.component';
 
 import { aolLayerTile, aolLayerVector } from './layers/index';
-import { aolSourceXyz } from './sources/index';
+import { aolSourceXyz , aolSourceOsm } from './sources/index';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -17,6 +17,7 @@ function registerComponent(component: any) {
   aolLayerTile,
   aolLayerVector,
   aolSourceXyz,
+  aolSourceOsm
 ].forEach(component => {
   registerComponent(component);
 });

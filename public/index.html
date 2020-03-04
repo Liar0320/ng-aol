@@ -18,7 +18,7 @@
       .map {
         height: 500px;
         width: 500px;
-        display: block;
+        display: inline-block;
       }
     </style>
   </head>
@@ -31,6 +31,20 @@
           url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
         ></aol-source-xyz>
       </aol-layer-tile>
+      <aol-layer-tile >
+        <aol-source-osm ></aol-source-osm>
+      </aol-layer-tile>
+    </aol-map>
+    <aol-map class="map">
+      <aol-view zoom="map.zoom" center="map.center"></aol-view>
+      <aol-layer-tile>
+        <aol-source-xyz
+          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+        ></aol-source-xyz>
+      </aol-layer-tile>
+      <!-- <aol-layer-tile >
+        <aol-source-osm ></aol-source-osm>
+      </aol-layer-tile> -->
     </aol-map>
     <input type="text" name="" id="" ng-model="property" />
     <button ng-click="reset()">更改属性</button>

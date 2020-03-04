@@ -28,11 +28,11 @@ var component: angular.IComponentOptions = {
   //       `,
   bindings: {
     ...layerComponentConfig.bindings,
-    preload: '=?',
-    useInterimTilesOnError: '=?',
+    preload: '<?',
+    useInterimTilesOnError: '<?',
   },
   require: layerComponentConfig.require,
-  controller: ['$element', LayerTileComponent],
+  controller: [ LayerTileComponent],
 };
 
 export const aolLayerTile = {

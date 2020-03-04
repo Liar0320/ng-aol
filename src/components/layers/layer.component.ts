@@ -62,14 +62,14 @@ export abstract class LayerComponent implements angular.IController {
 
 export const layerComponentConfig = {
   bindings: {
-    opacity: '=?',
-    visible: '=?',
-    extent: '=?',
-    zIndex: '=?',
-    minResolution: '=?',
-    maxResolution: '=?',
-    className: '=?',
-    // preload:'=?',
+    opacity: '<?',
+    visible: '<?',
+    extent: '<?',
+    zIndex: '<?',
+    minResolution: '<?',
+    maxResolution: '<?',
+    className: '<?',
+    // preload:'<?',
     prerender: '&?',
     postrender: '&?',
   },
