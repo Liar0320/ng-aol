@@ -14,9 +14,26 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="22" /> -->
+    <style>
+      .map {
+        height: 500px;
+        width: 500px;
+        display: block;
+      }
+    </style>
   </head>
 
   <body ng-app="app" ng-cloak>
+    <aol-map class="map">
+      <aol-view zoom="map.zoom" center="map.center"></aol-view>
+      <aol-layer-tile>
+        <aol-source-xyz
+          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+        ></aol-source-xyz>
+      </aol-layer-tile>
+    </aol-map>
+    <input type="text" name="" id="" ng-model="property" />
+    <button ng-click="reset()">更改属性</button>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please

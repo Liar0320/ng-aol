@@ -2,16 +2,16 @@
 
 ## 指令集合
 
-| 指令名称             | 作用                  |
-| -------------------- | --------------------- |
-| ag-map               | 地图容器              |
-| ag-view              | 地图视图              |
-| ag-tile-layer        | tile 图层渲染         |
-| ag-vector-layer      | vector 图层渲染       |
-| ag-webgl-layer       | webgl 图层渲染        |
-| ag-title-xyz-source  | tile 图层数据源 xyz   |
-| ag-tile-debug-source | tile 图层数据源 debug |
-| ag-vector-source     | vector 图层基础数据源 |
+| 指令名称              | 作用                  |
+| --------------------- | --------------------- |
+| aol-map               | 地图容器              |
+| aol-view              | 地图视图              |
+| aol-tile-layer        | tile 图层渲染         |
+| aol-vector-layer      | vector 图层渲染       |
+| aol-webgl-layer       | webgl 图层渲染        |
+| aol-title-xyz-source  | tile 图层数据源 xyz   |
+| aol-tile-debug-source | tile 图层数据源 debug |
+| aol-vector-source     | vector 图层基础数据源 |
 
 ## 目录集合
 

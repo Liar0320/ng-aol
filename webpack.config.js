@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-03 18:11:27
+ * @Last Modified time: 2020-03-04 11:15:24
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -23,22 +23,18 @@ module.exports = {
   },
   module: {
     rules: [
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
+        enforce: 'pre',
         test: /.jsx?$/,
         include: [path.resolve(__dirname, 'src')],
         // exclude: [
         //   path.resolve(__dirname, 'node_modules')
         // ],
-        loader: 'babel-loader',
-        //  query: {
-        //   presets: [
-        //     ["@babel/env", {
-        //       "targets": {
-        //         "browsers": "ie > 9"
-        //       }
-        //     }]
-        //   ]
-        // }
+        loader: 'source-map-loader',
       },
       {
         test: /\.s[ac]ss$/i,
@@ -73,7 +69,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.json', '.js', '.jsx'],
+    extensions: ['.json', '.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
