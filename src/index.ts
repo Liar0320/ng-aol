@@ -10,6 +10,7 @@ angular.module('app', [aolModule.name]).run([
       center: [120, 30],
       zoom: 11,
     };
+    $rootScope.property = JSON.stringify($rootScope.map);
     $rootScope.reset = () => {
       angular.extend($rootScope.map, JSON.parse($rootScope.property));
     };

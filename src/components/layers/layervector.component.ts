@@ -1,23 +1,37 @@
 import { LayerComponent, layerComponentConfig } from './layer.component';
-import TileSource from 'ol/source/Tile';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
+import VectorLayer from 'ol/layer/Vector';
+import { OrderFunction } from 'ol/render';
+import VectorSource from 'ol/source/Vector';
+import Geometry from 'ol/geom/Geometry';
+import { StyleLike } from 'ol/style/Style';
+import { Feature } from 'ol';
+import Point from 'ol/geom/Point';
 
 export class LayerVectorComponent extends LayerComponent
   implements angular.IController {
-  public instance: TileLayer;
+  public instance: VectorLayer;
+  public componentType: string = 'LayerVectorComponent';
 
-  preload: number;
-  useInterimTilesOnError: boolean;
+  renderOrder?: OrderFunction;
+  renderBuffer?: number;
+  source?: VectorSource<Geometry>;
+  declutter?: boolean;
+  style?: StyleLike;
+  updateWhileAnimating?: boolean;
+  updateWhileInteracting?: boolean;
 
   //   constructor(map: MapComponent, @Optional() group?: LayerGroupComponent) {
   //     super(group || map);
   //   }
 
   $onInit() {
-    this.instance = new TileLayer(this);
+    this.instance = new VectorLayer(this);
     super.$onInit();
-    this.instance.setSource(new OSM());
+    this.instance.setSource(
+      new VectorSource({
+        features: [new Feature(new Point([0, 0]))],
+      }),
+    );
   }
 
   $onChanges(changes: angular.IOnChangesObject) {
@@ -31,8 +45,13 @@ var component: angular.IComponentOptions = {
   //       `,
   bindings: {
     ...layerComponentConfig.bindings,
-    preload: '<?',
-    useInterimTilesOnError: '<?',
+    renderOrder: '<?',
+    renderBuffer: '<?',
+    source: '<?',
+    declutter: '<?',
+    style: '<?',
+    updateWhileAnimating: '<?',
+    updateWhileInteracting: '<?',
   },
   require: layerComponentConfig.require,
   controller: [LayerVectorComponent],

@@ -27,13 +27,11 @@
     <aol-map class="map">
       <aol-view zoom="map.zoom" center="map.center"></aol-view>
       <aol-layer-tile>
-        <aol-source-xyz
-          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
-        ></aol-source-xyz>
+        <aol-source-osm></aol-source-osm>
       </aol-layer-tile>
-      <aol-layer-tile >
-        <aol-source-osm ></aol-source-osm>
-      </aol-layer-tile>
+      <aol-layer-vector>
+        <aol-source-vector></aol-source-vector>
+      </aol-layer-vector>
     </aol-map>
     <aol-map class="map">
       <aol-view zoom="map.zoom" center="map.center"></aol-view>
