@@ -2,9 +2,19 @@ import * as angular from 'angular';
 
 import mapComponent from './map.component';
 import viewComponent from './view.component';
+import aolFeature from './feature.component';
 
 import { aolLayerTile, aolLayerVector } from './layers/index';
-import { aolSourceXyz , aolSourceOsm } from './sources/index';
+import { aolSourceXyz, aolSourceOsm, aolSourceVector } from './sources/index';
+import {
+  aolGeometryLinestring,
+  aolGeometryPoint,
+  aolGeometryPolygon,
+} from './geometry.component';
+import {
+  aolCoordinate,
+  aolCollectionCoordinates,
+} from './coordinate.component';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -17,7 +27,14 @@ function registerComponent(component: any) {
   aolLayerTile,
   aolLayerVector,
   aolSourceXyz,
-  aolSourceOsm
+  aolSourceOsm,
+  aolSourceVector,
+  aolFeature,
+  aolGeometryLinestring,
+  aolGeometryPoint,
+  aolGeometryPolygon,
+  aolCoordinate,
+  aolCollectionCoordinates,
 ].forEach(component => {
   registerComponent(component);
 });

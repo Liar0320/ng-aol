@@ -4,8 +4,8 @@ import { OrderFunction } from 'ol/render';
 import VectorSource from 'ol/source/Vector';
 import Geometry from 'ol/geom/Geometry';
 import { StyleLike } from 'ol/style/Style';
-import { Feature } from 'ol';
-import Point from 'ol/geom/Point';
+// import { Feature } from 'ol';
+// import Point from 'ol/geom/Point';
 
 export class LayerVectorComponent extends LayerComponent
   implements angular.IController {
@@ -27,11 +27,11 @@ export class LayerVectorComponent extends LayerComponent
   $onInit() {
     this.instance = new VectorLayer(this);
     super.$onInit();
-    this.instance.setSource(
-      new VectorSource({
-        features: [new Feature(new Point([0, 0]))],
-      }),
-    );
+    // this.instance.setSource(
+    //   new VectorSource({
+    //     features: [new Feature(new Point([0, 0]))],
+    //   }),
+    // );
   }
 
   $onChanges(changes: angular.IOnChangesObject) {

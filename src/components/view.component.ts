@@ -6,7 +6,7 @@ import mapComponent, { MapComponent } from './map.component';
 
 export class ViewComponent implements angular.IController {
   public instance: View;
-  public componentType: string = 'map';
+  public componentType: string = 'view';
   public host: MapComponent;
 
   constrainRotation: boolean | number;

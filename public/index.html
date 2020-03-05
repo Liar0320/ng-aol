@@ -25,24 +25,42 @@
 
   <body ng-app="app" ng-cloak>
     <aol-map class="map">
-      <aol-view zoom="map.zoom" center="map.center"></aol-view>
+      <aol-view zoom="map.zoom" center="map.center">
+        <aol-coordinate x="122" y="24"></aol-coordinate>
+      </aol-view>
       <aol-layer-tile>
         <aol-source-osm></aol-source-osm>
       </aol-layer-tile>
       <aol-layer-vector>
-        <aol-source-vector></aol-source-vector>
+        <aol-source-vector>
+          <aol-feature>
+            <aol-geometry-point>
+              <aol-coordinate x="122.2" y="24"></aol-coordinate>
+            </aol-geometry-point>
+          </aol-feature>
+        </aol-source-vector>
       </aol-layer-vector>
     </aol-map>
     <aol-map class="map">
-      <aol-view zoom="map.zoom" center="map.center"></aol-view>
+      <aol-view zoom="map.zoom" center="map.center">
+        <aol-coordinate x="122" y="24"></aol-coordinate>
+      </aol-view>
       <aol-layer-tile>
         <aol-source-xyz
           url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
         ></aol-source-xyz>
       </aol-layer-tile>
-      <!-- <aol-layer-tile >
-        <aol-source-osm ></aol-source-osm>
-      </aol-layer-tile> -->
+      <aol-layer-vector>
+        <aol-source-vector>
+          <aol-feature>
+            <aol-geometry-linestring>
+              <aol-collection-coordinates
+                coordinates="[[120.95,24],[124,24]]"
+              ></aol-collection-coordinates>
+            </aol-geometry-linestring>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
     </aol-map>
     <input type="text" name="" id="" ng-model="property" />
     <button ng-click="reset()">更改属性</button>

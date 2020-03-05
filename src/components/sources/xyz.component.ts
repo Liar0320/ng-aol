@@ -38,7 +38,7 @@ export class SourceXYZComponent extends SourceComponent
     this._register(this.instance);
   }
 
-  ngOnChanges(changes: ng.IOnChangesObject) {
+  $onChanges(changes: ng.IOnChangesObject) {
     let properties: { [index: string]: any } = {};
 
     if (!this.instance) {

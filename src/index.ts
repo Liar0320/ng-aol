@@ -8,7 +8,7 @@ angular.module('app', [aolModule.name]).run([
     $log.log('项目启动');
     $rootScope.map = {
       center: [120, 30],
-      zoom: 11,
+      zoom: 6,
     };
     $rootScope.property = JSON.stringify($rootScope.map);
     $rootScope.reset = () => {
