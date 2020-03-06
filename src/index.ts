@@ -9,6 +9,12 @@ angular.module('app', [aolModule.name]).run([
     $rootScope.map = {
       center: [120, 30],
       zoom: 6,
+      stroke:{
+        width:10,
+        lineDash:[],
+        lineDashOffset:5,
+        miterLimit:50
+      }
     };
     $rootScope.property = JSON.stringify($rootScope.map);
     $rootScope.reset = () => {

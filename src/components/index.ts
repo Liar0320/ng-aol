@@ -15,6 +15,7 @@ import {
   aolCoordinate,
   aolCollectionCoordinates,
 } from './coordinate.component';
+import { aolStyle, aolStroke } from './styles';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -35,6 +36,8 @@ function registerComponent(component: any) {
   aolGeometryPolygon,
   aolCoordinate,
   aolCollectionCoordinates,
+  aolStyle,
+  aolStroke
 ].forEach(component => {
   registerComponent(component);
 });
