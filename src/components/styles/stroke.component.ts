@@ -2,12 +2,13 @@ import Stroke, { Options } from 'ol/style/Stroke';
 import { StyleComponent, aolStyle } from './style.component';
 import { Color } from 'ol/color';
 import { ColorLike } from 'ol/colorlike';
+import {  styleCircleComponent, aolStyleCircle } from './circle.component';
 
 export class StrokeComponent implements ng.IController, Options {
-  public componentType = 'style';
+  public componentType = 'style-stroke';
   public instance: Stroke;
 
-  private host: StyleComponent;
+  private host: any // StyleComponent | CircleComponent;
 
   color?: Color | ColorLike;
   lineCap?: CanvasLineCap;
@@ -19,17 +20,29 @@ export class StrokeComponent implements ng.IController, Options {
 
   //   protected layerVectorHost: LayerVectorComponent;
   protected styleHost: StyleComponent;
+  protected styleCircleHost: styleCircleComponent;
 
   // constructor() {}
 
   $onInit() {
-    if (this.styleHost) {
+    if(this.styleCircleHost){
+      this.host = this.styleCircleHost;
+    }else if (this.styleHost) {
       this.host = this.styleHost;
     } else {
       throw new Error('aol-style must be applied to a feature or a layer');
     }
     this.instance = new Stroke(this);
-    this.host.instance.setStroke(this.instance);
+    switch (this.host.componentType) {
+      case 'style':
+        this.host.instance.setStroke(this.instance);
+        break;
+      case 'style-circle':
+          this.host.stroke = this.instance;
+          break;
+      default:
+        break;
+    }
   }
 
   // $postLink(){
@@ -97,6 +110,7 @@ var aolStrokeComponent: angular.IComponentOptions = {
   },
   require: {
     styleHost: `?^${aolStyle.name}`,
+    styleCircleHost: `?^${aolStyleCircle.name}`
   },
   controller: [StrokeComponent],
 };

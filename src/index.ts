@@ -7,13 +7,17 @@ angular.module('app', [aolModule.name]).run([
   ($log: angular.ILogService, $rootScope: any) => {
     $log.log('项目启动');
     $rootScope.map = {
-      center: [120, 30],
+      center: [120, 24],
       zoom: 6,
       stroke:{
         width:10,
         lineDash:[],
         lineDashOffset:5,
         miterLimit:50
+      },
+      styleCircle:{
+        radius:20,
+        fill:'#FF0000',
       }
     };
     $rootScope.property = JSON.stringify($rootScope.map);
