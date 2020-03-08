@@ -24,6 +24,10 @@ angular.module('app', [aolModule.name]).run([
         opacity:0.5,
         scale:0.08,
         rotation:1
+      },
+      styleText:{
+        text:"hello Word",
+        offsetY:-40
       }
     };
     $rootScope.property = JSON.stringify($rootScope.map);

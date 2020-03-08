@@ -15,7 +15,7 @@ import {
   aolCoordinate,
   aolCollectionCoordinates,
 } from './coordinate.component';
-import { aolStyle, aolStroke, aolFill, aolStyleCircle, aolStyleIcon } from './styles';
+import { aolStyle, aolStroke, aolFill, aolStyleCircle, aolStyleIcon, aolStyleText } from './styles';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -40,6 +40,7 @@ function registerComponent(component: any) {
   aolStroke,
   aolStyleCircle,
   aolStyleIcon,
+  aolStyleText,
   aolFill
 ].forEach(component => {
   registerComponent(component);
