@@ -71,54 +71,56 @@
       <aol-view zoom="map.zoom" center="map.center">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
-      <aol-layer-tile>
-        <aol-source-osm></aol-source-osm>
-      </aol-layer-tile>
-      <aol-layer-vector>
-        <aol-source-vector>
-          <aol-feature>
-            <aol-geometry-point>
-              <aol-coordinate x="122.2" y="24"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-circle radius="map.styleCircle.radius">
-                <aol-fill color="map.styleCircle.fill"></aol-fill>
-                <aol-stroke
-                  width="map.stroke.width"
-                  line-dash="map.stroke.lineDash"
-                  line-dash-offset="map.stroke.LineDashOffet"
-                  miter-limit="map.stroke.MiterLimit"
-                ></aol-stroke>
-              </aol-style-circle>
-            </aol-style>
-          </aol-feature>
-          <aol-feature>
-            <aol-geometry-point>
-              <aol-coordinate x="122.2" y="25"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-icon
-                src="map.styleIcon.src"
-                opacity="map.styleIcon.opacity"
-                scale="map.styleIcon.scale"
-                rotation="map.styleIcon.rotation"
-              >
-                <aol-fill color="map.styleCircle.fill"></aol-fill>
-                <aol-stroke
-                  width="map.stroke.width"
-                  line-dash="map.stroke.lineDash"
-                  line-dash-offset="map.stroke.LineDashOffet"
-                  miter-limit="map.stroke.MiterLimit"
-                ></aol-stroke>
-              </aol-style-icon>
-              <aol-style-text
-                text="map.styleText.text"
-                offset-y="map.styleText.offsetY"
-              ></aol-style-text>
-            </aol-style>
-          </aol-feature>
-        </aol-source-vector>
-      </aol-layer-vector>
+      <aol-layer-group visible="map.layerGroup.visible">
+        <aol-layer-tile>
+          <aol-source-osm></aol-source-osm>
+        </aol-layer-tile>
+        <aol-layer-vector>
+          <aol-source-vector>
+            <aol-feature>
+              <aol-geometry-point>
+                <aol-coordinate x="122.2" y="24"></aol-coordinate>
+              </aol-geometry-point>
+              <aol-style>
+                <aol-style-circle radius="map.styleCircle.radius">
+                  <aol-fill color="map.styleCircle.fill"></aol-fill>
+                  <aol-stroke
+                    width="map.stroke.width"
+                    line-dash="map.stroke.lineDash"
+                    line-dash-offset="map.stroke.LineDashOffet"
+                    miter-limit="map.stroke.MiterLimit"
+                  ></aol-stroke>
+                </aol-style-circle>
+              </aol-style>
+            </aol-feature>
+            <aol-feature>
+              <aol-geometry-point>
+                <aol-coordinate x="122.2" y="25"></aol-coordinate>
+              </aol-geometry-point>
+              <aol-style>
+                <aol-style-icon
+                  src="map.styleIcon.src"
+                  opacity="map.styleIcon.opacity"
+                  scale="map.styleIcon.scale"
+                  rotation="map.styleIcon.rotation"
+                >
+                  <aol-fill color="map.styleCircle.fill"></aol-fill>
+                  <aol-stroke
+                    width="map.stroke.width"
+                    line-dash="map.stroke.lineDash"
+                    line-dash-offset="map.stroke.LineDashOffet"
+                    miter-limit="map.stroke.MiterLimit"
+                  ></aol-stroke>
+                </aol-style-icon>
+                <aol-style-text
+                  text="map.styleText.text"
+                  offset-y="map.styleText.offsetY"
+                ></aol-style-text>
+              </aol-style>
+            </aol-feature>
+          </aol-source-vector>
+        </aol-layer-vector>
+      </aol-layer-group>
     </aol-map>
 
     <textarea

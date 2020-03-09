@@ -1,76 +1,33 @@
-// import LayerGroup from 'ol/layer/Group';
+import { layerComponentConfig, LayerComponent } from './layer.component';
+import LayerGroup, { Options } from 'ol/layer/Group';
+import { MapComponent } from '../map.component';
 
-// export class LayerGroupComponent implements angular.IController {
-//   public instance: LayerGroup;
-//   public componentType: string = 'layerGroup';
-//   public host: MapComponent;
+export class LayerGroupComponent extends LayerComponent
+  implements ng.IController, Options {
+  public componentType: string = 'LayerGroupComponent';
+  public instance: LayerGroup;
 
-//   $onInit() {
-//     this.instance = new View(this);
-//     this.host.instance.setView(this.instance);
+  protected host: MapComponent | LayerGroupComponent;
 
-//     this.host.instance.addLayer(
-//       new TileLayer({
-//         source: new OSM(),
-//       }),
-//     );
-//   }
+  $onInit() {
+    // console.log(`creating ol.layer.Group instance with:`, this);
+    this.instance = new LayerGroup(this);
+    super.$onInit();
+  }
+}
 
-//   $onChanges(changes: angular.IOnChangesObject) {
-//     let properties: { [index: string]: any } = {};
-//     if (!this.instance) {
-//       return;
-//     }
-//     for (let key in changes) {
-//       if (changes.hasOwnProperty(key)) {
-//         switch (key) {
-//           case 'zoom':
-//             /** Work-around: setting the zoom via setProperties does not work. */
-//             if (this.zoomAnimation) {
-//               this.instance.animate({ zoom: changes[key].currentValue });
-//             } else {
-//               this.instance.setZoom(changes[key].currentValue);
-//             }
-//             break;
-//           default:
-//             break;
-//         }
-//         properties[key] = changes[key].currentValue;
-//       }
-//     }
-//     // console.log('changes detected in aol-view, setting new properties: ', properties);
-//     this.instance.setProperties(properties, false);
-//   }
-// }
+var component: angular.IComponentOptions = {
+  //   template: `
+  //         <div ng-include></div>
+  //       `,
+  bindings: {
+    ...layerComponentConfig.bindings,
+  },
+  require: layerComponentConfig.require,
+  controller: [LayerGroupComponent],
+};
 
-// var component: angular.IComponentOptions = {
-//   //   template: `
-//   //         <div ng-include></div>
-//   //       `,
-//   bindings: {
-//     constrainRotation: '=?',
-//     enableRotation: '=?',
-//     extent: '=?',
-//     maxResolution: '=?',
-//     minResolution: '=?',
-//     maxZoom: '=?',
-//     minZoom: '=?',
-//     resolution: '=?',
-//     resolutions: '=?',
-//     rotation: '=?',
-//     zoom: '=?',
-//     zoomFactor: '=?',
-//     center: '=?',
-//     projection: '=?',
-//     zoomAnimation: '=?',
-//   },
-//   require: {
-//     host: `^${mapComponent.name}`,
-//   },
-//   controller: ['$element', ViewComponent],
-// };
-
-// export default {
-//   name: 'aolView',
-//   ...component,
-// };
+export const aolLayerGroup = {
+  name: 'aolLayerGroup',
+  ...component,
+};

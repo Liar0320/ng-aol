@@ -4,7 +4,7 @@ import mapComponent from './map.component';
 import viewComponent from './view.component';
 import aolFeature from './feature.component';
 
-import { aolLayerTile, aolLayerVector } from './layers/index';
+import { aolLayerTile, aolLayerVector, aolLayerGroup } from './layers/index';
 import { aolSourceXyz, aolSourceOsm, aolSourceVector } from './sources/index';
 import {
   aolGeometryLinestring,
@@ -15,7 +15,14 @@ import {
   aolCoordinate,
   aolCollectionCoordinates,
 } from './coordinate.component';
-import { aolStyle, aolStroke, aolFill, aolStyleCircle, aolStyleIcon, aolStyleText } from './styles';
+import {
+  aolStyle,
+  aolStroke,
+  aolFill,
+  aolStyleCircle,
+  aolStyleIcon,
+  aolStyleText,
+} from './styles';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -27,6 +34,7 @@ function registerComponent(component: any) {
   viewComponent,
   aolLayerTile,
   aolLayerVector,
+  aolLayerGroup,
   aolSourceXyz,
   aolSourceOsm,
   aolSourceVector,
@@ -41,7 +49,7 @@ function registerComponent(component: any) {
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
-  aolFill
+  aolFill,
 ].forEach(component => {
   registerComponent(component);
 });

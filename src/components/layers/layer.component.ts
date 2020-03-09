@@ -1,13 +1,14 @@
 import Event from 'ol/events/Event';
 import { Extent } from 'ol/extent';
 import mapComponent, { MapComponent } from '../map.component';
+import { LayerGroupComponent } from './layergroup.component';
 
 export abstract class LayerComponent implements angular.IController {
   public instance: MapComponent | any;
   public componentType: string = 'layer';
 
   protected host: any;
-  private layerGroupComponent: any;
+  private layerGroupComponent: LayerGroupComponent;
   private mapComponent: MapComponent;
 
   opacity: number;
@@ -75,6 +76,7 @@ export const layerComponentConfig = {
   },
   require: {
     mapComponent: `?^${mapComponent.name}`,
-    layerGroupComponent: `?^layerGroupComponent`,
+    /**@FIXME:待修复 */
+    layerGroupComponent: `?^^aolLayerGroup`,
   },
 };

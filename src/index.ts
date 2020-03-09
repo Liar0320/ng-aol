@@ -15,6 +15,9 @@ angular.module('app', [aolModule.name]).run([
       },
       center: [120, 24],
       zoom: 6,
+      layerGroup: {
+        visible: true,
+      },
       stroke: {
         width: 10,
         lineDash: [],
