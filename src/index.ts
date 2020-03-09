@@ -13,6 +13,11 @@ angular.module('app', [aolModule.name]).run([
       pointermove() {
         // console.log(arguments);
       },
+      interaction: {
+        drawend() {
+          console.log(arguments);
+        },
+      },
       center: [120, 24],
       zoom: 6,
       layerGroup: {

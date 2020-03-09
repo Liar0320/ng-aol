@@ -63,24 +63,20 @@
     </aol-map>
 
     <!-- 测试地图1 -->
-    <aol-map
-      class="map"
-      on-click="map.click(event)"
-      on-pointer-move="map.pointermove(event)"
-    >
+    <aol-map class="map" on-pointer-move="map.pointermove(event)">
       <aol-view zoom="map.zoom" center="map.center">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
-      <aol-interaction-defaults
-        double-click-zoom="false"
-        mouse-wheel-zoom="true"
-      ></aol-interaction-defaults>
+      <aol-interaction-draw
+        type="'MultiPolygon'"
+        on-draw-end="map.interaction.drawend(event)"
+      ></aol-interaction-draw>
       <aol-layer-group visible="map.layerGroup.visible">
         <aol-layer-tile>
           <aol-source-osm></aol-source-osm>
         </aol-layer-tile>
         <aol-layer-vector>
-          <aol-source-vector>
+          <aol-source-vector features="map.features">
             <aol-feature>
               <aol-geometry-point>
                 <aol-coordinate x="122.2" y="24"></aol-coordinate>

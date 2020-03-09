@@ -38,7 +38,14 @@ export class SourceVectorComponent extends SourceComponent
     }
     for (let key in changes) {
       if (changes.hasOwnProperty(key)) {
-        properties[key] = changes[key].currentValue;
+        switch (key) {
+          case 'features':
+            this.instance.addFeatures(changes[key].currentValue);
+            break;
+          default:
+            properties[key] = changes[key].currentValue;
+            break;
+        }
       }
     }
 
