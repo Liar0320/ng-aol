@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-04 11:15:24
+ * @Last Modified time: 2020-03-09 15:48:41
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -18,7 +18,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/dist/',
-    filename: 'bundle.js',
+    filename: 'aol.js',
     chunkFilename: '[name].js',
   },
   module: {

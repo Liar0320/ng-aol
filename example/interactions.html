@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      gis开发
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
+      type="text/css"
+    />
+    <!-- <link rel="stylesheet" href="22" /> -->
+    <style>
+      .map {
+        height: 500px;
+        width: 500px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body ng-app="app" ng-cloak>
+    <!-- 测试地图1 -->
+    <aol-map class="map">
+      <aol-view zoom="8">
+        <aol-coordinate x="122" y="24"></aol-coordinate>
+      </aol-view>
+      <aol-layer-tile>
+        <aol-source-xyz
+          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+        ></aol-source-xyz>
+      </aol-layer-tile>
+      <aol-interaction-defaults
+        double-click-zoom="false"
+        mouse-wheel-zoom="true"
+      ></aol-interaction-defaults>
+    </aol-map>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+    <script src="../dist/aol.js"></script>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
