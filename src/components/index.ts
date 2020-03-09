@@ -23,6 +23,7 @@ import {
   aolStyleIcon,
   aolStyleText,
 } from './styles';
+import { aolOverlay } from './overlay.component';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -50,6 +51,7 @@ function registerComponent(component: any) {
   aolStyleIcon,
   aolStyleText,
   aolFill,
+  aolOverlay,
 ].forEach(component => {
   registerComponent(component);
 });

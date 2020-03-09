@@ -18,6 +18,9 @@ angular.module('app', [aolModule.name]).run([
       layerGroup: {
         visible: true,
       },
+      overlayer: {
+        msg: '动态数据',
+      },
       stroke: {
         width: 10,
         lineDash: [],
