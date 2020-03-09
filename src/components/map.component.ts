@@ -1,11 +1,12 @@
-import { Map, MapBrowserEvent, MapEvent } from 'ol';
 import * as angular from 'angular';
+import { Map, MapBrowserEvent, MapEvent } from 'ol';
 import RenderEvent from 'ol/render/Event';
 import { ObjectEvent } from 'ol/Object';
 import Control from 'ol/control/Control';
 import Interaction from 'ol/interaction/Interaction';
+import { MapOptions } from 'ol/PluggableMap';
 
-export class MapComponent implements angular.IController {
+export class MapComponent implements angular.IController, MapOptions {
   public instance: Map;
   public componentType: string = 'map';
   public host: angular.IRootElementService;
@@ -30,34 +31,33 @@ export class MapComponent implements angular.IController {
   $onInit() {
     this.instance = new Map(this);
     this.instance.setTarget(this.host[0]);
-    this.instance.on('click', (event: MapBrowserEvent) => this.onClick(event));
-    this.instance.on('dblclick', (event: MapBrowserEvent) =>
-      this.onDblClick(event),
+    this.instance.on('click', (event: MapBrowserEvent) =>
+      this.onClick({ event }),
     );
-    this.instance.on('moveend', (event: MapEvent) => this.onMoveEnd(event));
+    this.instance.on('dblclick', (event: MapBrowserEvent) =>
+      this.onDblClick({ event }),
+    );
+    this.instance.on('moveend', (event: MapEvent) => this.onMoveEnd({ event }));
     this.instance.on('pointerdrag', (event: MapBrowserEvent) =>
-      this.onPointerDrag(event),
+      this.onPointerDrag({ event }),
     );
     this.instance.on('pointermove', (event: MapBrowserEvent) =>
-      this.onPointerMove(event),
+      this.onPointerMove({ event }),
     );
     this.instance.on('postcompose', (event: RenderEvent) =>
-      this.onPostCompose(event),
+      this.onPostCompose({ event }),
     );
     this.instance.on('postrender', (event: MapEvent) =>
-      this.onPostRender(event),
+      this.onPostRender({ event }),
     );
     this.instance.on('precompose', (event: RenderEvent) =>
-      this.onPreCompose(event),
+      this.onPreCompose({ event }),
     );
     this.instance.on('propertychange', (event: ObjectEvent) =>
-      this.onPropertyChange(event),
-    );
-    this.instance.on('propertychange', (event: ObjectEvent) =>
-      this.onPropertyChange(event),
+      this.onPropertyChange({ event }),
     );
     this.instance.on('singleclick', (event: MapBrowserEvent) =>
-      this.onSingleClick(event),
+      this.onSingleClick({ event }),
     );
   }
 }
