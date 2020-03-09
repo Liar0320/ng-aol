@@ -23,7 +23,9 @@ import {
   aolStyleIcon,
   aolStyleText,
 } from './styles';
+
 import { aolOverlay } from './overlay.component';
+import { aolInteractionDefaults } from './interactions';
 
 var aolModule = angular.module('aol', []);
 function registerComponent(component: any) {
@@ -33,25 +35,34 @@ function registerComponent(component: any) {
 [
   mapComponent,
   viewComponent,
+  /**图层组件 */
   aolLayerTile,
   aolLayerVector,
   aolLayerGroup,
+  /**数据源组件 */
   aolSourceXyz,
   aolSourceOsm,
   aolSourceVector,
+  /**要素组件 */
   aolFeature,
+  /**geo组件 */
   aolGeometryLinestring,
   aolGeometryPoint,
   aolGeometryPolygon,
+  /**坐标组件 */
   aolCoordinate,
   aolCollectionCoordinates,
+  /**样式组件 */
   aolStyle,
   aolStroke,
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
   aolFill,
+  /**domTOMap */
   aolOverlay,
+  /**交互 */
+  aolInteractionDefaults,
 ].forEach(component => {
   registerComponent(component);
 });

@@ -22,7 +22,7 @@ export class MapComponent implements angular.IController, MapOptions {
   private onMoveEnd: Function = angular.noop;
 
   controls: Control[] = [];
-  interartioncs: Interaction[] = [];
+  interactions: Interaction[] = [];
 
   constructor(host: angular.IRootElementService) {
     this.host = host;
