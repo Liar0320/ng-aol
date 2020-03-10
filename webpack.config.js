@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-10 14:23:44
+ * @Last Modified time: 2020-03-10 16:54:44
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -102,6 +102,8 @@ module.exports = {
         // console.log(request);
         // https://segmentfault.com/q/1010000021965610?_ea=33440450
         // https://blog.meathill.com/fe-tool-chain/webpack-4-notes.html
+        if (request === 'ol/layer/WebGLPoints') return callback();
+
         return callback(null, request.replace(/\//g, '.'));
       }
       callback();

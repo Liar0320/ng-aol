@@ -4,7 +4,12 @@ import mapComponent from './map.component';
 import viewComponent from './view.component';
 import aolFeature from './feature.component';
 
-import { aolLayerTile, aolLayerVector, aolLayerGroup } from './layers/index';
+import {
+  aolLayerTile,
+  aolLayerVector,
+  aolLayerGroup,
+  aolLayerWebgl,
+} from './layers/index';
 import { aolSourceXyz, aolSourceOsm, aolSourceVector } from './sources/index';
 import {
   aolGeometryLinestring,
@@ -39,6 +44,7 @@ function registerComponent(component: any) {
   /**图层组件 */
   aolLayerTile,
   aolLayerVector,
+  aolLayerWebgl,
   aolLayerGroup,
   /**数据源组件 */
   aolSourceXyz,

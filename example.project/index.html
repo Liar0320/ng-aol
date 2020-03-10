@@ -46,8 +46,8 @@
         ></aol-source-xyz>
       </aol-layer-tile>
       <aol-layer-group>
-        <aol-layer-vector>
-          <aol-source-vector>
+        <aol-layer-vector max-resolution="0.051243">
+          <aol-source-vector instance="map.source[1]">
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
                 <aol-coordinate
@@ -65,7 +65,7 @@
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
-        <aol-layer-vector declutter="true">
+        <aol-layer-vector declutter="true" max-resolution="0.051243">
           <aol-source-vector>
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
@@ -80,6 +80,10 @@
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
+        <aol-layer-webgl
+          source="map.source[1]"
+          min-resolution="0.051243"
+        ></aol-layer-webgl>
       </aol-layer-group>
       <aol-interaction-defaults
         double-click-zoom="false"

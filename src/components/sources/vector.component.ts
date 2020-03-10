@@ -1,5 +1,10 @@
 import { SourceComponent, sourceComponentConfig } from './source.component';
-import { aolLayerVector, LayerVectorComponent } from '../layers';
+import {
+  aolLayerVector,
+  LayerVectorComponent,
+  LayerGroupComponent,
+  aolLayerWebgl,
+} from '../layers';
 import { LoadingStrategy } from 'ol/source/Vector';
 import { Vector as VectorSource } from 'ol/source';
 import { Feature, Collection } from 'ol';
@@ -11,7 +16,9 @@ export class SourceVectorComponent extends SourceComponent
   implements angular.IController {
   public instance: VectorSource;
   public componentType: string = 'SourceVectorComponent';
-  public host: LayerVectorComponent;
+  public host: LayerVectorComponent | LayerGroupComponent;
+  public layerVectorHost: LayerVectorComponent;
+  public layerWebglHost: LayerGroupComponent;
 
   features?: Feature<Geometry>[] | Collection<Feature<Geometry>>;
   format?: FeatureFormat;
@@ -27,6 +34,16 @@ export class SourceVectorComponent extends SourceComponent
   //   }
 
   $onInit() {
+    if (this.layerVectorHost) {
+      this.host = this.layerVectorHost;
+    } else if (this.layerWebglHost) {
+      this.host = this.layerWebglHost;
+    } else {
+      throw new Error(
+        'aol-source-vector must be applied to a Style or layerWebglHost or layerVectorHost component',
+      );
+    }
+
     this.instance = new VectorSource(this);
     this._register(this.instance);
   }
@@ -74,7 +91,8 @@ var component: angular.IComponentOptions = {
     wrapX: '<?',
   },
   require: {
-    host: `^${aolLayerVector.name}`,
+    layerVectorHost: `^?${aolLayerVector.name}`,
+    layerWebglHost: `^?${aolLayerWebgl.name}`,
   },
   controller: [SourceVectorComponent],
 };

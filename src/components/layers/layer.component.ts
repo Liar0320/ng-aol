@@ -4,20 +4,20 @@ import mapComponent, { MapComponent } from '../map.component';
 import { LayerGroupComponent } from './layergroup.component';
 
 export abstract class LayerComponent implements angular.IController {
-  public instance: MapComponent | any;
+  public instance: any;
   public componentType: string = 'layer';
 
-  protected host: any;
+  protected host: MapComponent | LayerGroupComponent;
   private layerGroupComponent: LayerGroupComponent;
   private mapComponent: MapComponent;
 
-  opacity: number;
-  visible: boolean;
-  extent: Extent;
-  zIndex: number;
-  minResolution: number;
-  maxResolution: number;
-  className: string;
+  className?: string;
+  opacity?: number;
+  visible?: boolean;
+  extent?: Extent;
+  zIndex?: number;
+  minResolution?: number;
+  maxResolution?: number;
 
   prerender: (evt: Event) => void;
   postrender: (evt: Event) => void;
@@ -45,14 +45,21 @@ export abstract class LayerComponent implements angular.IController {
     }
     for (let key in changes) {
       if (changes.hasOwnProperty(key)) {
-        properties[key] = changes[key].currentValue;
-        if (key === 'prerender') {
-          this.instance.un('prerender', changes[key].previousValue);
-          this.instance.on('prerender', changes[key].currentValue);
-        }
-        if (key === 'postrender') {
-          this.instance.un('postrender', changes[key].previousValue);
-          this.instance.on('postrender', changes[key].currentValue);
+        switch (key) {
+          case 'prerender':
+            this.instance.un('prerender', changes[key].previousValue);
+            this.instance.on('prerender', changes[key].currentValue);
+            break;
+          case 'postrender':
+            this.instance.un('postrender', changes[key].previousValue);
+            this.instance.on('postrender', changes[key].currentValue);
+            break;
+          case 'source':
+            this.instance.setSource(changes[key].currentValue);
+            break;
+          default:
+            properties[key] = changes[key].currentValue;
+            break;
         }
       }
     }
