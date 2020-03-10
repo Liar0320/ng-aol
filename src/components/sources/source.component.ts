@@ -37,6 +37,7 @@ export class SourceComponent implements angular.IController {
 
 export const sourceComponentConfig = {
   bindings: {
+    instance: '=?',
     attributions: '<?',
     attributionsCollapsible: '<?',
   },

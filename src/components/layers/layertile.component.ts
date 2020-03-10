@@ -1,5 +1,5 @@
 import { LayerComponent, layerComponentConfig } from './layer.component';
-import TileLayer from 'ol/layer/Tile';
+import { Tile as TileLayer } from 'ol/layer';
 
 export class LayerTileComponent extends LayerComponent
   implements angular.IController {
@@ -32,7 +32,7 @@ var component: angular.IComponentOptions = {
     useInterimTilesOnError: '<?',
   },
   require: layerComponentConfig.require,
-  controller: [ LayerTileComponent],
+  controller: [LayerTileComponent],
 };
 
 export const aolLayerTile = {

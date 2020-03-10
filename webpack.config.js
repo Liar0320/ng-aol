@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-09 15:48:41
+ * @Last Modified time: 2020-03-10 14:23:44
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -89,8 +89,22 @@ module.exports = {
     open: true,
   },
   plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
-  externals: {
-    jquery: 'jQuery',
-    angular: 'angular',
-  },
+  externals: [
+    // 引入包的默认 entry
+    {
+      jquery: 'jQuery',
+      angular: 'angular',
+    },
+    // 引入包里的特定部分
+    function(context, request, callback) {
+      // 所有 ol 包里的内容
+      if (/^ol\/?/.test(request)) {
+        // console.log(request);
+        // https://segmentfault.com/q/1010000021965610?_ea=33440450
+        // https://blog.meathill.com/fe-tool-chain/webpack-4-notes.html
+        return callback(null, request.replace(/\//g, '.'));
+      }
+      callback();
+    },
+  ],
 };

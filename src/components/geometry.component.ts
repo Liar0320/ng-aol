@@ -1,8 +1,6 @@
 import aolFeature from './feature.component';
 import { FeatureComponent } from './feature.component';
-import LineString from 'ol/geom/LineString';
-import Point from 'ol/geom/Point';
-import Polygon from 'ol/geom/Polygon';
+import { LineString, Point, Polygon } from 'ol/geom';
 
 export class GeometryLinestringComponent implements ng.IController {
   public componentType: string = 'geometry-linestring';

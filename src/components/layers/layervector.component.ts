@@ -1,7 +1,7 @@
 import { LayerComponent, layerComponentConfig } from './layer.component';
-import VectorLayer from 'ol/layer/Vector';
+import { Vector as VectorLayer } from 'ol/layer';
 import { OrderFunction } from 'ol/render';
-import VectorSource from 'ol/source/Vector';
+import { Vector as VectorSource } from 'ol/source';
 import Geometry from 'ol/geom/Geometry';
 import { StyleLike } from 'ol/style/Style';
 // import { Feature } from 'ol';

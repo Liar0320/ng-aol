@@ -1,24 +1,24 @@
-import { SourceComponent, sourceComponentConfig } from "./source.component";
-import OSM from "ol/source/OSM";
-import { LoadFunction } from "ol/Tile";
-import { LayerTileComponent, aolLayerTile } from "../layers";
+import { SourceComponent, sourceComponentConfig } from './source.component';
+import { OSM } from 'ol/source';
+import { LoadFunction } from 'ol/Tile';
+import { LayerTileComponent, aolLayerTile } from '../layers';
 
-export class SourceOSMComponent extends SourceComponent implements ng.IController {
+export class SourceOSMComponent extends SourceComponent
+  implements ng.IController {
   public instance: OSM;
-  public componentType:string = "SourceOSMComponent";
-  public host:LayerTileComponent
+  public componentType: string = 'SourceOSMComponent';
+  public host: LayerTileComponent;
 
-   cacheSize?: number;
-   crossOrigin?: string;
-   maxZoom?: number;
-   opaque?: boolean;
-   reprojectionErrorThreshold?: number;
-   tileLoadFunction?: LoadFunction;
-   url?: string;
-   wrapX?: boolean;
+  cacheSize?: number;
+  crossOrigin?: string;
+  maxZoom?: number;
+  opaque?: boolean;
+  reprojectionErrorThreshold?: number;
+  tileLoadFunction?: LoadFunction;
+  url?: string;
+  wrapX?: boolean;
 
-
-   $onInit() {
+  $onInit() {
     this.instance = new OSM(this);
     this._register(this.instance);
   }
@@ -44,28 +44,27 @@ export class SourceOSMComponent extends SourceComponent implements ng.IControlle
 }
 
 var component: angular.IComponentOptions = {
-    // template: `
-    //           <div ng-include></div>
-    //       `,
-    bindings: {
-      ...sourceComponentConfig.bindings,
-      cacheSize: '<?',
-      crossOrigin: '<?',
-      opaque: '<?',
-      reprojectionErrorThreshold: '<?',
-      maxZoom: '<?',
-      tileLoadFunction: '<?',
-      url: '<?',
-      wrapX: '<?',
-    },
-    require: {
-      host: `^${aolLayerTile.name}`,
-    },
-    controller: [SourceOSMComponent],
-  };
-  
-  export const aolSourceOsm = {
-    name: 'aolSourceOsm',
-    ...component,
-  };
-  
+  // template: `
+  //           <div ng-include></div>
+  //       `,
+  bindings: {
+    ...sourceComponentConfig.bindings,
+    cacheSize: '<?',
+    crossOrigin: '<?',
+    opaque: '<?',
+    reprojectionErrorThreshold: '<?',
+    maxZoom: '<?',
+    tileLoadFunction: '<?',
+    url: '<?',
+    wrapX: '<?',
+  },
+  require: {
+    host: `^${aolLayerTile.name}`,
+  },
+  controller: [SourceOSMComponent],
+};
+
+export const aolSourceOsm = {
+  name: 'aolSourceOsm',
+  ...component,
+};

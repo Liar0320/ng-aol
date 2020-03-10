@@ -30,105 +30,42 @@
   </head>
 
   <body ng-app="app" ng-cloak>
-    <!-- 测试地图2 -->
-    <aol-map class="map" tabindex="1">
-      <aol-view zoom="map.zoom" center="map.center">
-        <aol-coordinate x="122" y="24"></aol-coordinate>
-      </aol-view>
-      <aol-layer-tile>
-        <aol-source-xyz
-          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
-        ></aol-source-xyz>
-      </aol-layer-tile>
-      <aol-layer-vector>
-        <aol-source-vector>
-          <aol-feature>
-            <aol-geometry-linestring>
-              <aol-collection-coordinates
-                coordinates="[[120.95,24],[124,24],[124,30],[120.95,24]]"
-              >
-              </aol-collection-coordinates>
-            </aol-geometry-linestring>
-            <aol-style>
-              <aol-stroke
-                width="map.stroke.width"
-                line-dash="map.stroke.lineDash"
-                line-dash-offset="map.stroke.LineDashOffet"
-                miter-limit="map.stroke.MiterLimit"
-              ></aol-stroke>
-            </aol-style>
-          </aol-feature>
-        </aol-source-vector>
-      </aol-layer-vector>
-    </aol-map>
-
     <!-- 测试地图1 -->
     <aol-map class="map" on-pointer-move="map.pointermove(event)">
       <aol-view zoom="map.zoom" center="map.center">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
-      <aol-interaction-draw
-        type="'MultiPolygon'"
-        on-draw-end="map.interaction.drawend(event)"
-      ></aol-interaction-draw>
-      <aol-layer-group visible="map.layerGroup.visible">
-        <aol-layer-tile>
-          <aol-source-osm></aol-source-osm>
-        </aol-layer-tile>
-        <aol-layer-vector>
-          <aol-source-vector>
-            <aol-feature>
-              <aol-geometry-point>
-                <aol-coordinate x="122.2" y="24"></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style>
-                <aol-style-circle radius="map.styleCircle.radius">
-                  <aol-fill color="map.styleCircle.fill"></aol-fill>
-                  <aol-stroke
-                    width="map.stroke.width"
-                    line-dash="map.stroke.lineDash"
-                    line-dash-offset="map.stroke.LineDashOffet"
-                    miter-limit="map.stroke.MiterLimit"
-                  ></aol-stroke>
-                </aol-style-circle>
-              </aol-style>
-            </aol-feature>
-            <aol-feature>
-              <aol-geometry-point>
-                <aol-coordinate x="122.2" y="25"></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style>
-                <aol-style-icon
-                  src="map.styleIcon.src"
-                  opacity="map.styleIcon.opacity"
-                  scale="map.styleIcon.scale"
-                  rotation="map.styleIcon.rotation"
-                >
-                  <aol-fill color="map.styleCircle.fill"></aol-fill>
-                  <aol-stroke
-                    width="map.stroke.width"
-                    line-dash="map.stroke.lineDash"
-                    line-dash-offset="map.stroke.LineDashOffet"
-                    miter-limit="map.stroke.MiterLimit"
-                  ></aol-stroke>
-                </aol-style-icon>
-                <aol-style-text
-                  text="map.styleText.text"
-                  offset-y="map.styleText.offsetY"
-                ></aol-style-text>
-              </aol-style>
-            </aol-feature>
-          </aol-source-vector>
-        </aol-layer-vector>
-      </aol-layer-group>
 
-      <aol-overlay position="map.center">
-        <div
-          style="width: 100px;height:100px;border:solid 1px; background-color: #FF0000;"
-        >
-          弹窗{{map.overlayer.msg}}
-        </div>
-      </aol-overlay>
+      <aol-layer-tile>
+        <aol-source-osm></aol-source-osm>
+      </aol-layer-tile>
+      <aol-layer-vector>
+        <aol-source-vector features="map.features" instance="map.source[1]">
+          <aol-feature>
+            <aol-geometry-point>
+              <aol-coordinate x="122.2" y="24"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-circle radius="map.styleCircle.radius">
+                <aol-fill color="map.styleCircle.fill"></aol-fill>
+                <aol-stroke
+                  width="map.stroke.width"
+                  line-dash="map.stroke.lineDash"
+                  line-dash-offset="map.stroke.LineDashOffet"
+                  miter-limit="map.stroke.MiterLimit"
+                ></aol-stroke>
+              </aol-style-circle>
+            </aol-style>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
+      <aol-interaction-draw
+        ng-if="map.once"
+        type="'Rectangle'"
+        on-draw-end="map.interaction.drawend(event)"
+        source="map.source[1]"
+      ></aol-interaction-draw>
+      <aol-interaction-modify source="map.source[1]"></aol-interaction-modify>
     </aol-map>
 
     <textarea
@@ -149,5 +86,6 @@
     gis开发
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
   </body>
 </html>

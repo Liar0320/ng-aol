@@ -1,5 +1,5 @@
 import { SourceComponent, sourceComponentConfig } from './source.component';
-import XYZ from 'ol/source/XYZ';
+import { XYZ } from 'ol/source';
 import { LayerTileComponent, aolLayerTile } from '../layers';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import { LoadFunction, UrlFunction } from 'ol/Tile';

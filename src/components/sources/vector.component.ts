@@ -1,6 +1,7 @@
 import { SourceComponent, sourceComponentConfig } from './source.component';
 import { aolLayerVector, LayerVectorComponent } from '../layers';
-import VectorSource, { LoadingStrategy } from 'ol/source/Vector';
+import { LoadingStrategy } from 'ol/source/Vector';
+import { Vector as VectorSource } from 'ol/source';
 import { Feature, Collection } from 'ol';
 import Geometry from 'ol/geom/Geometry';
 import FeatureFormat from 'ol/format/Feature';

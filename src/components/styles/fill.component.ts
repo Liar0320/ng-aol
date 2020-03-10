@@ -2,14 +2,14 @@ import { Options } from 'ol/style/Stroke';
 import { StyleComponent, aolStyle } from './style.component';
 import { Color } from 'ol/color';
 import { ColorLike } from 'ol/colorlike';
-import Fill from 'ol/style/Fill';
+import { Fill } from 'ol/style';
 import { styleCircleComponent, aolStyleCircle } from './circle.component';
 
 export class FillComponent implements ng.IController, Options {
   public componentType = 'fill';
   public instance: Fill;
 
-  private host: any // StyleComponent;
+  private host: any; // StyleComponent;
   private styleHost: StyleComponent;
   private styleCircleHost: styleCircleComponent;
   //private styleTextHost: StyleTextComponent;
@@ -19,9 +19,9 @@ export class FillComponent implements ng.IController, Options {
   // constructor() {}
 
   $onInit() {
-    if(this.styleCircleHost){
+    if (this.styleCircleHost) {
       this.host = this.styleCircleHost;
-    }else if (this.styleHost) {
+    } else if (this.styleHost) {
       this.host = this.styleHost;
     } else {
       throw new Error(
@@ -34,8 +34,8 @@ export class FillComponent implements ng.IController, Options {
         this.host.instance.setStroke(this.instance);
         break;
       case 'style-circle':
-          this.host.fill = this.instance;
-          break;
+        this.host.fill = this.instance;
+        break;
       default:
         break;
     }
@@ -57,14 +57,14 @@ export class FillComponent implements ng.IController, Options {
       return;
     }
     // this.host.instance.setFill(new Fill({color:changes['color'].currentValue}))
-    this.instance =  new Fill({color:changes['color'].currentValue});
+    this.instance = new Fill({ color: changes['color'].currentValue });
     switch (this.host.componentType) {
       case 'style':
         this.host.instance.setStroke(this.instance);
         break;
       case 'style-circle':
-          this.host.fill = this.instance;
-          break;
+        this.host.fill = this.instance;
+        break;
       default:
         break;
     }
@@ -78,10 +78,10 @@ var aolFillComponent: angular.IComponentOptions = {
   //       `,
   bindings: {
     color: '<?',
-    },
+  },
   require: {
     styleHost: `?^${aolStyle.name}`,
-    styleCircleHost: `?^${aolStyleCircle.name}`
+    styleCircleHost: `?^${aolStyleCircle.name}`,
   },
   controller: [FillComponent],
 };

@@ -1,17 +1,13 @@
 import * as angular from 'angular';
-import Draw, {
-  Options,
-  GeometryFunction,
-  DrawEvent,
-} from 'ol/interaction/Draw';
+import { Options, GeometryFunction, DrawEvent } from 'ol/interaction/Draw';
+import { Draw } from 'ol/interaction';
 import GeometryType from 'ol/geom/GeometryType';
 import { Collection, Feature } from 'ol';
-import Geometry from 'ol/geom/Geometry';
+import { Geometry } from 'ol/geom';
 import VectorSource from 'ol/source/Vector';
 import { Condition } from 'ol/events/condition';
 import { StyleLike } from 'ol/style/Style';
 import aolMap, { MapComponent } from '../map.component';
-import { extend } from 'ol/extent';
 import { DrawInteractionExtend } from './draw.component.extend';
 
 export class DrawInteractionComponent extends DrawInteractionExtend

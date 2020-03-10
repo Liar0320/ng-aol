@@ -1,7 +1,5 @@
-import Stroke from 'ol/style/Stroke';
 import { StyleComponent, aolStyle } from './style.component';
-import Fill from 'ol/style/Fill';
-import Circle from 'ol/style/Circle';
+import { Fill, Circle, Stroke } from 'ol/style';
 
 export class styleCircleComponent implements ng.IController {
   public componentType = 'style-circle';

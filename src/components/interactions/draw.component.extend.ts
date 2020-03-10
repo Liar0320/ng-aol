@@ -1,13 +1,9 @@
 import GeometryType from 'ol/geom/GeometryType';
-import {
-  Options,
-  GeometryFunction,
-  SketchCoordType,
-} from 'ol/interaction/Draw';
-import Polygon from 'ol/geom/Polygon';
+import { Options, GeometryFunction } from 'ol/interaction/Draw';
+import { Polygon } from 'ol/geom';
 
 export abstract class DrawInteractionExtend implements Options {
-  type: GeometryType;
+  type: any;
   // clickTolerance?: number;
   // features?: Collection<Feature<Geometry>>;
   // source?: VectorSource<Geometry>;
@@ -38,7 +34,7 @@ export abstract class DrawInteractionExtend implements Options {
 
   __createRectangleParams() {
     this.maxPoints = 2;
-    this.type = GeometryType.LINE_STRING;
+    this.type = 'LineString';
     this.geometryFunction = (coordinates: any, geometry) => {
       //如果geometry对象不存在或者为空，则创建
       if (!geometry) {

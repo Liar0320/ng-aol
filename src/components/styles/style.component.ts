@@ -1,12 +1,9 @@
-import Style, { GeometryFunction } from 'ol/style/Style';
+import { GeometryFunction } from 'ol/style/Style';
 import aolFeature, { FeatureComponent } from '../feature.component';
 import { aolLayerVector, LayerVectorComponent } from '../layers';
 import Geometry from 'ol/geom/Geometry';
-import Fill from 'ol/style/Fill';
-import ImageStyle from 'ol/style/Image';
+import { Fill, Image as ImageStyle, Stroke, Text, Style } from 'ol/style';
 // import { RenderFunction } from 'ol/layer/Layer';
-import Stroke from 'ol/style/Stroke';
-import Text from 'ol/style/Text';
 
 export class StyleComponent implements ng.IController {
   public componentType = 'style';
@@ -20,7 +17,7 @@ export class StyleComponent implements ng.IController {
   geometry?: string | Geometry | GeometryFunction;
   fill?: Fill;
   image?: ImageStyle;
-//   renderer?: RenderFunction;
+  //   renderer?: RenderFunction;
   stroke?: Stroke;
   text?: Text;
   zIndex?: number;
@@ -39,29 +36,29 @@ export class StyleComponent implements ng.IController {
     this.host.instance.setStyle(this.instance);
   }
 
-    // $postLink(){
-    //     this.host.instance.setStyle(this.instance);
-    // }
+  // $postLink(){
+  //     this.host.instance.setStyle(this.instance);
+  // }
   // 因为在改变Stroke等属性值时style不会检查到变化，因此不会触发re-render
   update() {
     this.host.instance.changed();
   }
 
   $onDestroy() {
-      let style = this.host.instance.getStyle();
-      if(style instanceof Array){
-          style.splice(style.indexOf(this.instance),1);
-      }else{
-          style = null;
-      }
-      this.host.instance.setStyle(style);
+    let style = this.host.instance.getStyle();
+    if (style instanceof Array) {
+      style.splice(style.indexOf(this.instance), 1);
+    } else {
+      style = null;
+    }
+    this.host.instance.setStyle(style);
   }
 
-//   $onChanges(changes: ng.IOnChangesObject) {
-//     if (this.instance) {
-//       this.instance.setId(this.id);
-//     }
-//   }
+  //   $onChanges(changes: ng.IOnChangesObject) {
+  //     if (this.instance) {
+  //       this.instance.setId(this.id);
+  //     }
+  //   }
 }
 
 var aolStyleComponent: angular.IComponentOptions = {
@@ -74,11 +71,11 @@ var aolStyleComponent: angular.IComponentOptions = {
     image: '<?',
     stroke: '<?',
     text: '<?',
-    zIndex:'<?'
+    zIndex: '<?',
   },
   require: {
     layerVectorHost: `?^${aolLayerVector.name}`,
-    featureHost:`?^${aolFeature.name}`
+    featureHost: `?^${aolFeature.name}`,
   },
   controller: [StyleComponent],
 };

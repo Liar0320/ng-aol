@@ -13,11 +13,16 @@ angular.module('app', [aolModule.name]).run([
       pointermove() {
         // console.log(arguments);
       },
+      features: [],
       interaction: {
         drawend() {
           console.log(arguments);
+          $rootScope.$apply(() => {
+            $rootScope.map.once = false;
+          });
         },
       },
+      once: true,
       center: [120, 24],
       zoom: 6,
       layerGroup: {
