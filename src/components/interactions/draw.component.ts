@@ -11,8 +11,11 @@ import VectorSource from 'ol/source/Vector';
 import { Condition } from 'ol/events/condition';
 import { StyleLike } from 'ol/style/Style';
 import aolMap, { MapComponent } from '../map.component';
+import { extend } from 'ol/extent';
+import { DrawInteractionExtend } from './draw.component.extend';
 
-export class DrawInteractionComponent implements ng.IController, Options {
+export class DrawInteractionComponent extends DrawInteractionExtend
+  implements ng.IController, Options {
   private instance: Draw;
   protected host: MapComponent;
 
@@ -43,6 +46,7 @@ export class DrawInteractionComponent implements ng.IController, Options {
   //   constructor(private map: MapComponent) {}
 
   $onInit() {
+    super.init(this.type);
     this.instance = new Draw(this);
     this.instance.on('change', (event: DrawEvent) => this.onChange({ event }));
     this.instance.on('change:active', (event: DrawEvent) =>
@@ -58,6 +62,29 @@ export class DrawInteractionComponent implements ng.IController, Options {
       this.onPropertyChange({ event }),
     );
     this.host.instance.addInteraction(this.instance);
+  }
+
+  $onChanges(changes: ng.IOnChangesObject) {
+    let properties: { [index: string]: any } = {};
+
+    if (!this.instance) {
+      return;
+    }
+    for (let key in changes) {
+      if (changes.hasOwnProperty(key)) {
+        switch (key) {
+          case 'source':
+            this.$onDestroy();
+            this.$onInit();
+            break;
+          default:
+            properties[key] = changes[key].currentValue;
+            break;
+        }
+      }
+    }
+
+    this.instance.setProperties(properties, false);
   }
 
   $onDestroy() {
