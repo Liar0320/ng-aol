@@ -45,15 +45,52 @@
           url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
         ></aol-source-xyz>
       </aol-layer-tile>
+      <aol-layer-group>
+        <aol-layer-vector>
+          <aol-source-vector>
+            <aol-feature ng-repeat="feature in map.collection track by $index">
+              <aol-geometry-point>
+                <aol-coordinate
+                  x="feature.lat"
+                  y="feature.lon"
+                ></aol-coordinate>
+                <aol-style>
+                  <aol-style-icon
+                    src="feature.logo"
+                    scale="0.5"
+                    rotation="feature.rotation"
+                  ></aol-style-icon>
+                </aol-style>
+              </aol-geometry-point>
+            </aol-feature>
+          </aol-source-vector>
+        </aol-layer-vector>
+        <aol-layer-vector declutter="true">
+          <aol-source-vector>
+            <aol-feature ng-repeat="feature in map.collection track by $index">
+              <aol-geometry-point>
+                <aol-coordinate
+                  x="feature.lat"
+                  y="feature.lon"
+                ></aol-coordinate>
+                <aol-style>
+                  <aol-style-text text="feature.name"></aol-style-text>
+                </aol-style>
+              </aol-geometry-point>
+            </aol-feature>
+          </aol-source-vector>
+        </aol-layer-vector>
+      </aol-layer-group>
       <aol-interaction-defaults
         double-click-zoom="false"
         mouse-wheel-zoom="true"
       ></aol-interaction-defaults>
     </aol-map>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
     <script src="../dist/aol.js"></script>
-    <script src="./bootstrap.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

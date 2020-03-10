@@ -1,16 +1,17 @@
 import { StyleComponent, aolStyle } from './style.component';
-import Icon, { Options } from 'ol/style/Icon';
+import { Options } from 'ol/style/Icon';
+import { Icon } from 'ol/style';
 import IconOrigin from 'ol/style/IconOrigin';
 import IconAnchorUnits from 'ol/style/IconAnchorUnits';
 import { Color } from 'ol/color';
 import { Size } from 'ol/size';
 
-export class styleIconComponent implements ng.IController , Options {
+export class styleIconComponent implements ng.IController, Options {
   public componentType = 'style-icon';
   public instance: Icon;
 
   private host: StyleComponent;
-  
+
   anchor?: number[];
   anchorOrigin?: IconOrigin;
   anchorXUnits?: IconAnchorUnits;
@@ -32,7 +33,7 @@ export class styleIconComponent implements ng.IController , Options {
 
   $onInit() {
     if (!this.host) {
-        throw new Error('aol-style-icon must be applied to a style component');
+      throw new Error('aol-style-icon must be applied to a style component');
     }
     this.instance = new Icon(this);
     this.host.instance.setImage(this.instance);
@@ -45,23 +46,23 @@ export class styleIconComponent implements ng.IController , Options {
   //@TODO: 增加其他属性的监听
   $onChanges(changes: angular.IOnChangesObject) {
     if (!this.instance) {
-        return;
-      }
-      if (changes['opacity']) {
-        this.instance.setOpacity(changes['opacity'].currentValue);
-      }
-      if (changes['rotation']) {
-        this.instance.setRotation(changes['rotation'].currentValue);
-      }
-      if (changes['scale']) {
-        this.instance.setScale(changes['scale'].currentValue);
-      }
-      if (changes['src']) {
-        this.instance = new Icon(this);
-        this.host.instance.setImage(this.instance);
-      }
-      this.host.update();
-      // console.log('changes detected in aol-style-icon: ', changes);
+      return;
+    }
+    if (changes['opacity']) {
+      this.instance.setOpacity(changes['opacity'].currentValue);
+    }
+    if (changes['rotation']) {
+      this.instance.setRotation(changes['rotation'].currentValue);
+    }
+    if (changes['scale']) {
+      this.instance.setScale(changes['scale'].currentValue);
+    }
+    if (changes['src']) {
+      this.instance = new Icon(this);
+      this.host.instance.setImage(this.instance);
+    }
+    this.host.update();
+    // console.log('changes detected in aol-style-icon: ', changes);
   }
 }
 

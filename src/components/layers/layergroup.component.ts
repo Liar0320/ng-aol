@@ -1,5 +1,6 @@
 import { layerComponentConfig, LayerComponent } from './layer.component';
-import LayerGroup, { Options } from 'ol/layer/Group';
+import { Options } from 'ol/layer/Group';
+import { Group as LayerGroup } from 'ol/layer';
 import { MapComponent } from '../map.component';
 
 export class LayerGroupComponent extends LayerComponent

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -103,7 +103,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
-var ol_1 = __webpack_require__(4);
+var ol_1 = __webpack_require__(5);
 var MapComponent = /** @class */ (function () {
     function MapComponent(host) {
         this.componentType = 'map';
@@ -209,9 +209,10 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Style_1 = __webpack_require__(32);
-var feature_component_1 = __webpack_require__(5);
-var layers_1 = __webpack_require__(3);
+var feature_component_1 = __webpack_require__(6);
+var layers_1 = __webpack_require__(4);
+var style_1 = __webpack_require__(3);
+// import { RenderFunction } from 'ol/layer/Layer';
 var StyleComponent = /** @class */ (function () {
     function StyleComponent() {
         this.componentType = 'style';
@@ -232,7 +233,7 @@ var StyleComponent = /** @class */ (function () {
         else {
             throw new Error('aol-style must be applied to a feature or a layer');
         }
-        this.instance = new Style_1.default(this);
+        this.instance = new style_1.Style(this);
         this.host.instance.setStyle(this.instance);
     };
     // $postLink(){
@@ -265,11 +266,11 @@ var aolStyleComponent = {
         image: '<?',
         stroke: '<?',
         text: '<?',
-        zIndex: '<?'
+        zIndex: '<?',
     },
     require: {
         layerVectorHost: "?^" + layers_1.aolLayerVector.name,
-        featureHost: "?^" + feature_component_1.default.name
+        featureHost: "?^" + feature_component_1.default.name,
     },
     controller: [StyleComponent],
 };
@@ -278,6 +279,12 @@ exports.aolStyle = __assign({ name: 'aolStyle' }, aolStyleComponent);
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+module.exports = ol.style;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -287,19 +294,19 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 // export * from './layer.component';
-__export(__webpack_require__(19));
 __export(__webpack_require__(20));
 __export(__webpack_require__(21));
+__export(__webpack_require__(22));
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = ol;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -316,8 +323,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ol_1 = __webpack_require__(4);
-var sources_1 = __webpack_require__(11);
+var ol_1 = __webpack_require__(5);
+var sources_1 = __webpack_require__(14);
 var FeatureComponent = /** @class */ (function () {
     function FeatureComponent() {
         this.componentType = 'feature';
@@ -357,7 +364,7 @@ exports.default = __assign({ name: 'aolFeature' }, component);
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -398,7 +405,13 @@ exports.sourceComponentConfig = {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = ol.source;
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -468,7 +481,13 @@ exports.layerComponentConfig = {
 
 
 /***/ }),
-/* 8 */
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = ol.layer;
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -486,7 +505,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_component_1 = __webpack_require__(2);
-var Circle_1 = __webpack_require__(35);
+var style_1 = __webpack_require__(3);
 var styleCircleComponent = /** @class */ (function () {
     function styleCircleComponent() {
         this.componentType = 'style-circle';
@@ -502,12 +521,12 @@ var styleCircleComponent = /** @class */ (function () {
         }
     };
     styleCircleComponent.prototype.$postLink = function () {
-        this.instance = new Circle_1.default(this);
+        this.instance = new style_1.Circle(this);
         this.host.instance.setImage(this.instance);
     };
     styleCircleComponent.prototype.update = function () {
         if (!!this.instance) {
-            this.instance = new Circle_1.default(this);
+            this.instance = new style_1.Circle(this);
             this.host.instance.setImage(this.instance);
             // this.instance.setRadius(this.radius);
         }
@@ -549,13 +568,13 @@ exports.aolStyleCircle = __assign({ name: 'aolStyleCircle' }, aolStyleCircleComp
 
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = ol.interaction;
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -572,7 +591,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ol_1 = __webpack_require__(4);
+var ol_1 = __webpack_require__(5);
 var map_component_1 = __webpack_require__(0);
 var ViewComponent = /** @class */ (function () {
     function ViewComponent() {
@@ -653,7 +672,7 @@ exports.default = __assign({ name: 'aolView' }, component);
 
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -662,19 +681,13 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(17));
+__export(__webpack_require__(19));
 __export(__webpack_require__(23));
-__export(__webpack_require__(25));
+__export(__webpack_require__(24));
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-module.exports = ol.layer;
-
-/***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -691,10 +704,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var feature_component_1 = __webpack_require__(5);
-var LineString_1 = __webpack_require__(27);
-var Point_1 = __webpack_require__(28);
-var Polygon_1 = __webpack_require__(14);
+var feature_component_1 = __webpack_require__(6);
+var geom_1 = __webpack_require__(16);
 var GeometryLinestringComponent = /** @class */ (function () {
     function GeometryLinestringComponent() {
         this.componentType = 'geometry-linestring';
@@ -703,7 +714,7 @@ var GeometryLinestringComponent = /** @class */ (function () {
     //     // console.log('instancing aol-geometry-linestring');
     //   }
     GeometryLinestringComponent.prototype.$onInit = function () {
-        this.instance = new LineString_1.default([]);
+        this.instance = new geom_1.LineString([]);
         this.host.instance.setGeometry(this.instance);
     };
     GeometryLinestringComponent.prototype.$onDestroy = function () {
@@ -728,7 +739,7 @@ var GeometryPointComponent = /** @class */ (function () {
     //     // console.log('creating aol-geometry-point');
     //   }
     GeometryPointComponent.prototype.$onInit = function () {
-        this.instance = new Point_1.default([0, 0]); // defaulting coordinates to [0,0]. To be overridden in child component.
+        this.instance = new geom_1.Point([0, 0]); // defaulting coordinates to [0,0]. To be overridden in child component.
         this.host.instance.setGeometry(this.instance);
     };
     GeometryPointComponent.prototype.$onDestroy = function () {
@@ -757,7 +768,7 @@ var GeometryPolygonComponent = /** @class */ (function () {
     //   }
     GeometryPolygonComponent.prototype.$onInit = function () {
         // defaulting coordinates to [0,0]. To be overridden in child component.
-        this.instance = new Polygon_1.default([
+        this.instance = new geom_1.Polygon([
             [
                 [0, 0],
                 [1, 0],
@@ -780,20 +791,20 @@ exports.aolGeometryPolygon = __assign({ name: 'aolGeometryPolygon' }, aolGeometr
 
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports) {
 
-module.exports = ol.geom.Polygon;
+module.exports = ol.geom;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
-var index_1 = __webpack_require__(16);
+var index_1 = __webpack_require__(18);
 angular.module('app', [index_1.default.name]).run([
     '$log',
     '$rootScope',
@@ -854,7 +865,7 @@ angular.module('app', [index_1.default.name]).run([
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -862,16 +873,16 @@ angular.module('app', [index_1.default.name]).run([
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
 var map_component_1 = __webpack_require__(0);
-var view_component_1 = __webpack_require__(10);
-var feature_component_1 = __webpack_require__(5);
-var index_1 = __webpack_require__(3);
-var index_2 = __webpack_require__(11);
-var geometry_component_1 = __webpack_require__(13);
-var coordinate_component_1 = __webpack_require__(29);
-var styles_1 = __webpack_require__(31);
-var overlay_component_1 = __webpack_require__(42);
-var interactions_1 = __webpack_require__(43);
-var draw_component_1 = __webpack_require__(46);
+var view_component_1 = __webpack_require__(13);
+var feature_component_1 = __webpack_require__(6);
+var index_1 = __webpack_require__(4);
+var index_2 = __webpack_require__(14);
+var geometry_component_1 = __webpack_require__(15);
+var coordinate_component_1 = __webpack_require__(25);
+var styles_1 = __webpack_require__(27);
+var overlay_component_1 = __webpack_require__(32);
+var interactions_1 = __webpack_require__(33);
+var draw_component_1 = __webpack_require__(36);
 var aolModule = angular.module('aol', []);
 function registerComponent(component) {
     aolModule.component(component.name, component);
@@ -916,7 +927,7 @@ exports.default = aolModule;
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -946,9 +957,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(6);
-var source_1 = __webpack_require__(18);
-var layers_1 = __webpack_require__(3);
+var source_component_1 = __webpack_require__(7);
+var source_1 = __webpack_require__(8);
+var layers_1 = __webpack_require__(4);
 var SourceXYZComponent = /** @class */ (function (_super) {
     __extends(SourceXYZComponent, _super);
     function SourceXYZComponent() {
@@ -995,74 +1006,6 @@ exports.aolSourceXyz = __assign({ name: 'aolSourceXyz' }, component);
 
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = ol.source;
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var layer_component_1 = __webpack_require__(7);
-var layer_1 = __webpack_require__(12);
-var LayerTileComponent = /** @class */ (function (_super) {
-    __extends(LayerTileComponent, _super);
-    function LayerTileComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    //   constructor(map: MapComponent, @Optional() group?: LayerGroupComponent) {
-    //     super(group || map);
-    //   }
-    LayerTileComponent.prototype.$onInit = function () {
-        this.instance = new layer_1.Tile(this);
-        _super.prototype.$onInit.call(this);
-    };
-    LayerTileComponent.prototype.$onChanges = function (changes) {
-        _super.prototype.$onChanges.call(this, changes);
-    };
-    return LayerTileComponent;
-}(layer_component_1.LayerComponent));
-exports.LayerTileComponent = LayerTileComponent;
-var component = {
-    //   template: `
-    //         <div ng-include></div>
-    //       `,
-    bindings: __assign(__assign({}, layer_component_1.layerComponentConfig.bindings), { preload: '<?', useInterimTilesOnError: '<?' }),
-    require: layer_component_1.layerComponentConfig.require,
-    controller: [LayerTileComponent],
-};
-exports.aolLayerTile = __assign({ name: 'aolLayerTile' }, component);
-
-
-/***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1093,8 +1036,70 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var layer_component_1 = __webpack_require__(7);
-var layer_1 = __webpack_require__(12);
+var layer_component_1 = __webpack_require__(9);
+var layer_1 = __webpack_require__(10);
+var LayerTileComponent = /** @class */ (function (_super) {
+    __extends(LayerTileComponent, _super);
+    function LayerTileComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    //   constructor(map: MapComponent, @Optional() group?: LayerGroupComponent) {
+    //     super(group || map);
+    //   }
+    LayerTileComponent.prototype.$onInit = function () {
+        this.instance = new layer_1.Tile(this);
+        _super.prototype.$onInit.call(this);
+    };
+    LayerTileComponent.prototype.$onChanges = function (changes) {
+        _super.prototype.$onChanges.call(this, changes);
+    };
+    return LayerTileComponent;
+}(layer_component_1.LayerComponent));
+exports.LayerTileComponent = LayerTileComponent;
+var component = {
+    //   template: `
+    //         <div ng-include></div>
+    //       `,
+    bindings: __assign(__assign({}, layer_component_1.layerComponentConfig.bindings), { preload: '<?', useInterimTilesOnError: '<?' }),
+    require: layer_component_1.layerComponentConfig.require,
+    controller: [LayerTileComponent],
+};
+exports.aolLayerTile = __assign({ name: 'aolLayerTile' }, component);
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var layer_component_1 = __webpack_require__(9);
+var layer_1 = __webpack_require__(10);
 // import { Feature } from 'ol';
 // import Point from 'ol/geom/Point';
 var LayerVectorComponent = /** @class */ (function (_super) {
@@ -1134,7 +1139,7 @@ exports.aolLayerVector = __assign({ name: 'aolLayerVector' }, component);
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1164,8 +1169,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var layer_component_1 = __webpack_require__(7);
-var Group_1 = __webpack_require__(22);
+var layer_component_1 = __webpack_require__(9);
+var layer_1 = __webpack_require__(10);
 var LayerGroupComponent = /** @class */ (function (_super) {
     __extends(LayerGroupComponent, _super);
     function LayerGroupComponent() {
@@ -1175,7 +1180,7 @@ var LayerGroupComponent = /** @class */ (function (_super) {
     }
     LayerGroupComponent.prototype.$onInit = function () {
         // console.log(`creating ol.layer.Group instance with:`, this);
-        this.instance = new Group_1.default(this);
+        this.instance = new layer_1.Group(this);
         _super.prototype.$onInit.call(this);
     };
     return LayerGroupComponent;
@@ -1191,12 +1196,6 @@ var component = {
 };
 exports.aolLayerGroup = __assign({ name: 'aolLayerGroup' }, component);
 
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = ol.layer.Group;
 
 /***/ }),
 /* 23 */
@@ -1229,18 +1228,18 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(6);
-var OSM_1 = __webpack_require__(24);
-var layers_1 = __webpack_require__(3);
+var source_component_1 = __webpack_require__(7);
+var source_1 = __webpack_require__(8);
+var layers_1 = __webpack_require__(4);
 var SourceOSMComponent = /** @class */ (function (_super) {
     __extends(SourceOSMComponent, _super);
     function SourceOSMComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.componentType = "SourceOSMComponent";
+        _this.componentType = 'SourceOSMComponent';
         return _this;
     }
     SourceOSMComponent.prototype.$onInit = function () {
-        this.instance = new OSM_1.default(this);
+        this.instance = new source_1.OSM(this);
         this._register(this.instance);
     };
     SourceOSMComponent.prototype.ngOnChanges = function (changes) {
@@ -1255,7 +1254,7 @@ var SourceOSMComponent = /** @class */ (function (_super) {
         }
         this.instance.setProperties(properties, false);
         if (changes.hasOwnProperty('url')) {
-            this.instance = new OSM_1.default(this);
+            this.instance = new source_1.OSM(this);
             this._register(this.instance);
         }
     };
@@ -1277,12 +1276,6 @@ exports.aolSourceOsm = __assign({ name: 'aolSourceOsm' }, component);
 
 /***/ }),
 /* 24 */
-/***/ (function(module, exports) {
-
-module.exports = ol.source.OSM;
-
-/***/ }),
-/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1312,9 +1305,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(6);
-var layers_1 = __webpack_require__(3);
-var Vector_1 = __webpack_require__(26);
+var source_component_1 = __webpack_require__(7);
+var layers_1 = __webpack_require__(4);
+var source_1 = __webpack_require__(8);
 var SourceVectorComponent = /** @class */ (function (_super) {
     __extends(SourceVectorComponent, _super);
     function SourceVectorComponent() {
@@ -1325,7 +1318,7 @@ var SourceVectorComponent = /** @class */ (function (_super) {
     //   constructor(host: angular.IRootElementService) {
     //   }
     SourceVectorComponent.prototype.$onInit = function () {
-        this.instance = new Vector_1.default(this);
+        this.instance = new source_1.Vector(this);
         this._register(this.instance);
     };
     SourceVectorComponent.prototype.$onChanges = function (changes) {
@@ -1368,25 +1361,7 @@ exports.aolSourceVector = __assign({ name: 'aolSourceVector' }, component);
 
 
 /***/ }),
-/* 26 */
-/***/ (function(module, exports) {
-
-module.exports = ol.source.Vector;
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-module.exports = ol.geom.LineString;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-module.exports = ol.geom.Point;
-
-/***/ }),
-/* 29 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1404,9 +1379,9 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
-var geometry_component_1 = __webpack_require__(13);
-var proj_1 = __webpack_require__(30);
-var view_component_1 = __webpack_require__(10);
+var geometry_component_1 = __webpack_require__(15);
+var proj_1 = __webpack_require__(26);
+var view_component_1 = __webpack_require__(13);
 var map_component_1 = __webpack_require__(0);
 var CoordinateComponent = /** @class */ (function () {
     function CoordinateComponent() {
@@ -1541,13 +1516,13 @@ exports.aolCollectionCoordinates = __assign({ name: 'aolCollectionCoordinates' }
 
 
 /***/ }),
-/* 30 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = ol.proj;
 
 /***/ }),
-/* 31 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1557,21 +1532,15 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(2));
-__export(__webpack_require__(33));
-__export(__webpack_require__(36));
-__export(__webpack_require__(8));
-__export(__webpack_require__(38));
-__export(__webpack_require__(40));
+__export(__webpack_require__(28));
+__export(__webpack_require__(29));
+__export(__webpack_require__(11));
+__export(__webpack_require__(30));
+__export(__webpack_require__(31));
 
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Style;
-
-/***/ }),
-/* 33 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1588,9 +1557,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Stroke_1 = __webpack_require__(34);
+var style_1 = __webpack_require__(3);
 var style_component_1 = __webpack_require__(2);
-var circle_component_1 = __webpack_require__(8);
+var circle_component_1 = __webpack_require__(11);
 var StrokeComponent = /** @class */ (function () {
     function StrokeComponent() {
         this.componentType = 'style-stroke';
@@ -1606,7 +1575,7 @@ var StrokeComponent = /** @class */ (function () {
         else {
             throw new Error('aol-style must be applied to a feature or a layer');
         }
-        this.instance = new Stroke_1.default(this);
+        this.instance = new style_1.Stroke(this);
         switch (this.host.componentType) {
             case 'style':
                 this.host.instance.setStroke(this.instance);
@@ -1681,7 +1650,7 @@ var aolStrokeComponent = {
     },
     require: {
         styleHost: "?^" + style_component_1.aolStyle.name,
-        styleCircleHost: "?^" + circle_component_1.aolStyleCircle.name
+        styleCircleHost: "?^" + circle_component_1.aolStyleCircle.name,
     },
     controller: [StrokeComponent],
 };
@@ -1689,19 +1658,7 @@ exports.aolStroke = __assign({ name: 'aolStroke' }, aolStrokeComponent);
 
 
 /***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Stroke;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Circle;
-
-/***/ }),
-/* 36 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1719,8 +1676,8 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_component_1 = __webpack_require__(2);
-var Fill_1 = __webpack_require__(37);
-var circle_component_1 = __webpack_require__(8);
+var style_1 = __webpack_require__(3);
+var circle_component_1 = __webpack_require__(11);
 var FillComponent = /** @class */ (function () {
     function FillComponent() {
         this.componentType = 'fill';
@@ -1736,7 +1693,7 @@ var FillComponent = /** @class */ (function () {
         else {
             throw new Error('aol-fill must be applied to a Style or styleCircleHost or StyleText component');
         }
-        this.instance = new Fill_1.default(this);
+        this.instance = new style_1.Fill(this);
         switch (this.host.componentType) {
             case 'style':
                 this.host.instance.setStroke(this.instance);
@@ -1762,7 +1719,7 @@ var FillComponent = /** @class */ (function () {
             return;
         }
         // this.host.instance.setFill(new Fill({color:changes['color'].currentValue}))
-        this.instance = new Fill_1.default({ color: changes['color'].currentValue });
+        this.instance = new style_1.Fill({ color: changes['color'].currentValue });
         switch (this.host.componentType) {
             case 'style':
                 this.host.instance.setStroke(this.instance);
@@ -1787,7 +1744,7 @@ var aolFillComponent = {
     },
     require: {
         styleHost: "?^" + style_component_1.aolStyle.name,
-        styleCircleHost: "?^" + circle_component_1.aolStyleCircle.name
+        styleCircleHost: "?^" + circle_component_1.aolStyleCircle.name,
     },
     controller: [FillComponent],
 };
@@ -1795,13 +1752,7 @@ exports.aolFill = __assign({ name: 'aolFill' }, aolFillComponent);
 
 
 /***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Fill;
-
-/***/ }),
-/* 38 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1819,7 +1770,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_component_1 = __webpack_require__(2);
-var Icon_1 = __webpack_require__(39);
+var style_1 = __webpack_require__(3);
 var styleIconComponent = /** @class */ (function () {
     function styleIconComponent() {
         this.componentType = 'style-icon';
@@ -1829,7 +1780,7 @@ var styleIconComponent = /** @class */ (function () {
         if (!this.host) {
             throw new Error('aol-style-icon must be applied to a style component');
         }
-        this.instance = new Icon_1.default(this);
+        this.instance = new style_1.Icon(this);
         this.host.instance.setImage(this.instance);
     };
     styleIconComponent.prototype.$onDestroy = function () {
@@ -1850,7 +1801,7 @@ var styleIconComponent = /** @class */ (function () {
             this.instance.setScale(changes['scale'].currentValue);
         }
         if (changes['src']) {
-            this.instance = new Icon_1.default(this);
+            this.instance = new style_1.Icon(this);
             this.host.instance.setImage(this.instance);
         }
         this.host.update();
@@ -1890,13 +1841,7 @@ exports.aolStyleIcon = __assign({ name: 'aolStyleIcon' }, aolStyleIconComponent)
 
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Icon;
-
-/***/ }),
-/* 40 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1914,7 +1859,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_component_1 = __webpack_require__(2);
-var Text_1 = __webpack_require__(41);
+var style_1 = __webpack_require__(3);
 var styleTextComponent = /** @class */ (function () {
     function styleTextComponent() {
         this.componentType = 'style-icon';
@@ -1924,7 +1869,7 @@ var styleTextComponent = /** @class */ (function () {
         if (!this.host) {
             throw new Error('aol-style-icon must be applied to a style component');
         }
-        this.instance = new Text_1.default(this);
+        this.instance = new style_1.Text(this);
         this.host.instance.setText(this.instance);
     };
     styleTextComponent.prototype.$onDestroy = function () {
@@ -1997,13 +1942,7 @@ exports.aolStyleText = __assign({ name: 'aolStyleText' }, aolStyleTextComponent)
 
 
 /***/ }),
-/* 41 */
-/***/ (function(module, exports) {
-
-module.exports = ol.style.Text;
-
-/***/ }),
-/* 42 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2020,7 +1959,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ol_1 = __webpack_require__(4);
+var ol_1 = __webpack_require__(5);
 var map_component_1 = __webpack_require__(0);
 var OverlayComponent = /** @class */ (function () {
     function OverlayComponent($element) {
@@ -2080,7 +2019,7 @@ exports.aolOverlay = __assign({ name: 'aolOverlay' }, component);
 
 
 /***/ }),
-/* 43 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2089,12 +2028,12 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(44));
-__export(__webpack_require__(45));
+__export(__webpack_require__(34));
+__export(__webpack_require__(35));
 
 
 /***/ }),
-/* 44 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2111,7 +2050,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var interaction_1 = __webpack_require__(9);
+var interaction_1 = __webpack_require__(12);
 var map_component_1 = __webpack_require__(0);
 var DefaultInteractionComponent = /** @class */ (function () {
     function DefaultInteractionComponent() {
@@ -2159,7 +2098,7 @@ exports.aolInteractionDefaults = __assign({ name: 'aolInteractionDefaults' }, co
 
 
 /***/ }),
-/* 45 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2178,7 +2117,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
 var map_component_1 = __webpack_require__(0);
-var interaction_1 = __webpack_require__(9);
+var interaction_1 = __webpack_require__(12);
 var ModifyInteractionComponent = /** @class */ (function () {
     function ModifyInteractionComponent() {
         this.onModifyEnd = angular.noop;
@@ -2262,7 +2201,7 @@ exports.aolInteractionModify = __assign({ name: 'aolInteractionModify' }, compon
 
 
 /***/ }),
-/* 46 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2293,9 +2232,9 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
-var interaction_1 = __webpack_require__(9);
+var interaction_1 = __webpack_require__(12);
 var map_component_1 = __webpack_require__(0);
-var draw_component_extend_1 = __webpack_require__(47);
+var draw_component_extend_1 = __webpack_require__(37);
 var DrawInteractionComponent = /** @class */ (function (_super) {
     __extends(DrawInteractionComponent, _super);
     function DrawInteractionComponent() {
@@ -2390,14 +2329,13 @@ exports.aolInteractionDraw = __assign({ name: 'aolInteractionDraw' }, component)
 
 
 /***/ }),
-/* 47 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var GeometryType_1 = __webpack_require__(48);
-var Polygon_1 = __webpack_require__(14);
+var geom_1 = __webpack_require__(16);
 var DrawInteractionExtend = /** @class */ (function () {
     function DrawInteractionExtend() {
     }
@@ -2418,12 +2356,12 @@ var DrawInteractionExtend = /** @class */ (function () {
     };
     DrawInteractionExtend.prototype.__createRectangleParams = function () {
         this.maxPoints = 2;
-        this.type = GeometryType_1.default.LINE_STRING;
+        this.type = 'LineString';
         this.geometryFunction = function (coordinates, geometry) {
             //如果geometry对象不存在或者为空，则创建
             if (!geometry) {
                 //多面几何图形下设置
-                geometry = new Polygon_1.default([]);
+                geometry = new geom_1.Polygon([]);
             }
             // 开始坐标
             var start = coordinates[0];
@@ -2441,12 +2379,6 @@ var DrawInteractionExtend = /** @class */ (function () {
 }());
 exports.DrawInteractionExtend = DrawInteractionExtend;
 
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-module.exports = ol.geom.GeometryType;
 
 /***/ })
 /******/ ]);

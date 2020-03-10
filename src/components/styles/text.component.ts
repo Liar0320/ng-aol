@@ -1,5 +1,6 @@
 import { StyleComponent, aolStyle } from './style.component';
-import Text, { Options } from 'ol/style/Text';
+import { Options } from 'ol/style/Text';
+import { Text } from 'ol/style';
 import TextPlacement from 'ol/style/TextPlacement';
 import Fill from 'ol/style/Fill';
 import Stroke from 'ol/style/Stroke';
@@ -47,29 +48,29 @@ export class styleTextComponent implements ng.IController, Options {
       return;
     }
     if (changes['font']) {
-        this.instance.setFont(changes['font'].currentValue);
-      }
-      if (changes['offsetX']) {
-        this.instance.setOffsetX(changes['offsetX'].currentValue);
-      }
-      if (changes['offsetY']) {
-        this.instance.setOffsetY(changes['offsetY'].currentValue);
-      }
-      if (changes['scale']) {
-        this.instance.setScale(changes['scale'].currentValue);
-      }
-      if (changes['rotation']) {
-        this.instance.setRotation(changes['rotation'].currentValue);
-      }
-      if (changes['text']) {
-        this.instance.setText(changes['text'].currentValue);
-      }
-      if (changes['textAlign']) {
-        this.instance.setTextAlign(changes['textAlign'].currentValue);
-      }
-      if (changes['textBaseLine']) {
-        this.instance.setTextBaseline(changes['textBaseLine'].currentValue);
-      }
+      this.instance.setFont(changes['font'].currentValue);
+    }
+    if (changes['offsetX']) {
+      this.instance.setOffsetX(changes['offsetX'].currentValue);
+    }
+    if (changes['offsetY']) {
+      this.instance.setOffsetY(changes['offsetY'].currentValue);
+    }
+    if (changes['scale']) {
+      this.instance.setScale(changes['scale'].currentValue);
+    }
+    if (changes['rotation']) {
+      this.instance.setRotation(changes['rotation'].currentValue);
+    }
+    if (changes['text']) {
+      this.instance.setText(changes['text'].currentValue);
+    }
+    if (changes['textAlign']) {
+      this.instance.setTextAlign(changes['textAlign'].currentValue);
+    }
+    if (changes['textBaseLine']) {
+      this.instance.setTextBaseline(changes['textBaseLine'].currentValue);
+    }
     this.host.update();
     // console.log('changes detected in aol-style-icon: ', changes);
   }
