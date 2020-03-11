@@ -30,7 +30,11 @@ import {
 } from './styles';
 
 import { aolOverlay } from './overlay.component';
-import { aolInteractionDefaults, aolInteractionModify } from './interactions';
+import {
+  aolInteractionDefaults,
+  aolInteractionModify,
+  aolInteractionSelect,
+} from './interactions';
 import { aolInteractionDraw } from './interactions/draw.component';
 
 var aolModule = angular.module('aol', []);
@@ -72,6 +76,7 @@ function registerComponent(component: any) {
   aolInteractionDefaults,
   aolInteractionDraw,
   aolInteractionModify,
+  aolInteractionSelect,
 ].forEach(component => {
   registerComponent(component);
 });

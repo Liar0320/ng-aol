@@ -209,7 +209,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var feature_component_1 = __webpack_require__(7);
+var feature_component_1 = __webpack_require__(8);
 var layers_1 = __webpack_require__(4);
 var style_1 = __webpack_require__(3);
 // import { RenderFunction } from 'ol/layer/Layer';
@@ -385,6 +385,12 @@ exports.layerComponentConfig = {
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+module.exports = ol.interaction;
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -442,7 +448,7 @@ exports.default = __assign({ name: 'aolFeature' }, component);
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -483,19 +489,19 @@ exports.sourceComponentConfig = {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = ol.source;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = ol.layer;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -574,12 +580,6 @@ var aolStyleCircleComponent = {
 };
 exports.aolStyleCircle = __assign({ name: 'aolStyleCircle' }, aolStyleCircleComponent);
 
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-module.exports = ol.interaction;
 
 /***/ }),
 /* 13 */
@@ -712,7 +712,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var feature_component_1 = __webpack_require__(7);
+var feature_component_1 = __webpack_require__(8);
 var geom_1 = __webpack_require__(16);
 var GeometryLinestringComponent = /** @class */ (function () {
     function GeometryLinestringComponent() {
@@ -882,7 +882,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
 var map_component_1 = __webpack_require__(0);
 var view_component_1 = __webpack_require__(13);
-var feature_component_1 = __webpack_require__(7);
+var feature_component_1 = __webpack_require__(8);
 var index_1 = __webpack_require__(4);
 var index_2 = __webpack_require__(14);
 var geometry_component_1 = __webpack_require__(15);
@@ -890,7 +890,7 @@ var coordinate_component_1 = __webpack_require__(26);
 var styles_1 = __webpack_require__(28);
 var overlay_component_1 = __webpack_require__(33);
 var interactions_1 = __webpack_require__(34);
-var draw_component_1 = __webpack_require__(37);
+var draw_component_1 = __webpack_require__(40);
 var aolModule = angular.module('aol', []);
 function registerComponent(component) {
     aolModule.component(component.name, component);
@@ -929,6 +929,7 @@ function registerComponent(component) {
     interactions_1.aolInteractionDefaults,
     draw_component_1.aolInteractionDraw,
     interactions_1.aolInteractionModify,
+    interactions_1.aolInteractionSelect,
 ].forEach(function (component) {
     registerComponent(component);
 });
@@ -966,8 +967,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(8);
-var source_1 = __webpack_require__(9);
+var source_component_1 = __webpack_require__(9);
+var source_1 = __webpack_require__(10);
 var layers_1 = __webpack_require__(4);
 var SourceXYZComponent = /** @class */ (function (_super) {
     __extends(SourceXYZComponent, _super);
@@ -1046,7 +1047,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var layer_component_1 = __webpack_require__(6);
-var layer_1 = __webpack_require__(10);
+var layer_1 = __webpack_require__(11);
 var LayerTileComponent = /** @class */ (function (_super) {
     __extends(LayerTileComponent, _super);
     function LayerTileComponent() {
@@ -1108,7 +1109,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var layer_component_1 = __webpack_require__(6);
-var layer_1 = __webpack_require__(10);
+var layer_1 = __webpack_require__(11);
 // import { Feature } from 'ol';
 // import Point from 'ol/geom/Point';
 var LayerVectorComponent = /** @class */ (function (_super) {
@@ -1179,7 +1180,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var layer_component_1 = __webpack_require__(6);
-var layer_1 = __webpack_require__(10);
+var layer_1 = __webpack_require__(11);
 var LayerGroupComponent = /** @class */ (function (_super) {
     __extends(LayerGroupComponent, _super);
     function LayerGroupComponent() {
@@ -1238,7 +1239,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var layer_component_1 = __webpack_require__(6);
-var WebGLPoints_1 = __webpack_require__(39);
+var WebGLPoints_1 = __webpack_require__(42);
 var LayerWebglComponent = /** @class */ (function (_super) {
     __extends(LayerWebglComponent, _super);
     function LayerWebglComponent() {
@@ -1343,8 +1344,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(8);
-var source_1 = __webpack_require__(9);
+var source_component_1 = __webpack_require__(9);
+var source_1 = __webpack_require__(10);
 var layers_1 = __webpack_require__(4);
 var SourceOSMComponent = /** @class */ (function (_super) {
     __extends(SourceOSMComponent, _super);
@@ -1420,9 +1421,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_component_1 = __webpack_require__(8);
+var source_component_1 = __webpack_require__(9);
 var layers_1 = __webpack_require__(4);
-var source_1 = __webpack_require__(9);
+var source_1 = __webpack_require__(10);
 var SourceVectorComponent = /** @class */ (function (_super) {
     __extends(SourceVectorComponent, _super);
     function SourceVectorComponent() {
@@ -1659,7 +1660,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(2));
 __export(__webpack_require__(29));
 __export(__webpack_require__(30));
-__export(__webpack_require__(11));
+__export(__webpack_require__(12));
 __export(__webpack_require__(31));
 __export(__webpack_require__(32));
 
@@ -1684,7 +1685,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_1 = __webpack_require__(3);
 var style_component_1 = __webpack_require__(2);
-var circle_component_1 = __webpack_require__(11);
+var circle_component_1 = __webpack_require__(12);
 var StrokeComponent = /** @class */ (function () {
     function StrokeComponent() {
         this.componentType = 'style-stroke';
@@ -1802,7 +1803,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var style_component_1 = __webpack_require__(2);
 var style_1 = __webpack_require__(3);
-var circle_component_1 = __webpack_require__(11);
+var circle_component_1 = __webpack_require__(12);
 var FillComponent = /** @class */ (function () {
     function FillComponent() {
         this.componentType = 'fill';
@@ -2155,6 +2156,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(35));
 __export(__webpack_require__(36));
+__export(__webpack_require__(37));
 
 
 /***/ }),
@@ -2175,7 +2177,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var interaction_1 = __webpack_require__(12);
+var interaction_1 = __webpack_require__(7);
 var map_component_1 = __webpack_require__(0);
 var DefaultInteractionComponent = /** @class */ (function () {
     function DefaultInteractionComponent() {
@@ -2242,7 +2244,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
 var map_component_1 = __webpack_require__(0);
-var interaction_1 = __webpack_require__(12);
+var interaction_1 = __webpack_require__(7);
 var ModifyInteractionComponent = /** @class */ (function () {
     function ModifyInteractionComponent() {
         this.onModifyEnd = angular.noop;
@@ -2357,9 +2359,235 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(1);
-var interaction_1 = __webpack_require__(12);
+var interaction_1 = __webpack_require__(7);
 var map_component_1 = __webpack_require__(0);
-var draw_component_extend_1 = __webpack_require__(38);
+var select_component_extend_1 = __webpack_require__(38);
+var SelectInteractionComponent = /** @class */ (function (_super) {
+    __extends(SelectInteractionComponent, _super);
+    function SelectInteractionComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.onSelect = angular.noop;
+        _this.onChange = angular.noop;
+        _this.onPropertyChange = angular.noop;
+        return _this;
+    }
+    //   constructor(private map: MapComponent) {}
+    SelectInteractionComponent.prototype.$onInit = function () {
+        var _this = this;
+        if (!this.host) {
+            console.error('The select interaction requires map component');
+            return;
+        }
+        _super.prototype.initCondition.call(this);
+        this.instance = new interaction_1.Select(this);
+        this.instance.on('select', function (event) {
+            return _this.onSelect({ event: event });
+        });
+        this.instance.on('change', function (event) {
+            return _this.onChange({ event: event });
+        });
+        this.instance.on('propertychange', function (event) {
+            return _this.onPropertyChange({ event: event });
+        });
+        this.host.instance.addInteraction(this.instance);
+    };
+    SelectInteractionComponent.prototype.$onChanges = function (changes) {
+        var properties = {};
+        if (!this.instance) {
+            return;
+        }
+        for (var key in changes) {
+            if (changes.hasOwnProperty(key)) {
+                properties[key] = changes[key].currentValue;
+            }
+        }
+        this.instance.setProperties(properties, false);
+    };
+    SelectInteractionComponent.prototype.$onDestroy = function () {
+        this.host.instance.removeInteraction(this.instance);
+    };
+    return SelectInteractionComponent;
+}(select_component_extend_1.SelectInteractionExtend));
+exports.SelectInteractionComponent = SelectInteractionComponent;
+var component = {
+    //   template: `
+    //         <div ng-include></div>
+    //       `,
+    bindings: {
+        addCondition: '<',
+        condition: '<?',
+        layers: '<?',
+        style: '<?',
+        removeCondition: '<?',
+        toggleCondition: '<?',
+        multi: '<?',
+        features: '<?',
+        filter: '<?',
+        wrapX: '<?',
+        onChange: '&?',
+        onSelect: '&?',
+        onPropertyChange: '&?',
+    },
+    require: {
+        host: "^" + map_component_1.default.name,
+    },
+    controller: ['$element', SelectInteractionComponent],
+};
+exports.aolInteractionSelect = __assign({ name: 'aolInteractionSelect' }, component);
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var condition_1 = __webpack_require__(39);
+// var conditionType:
+//   | 'altKeyOnly'
+//   | 'altShiftKeysOnly'
+//   | 'click'
+//   | 'doubleClick'
+//   | 'focus'
+//   | 'mouseActionButton'
+//   | 'mouseOnly'
+//   | 'noModifierKeys'
+//   | 'penOnly'
+//   | 'platformModifierKeyOnly'
+//   | 'pointerMove'
+//   | 'primaryAction'
+//   | 'shiftKeyOnly'
+//   | 'singleClick'
+//   | 'targetNotEditable'
+//   | 'touchOnly';
+var SelectInteractionExtend = /** @class */ (function () {
+    function SelectInteractionExtend() {
+    }
+    /**初始化condition状态 */
+    SelectInteractionExtend.prototype.initCondition = function () {
+        var key = this.condition;
+        if (typeof key === 'function')
+            return key;
+        switch (key) {
+            case 'altKeyOnly':
+                this.condition = condition_1.altKeyOnly;
+                break;
+            case 'altShiftKeysOnly':
+                this.condition = condition_1.altShiftKeysOnly;
+                break;
+            case 'click':
+                this.condition = condition_1.click;
+                break;
+            case 'doubleClick':
+                this.condition = condition_1.doubleClick;
+                break;
+            case 'focus':
+                this.condition = condition_1.focus;
+                break;
+            case 'mouseActionButton':
+                this.condition = condition_1.mouseActionButton;
+                break;
+            case 'mouseOnly':
+                this.condition = condition_1.mouseOnly;
+                break;
+            case 'noModifierKeys':
+                this.condition = condition_1.noModifierKeys;
+                break;
+            case 'penOnly':
+                this.condition = condition_1.penOnly;
+                break;
+            case 'platformModifierKeyOnly':
+                this.condition = condition_1.platformModifierKeyOnly;
+                break;
+            case 'pointerMove':
+                this.condition = condition_1.pointerMove;
+                break;
+            case 'primaryAction':
+                this.condition = condition_1.primaryAction;
+                break;
+            case 'shiftKeyOnly':
+                this.condition = condition_1.shiftKeyOnly;
+                break;
+            case 'singleClick':
+                this.condition = condition_1.singleClick;
+                break;
+            case 'targetNotEditable':
+                this.condition = condition_1.targetNotEditable;
+                break;
+            case 'touchOnly':
+                this.condition = condition_1.touchOnly;
+                break;
+            default:
+                this.condition = condition_1.click;
+                break;
+        }
+    };
+    return SelectInteractionExtend;
+}());
+exports.SelectInteractionExtend = SelectInteractionExtend;
+var conditionType;
+(function (conditionType) {
+    conditionType["altKeyOnly"] = "altKeyOnly";
+    conditionType["altShiftKeysOnly"] = "altShiftKeysOnly";
+    conditionType["click"] = "click";
+    conditionType["doubleClick"] = "doubleClick";
+    conditionType["focus"] = "focus";
+    conditionType["mouseActionButton"] = "mouseActionButton";
+    conditionType["mouseOnly"] = "mouseOnly";
+    conditionType["noModifierKeys"] = "noModifierKeys";
+    conditionType["penOnly"] = "penOnly";
+    conditionType["platformModifierKeyOnly"] = "platformModifierKeyOnly";
+    conditionType["pointerMove"] = "pointerMove";
+    conditionType["primaryAction"] = "primaryAction";
+    conditionType["shiftKeyOnly"] = "shiftKeyOnly";
+    conditionType["singleClick"] = "singleClick";
+    conditionType["targetNotEditable"] = "targetNotEditable";
+    conditionType["touchOnly"] = "touchOnly";
+})(conditionType || (conditionType = {}));
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+module.exports = ol.events.condition;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var angular = __webpack_require__(1);
+var interaction_1 = __webpack_require__(7);
+var map_component_1 = __webpack_require__(0);
+var draw_component_extend_1 = __webpack_require__(41);
 var DrawInteractionComponent = /** @class */ (function (_super) {
     __extends(DrawInteractionComponent, _super);
     function DrawInteractionComponent() {
@@ -2454,7 +2682,7 @@ exports.aolInteractionDraw = __assign({ name: 'aolInteractionDraw' }, component)
 
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2506,7 +2734,7 @@ exports.DrawInteractionExtend = DrawInteractionExtend;
 
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

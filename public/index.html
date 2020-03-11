@@ -35,7 +35,6 @@
       <aol-view zoom="map.zoom" center="map.center">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
-
       <aol-layer-tile>
         <aol-source-osm></aol-source-osm>
       </aol-layer-tile>
@@ -57,16 +56,29 @@
               </aol-style-circle>
             </aol-style>
           </aol-feature>
+          <aol-feature>
+            <aol-geometry-point>
+              <aol-coordinate x="122.4" y="24"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-circle radius="map.styleCircle.radius">
+                <aol-fill color="map.styleCircle.fill"></aol-fill>
+                <aol-stroke
+                  width="map.stroke.width"
+                  line-dash="map.stroke.lineDash"
+                  line-dash-offset="map.stroke.LineDashOffet"
+                  miter-limit="map.stroke.MiterLimit"
+                ></aol-stroke>
+              </aol-style-circle>
+            </aol-style>
+          </aol-feature>
         </aol-source-vector>
       </aol-layer-vector>
       <aol-layer-webgl source="map.source[1]"></aol-layer-webgl>
-      <aol-interaction-draw
-        ng-if="map.once"
-        type="'Rectangle'"
-        on-draw-end="map.interaction.drawend(event)"
-        source="map.source[1]"
-      ></aol-interaction-draw>
-      <aol-interaction-modify source="map.source[1]"></aol-interaction-modify>
+      <aol-interaction-select
+        condition="'click'"
+        multi="false"
+      ></aol-interaction-select>
     </aol-map>
 
     <textarea
