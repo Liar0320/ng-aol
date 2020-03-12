@@ -21,16 +21,20 @@
     />
     <!-- <link rel="stylesheet" href="22" /> -->
     <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
       .map {
-        height: 500px;
-        width: 500px;
+        height: 100%;
+        width: 100%;
         display: inline-block;
       }
     </style>
   </head>
 
   <body ng-app="app" ng-cloak>
-    <!-- 测试地图1 -->
     <!-- 测试地图1 -->
     <aol-map class="map">
       <aol-view zoom="8">
@@ -43,6 +47,9 @@
       </aol-layer-tile>
       <aol-layer-vector>
         <aol-source-vector instance="source"></aol-source-vector>
+        <aol-style>
+          <aol-fill color="'#FF0000'"></aol-fill>
+        </aol-style>
       </aol-layer-vector>
       <aol-interaction-draw
         type="'Rectangle'"
