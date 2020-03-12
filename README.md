@@ -1,4 +1,5 @@
 # openlayers and angularjs
+>refer https://github.com/quentin-ol/ngx-openlayers
 
 ## used
 
@@ -39,13 +40,30 @@ npm run start
 
 ## directive
 
-| name                  | src |
-| --------------------- | --- |
-| aol-map               |     |
-| aol-view              |     |
-| aol-tile-layer        |     |
-| aol-vector-layer      |     |
-| aol-webgl-layer       |     |
-| aol-title-xyz-source  |     |
-| aol-tile-debug-source |     |
-| aol-vector-source     |     |
+| name                       | src |
+| -------------------------- | --- |
+| aol-map                    |     |
+| aol-view                   |     |
+| aol-coordinate             |     |
+| aol-collection-coordinates |     |
+| aol-layer-group            |     |
+| aol-layer-tile             |     |
+| aol-layer-vector           |     |
+| aol-layer-webgl            |     |
+| aol-source-osm             |     |
+| aol-source-vector          |     |
+| aol-feature                |     |
+| aol-geometry-point         |     |
+| aol-geometry-linestring    |     |
+| aol-geometry-polygon       |     |
+| aol-overlay                |     |
+| aol-style                  |     |
+| aol-style-circle           |     |
+| aol-style-icon             |     |
+| aol-style-fill             |     |
+| aol-style-stroke           |     |
+| aol-style-text             |     |
+| aol-interaction-default    |     |
+| aol-interaction-select     |     |
+| aol-interaction-draw       |     |
+| aol-interaction-modify     |     |
