@@ -4,6 +4,7 @@ import { Color } from 'ol/color';
 import { ColorLike } from 'ol/colorlike';
 import { Fill } from 'ol/style';
 import { styleCircleComponent, aolStyleCircle } from './circle.component';
+import { styleTextComponent } from './text.component';
 
 export class FillComponent implements ng.IController, Options {
   public componentType = 'fill';
@@ -12,7 +13,7 @@ export class FillComponent implements ng.IController, Options {
   private host: any; // StyleComponent;
   private styleHost: StyleComponent;
   private styleCircleHost: styleCircleComponent;
-  //private styleTextHost: StyleTextComponent;
+  private styleTextHost: styleTextComponent;
 
   color?: Color | ColorLike;
 
@@ -31,14 +32,18 @@ export class FillComponent implements ng.IController, Options {
     this.instance = new Fill(this);
     switch (this.host.componentType) {
       case 'style':
-        this.host.instance.setStroke(this.instance);
+        this.host.instance.setFill(this.instance);
         break;
       case 'style-circle':
         this.host.fill = this.instance;
         break;
+      case 'style-text':
+        this.host.instance.setFill(this.instance);
+        break;
       default:
         break;
     }
+    this.host.update();
   }
 
   // $postLink(){
@@ -49,7 +54,20 @@ export class FillComponent implements ng.IController, Options {
   //     this.host.instance.changed();
   //   }
   $onDestroy() {
-    this.host.instance.setFill(null);
+    switch (this.host.componentType) {
+      case 'style':
+        this.host.instance.setFill(null);
+        break;
+      case 'style-circle':
+        this.host.fill = this.instance;
+        this.host.update();
+        break;
+      case 'style-text':
+        this.host.instance.setFill(null);
+        break;
+      default:
+        break;
+    }
   }
 
   $onChanges(changes: angular.IOnChangesObject) {
@@ -65,6 +83,8 @@ export class FillComponent implements ng.IController, Options {
       case 'style-circle':
         this.host.fill = this.instance;
         break;
+      case 'style-text':
+        this.host.instance.setFill(this.instance);
       default:
         break;
     }

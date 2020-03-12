@@ -42,7 +42,7 @@ export class styleCircleComponent implements ng.IController {
   }
 
   $onDestroy() {
-    this.host.instance.setStroke(null);
+    this.host.instance.setImage(null);
   }
 
   $onChanges(changes: angular.IOnChangesObject) {

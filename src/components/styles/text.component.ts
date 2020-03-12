@@ -6,7 +6,7 @@ import Fill from 'ol/style/Fill';
 import Stroke from 'ol/style/Stroke';
 
 export class styleTextComponent implements ng.IController, Options {
-  public componentType = 'style-icon';
+  public componentType = 'style-text';
   public instance: Text;
 
   private host: StyleComponent;
