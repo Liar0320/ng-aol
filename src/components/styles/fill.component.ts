@@ -4,7 +4,7 @@ import { Color } from 'ol/color';
 import { ColorLike } from 'ol/colorlike';
 import { Fill } from 'ol/style';
 import { styleCircleComponent, aolStyleCircle } from './circle.component';
-import { styleTextComponent } from './text.component';
+import { styleTextComponent, aolStyleText } from './text.component';
 
 export class FillComponent implements ng.IController, Options {
   public componentType = 'fill';
@@ -20,7 +20,9 @@ export class FillComponent implements ng.IController, Options {
   // constructor() {}
 
   $onInit() {
-    if (this.styleCircleHost) {
+    if (this.styleTextHost) {
+      this.host = this.styleTextHost;
+    } else if (this.styleCircleHost) {
       this.host = this.styleCircleHost;
     } else if (this.styleHost) {
       this.host = this.styleHost;
@@ -36,6 +38,7 @@ export class FillComponent implements ng.IController, Options {
         break;
       case 'style-circle':
         this.host.fill = this.instance;
+        this.host.update();
         break;
       case 'style-text':
         this.host.instance.setFill(this.instance);
@@ -43,7 +46,6 @@ export class FillComponent implements ng.IController, Options {
       default:
         break;
     }
-    this.host.update();
   }
 
   // $postLink(){
@@ -82,13 +84,13 @@ export class FillComponent implements ng.IController, Options {
         break;
       case 'style-circle':
         this.host.fill = this.instance;
+        this.host.update();
         break;
       case 'style-text':
         this.host.instance.setFill(this.instance);
       default:
         break;
     }
-    this.host.update();
   }
 }
 
@@ -102,6 +104,7 @@ var aolFillComponent: angular.IComponentOptions = {
   require: {
     styleHost: `?^${aolStyle.name}`,
     styleCircleHost: `?^${aolStyleCircle.name}`,
+    styleTextHost: `?^${aolStyleText.name}`,
   },
   controller: [FillComponent],
 };
