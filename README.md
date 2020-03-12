@@ -1,52 +1,51 @@
-# Download novel from net
+# openlayers and angularjs
 
-## Show
+## used
 
-![安装](images/install01.png)
-![安装](images/doc01.png)
+```html
+<aol-map class="map">
+  <aol-view zoom="8">
+    <aol-coordinate x="122" y="24"></aol-coordinate>
+  </aol-view>
+  <aol-layer-tile>
+    <aol-source-osm></aol-source-osm>
+  </aol-layer-tile>
+  <aol-interaction-defaults
+    double-click-zoom="false"
+    mouse-wheel-zoom="true"
+  ></aol-interaction-defaults>
+</aol-map>
+```
 
 ## Depedency
 
-- [cherrio](https://cheerio.js.org/) Fast, flexible & lean implementation of core jQuery designed specifically for the server.
-- [inquirer](https://github.com/SBoudrias/Inquirer.js) A collection of common interactive command line user interfaces.
+- [openlayers](https://openlayers.org/) A high-performance, feature-packed library for all your mapping needs.
+- [angularjs](https://angularjs.org/)
 
 ## Install
 
 Clone the repo using Git:
 
-```
-git clone https://github.com/Liar0320/spider.git
+```base
+git clone https://github.com/Liar0320/gis.develop.git
 ```
 
 Alternatively you can download this repository and then:
 
-```
+```base
 npm i
-npm run start
+npm run dev
 ```
 
-## Configuration options
+## directive
 
-#### timeout
-
-Timeout for each request.
-
-default value: 15000
-
-#### maxThreadExist
-
-The maximum number of threads that exist at one time, that is, the number of asynchronous downloads that are started at the same time.
-
-default value: 20
-
-#### rePullCount
-
-The number of times the request was re initiated if there was a request failure.
-
-default value: 4
-
-#### downloadDirector
-
-Root of download directory
-
-default value: join(\_\_dirname, './download')
+| name                  | src |
+| --------------------- | --- |
+| aol-map               |     |
+| aol-view              |     |
+| aol-tile-layer        |     |
+| aol-vector-layer      |     |
+| aol-webgl-layer       |     |
+| aol-title-xyz-source  |     |
+| aol-tile-debug-source |     |
+| aol-vector-source     |     |
