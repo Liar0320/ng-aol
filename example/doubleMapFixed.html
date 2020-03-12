@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      gis开发
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
+      type="text/css"
+    />
+    <!-- <link rel="stylesheet" href="22" /> -->
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .map {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+      }
+      .mapContainer {
+        display: flex;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body ng-app="app" ng-cloak>
+    <div class="mapContainer">
+      <!-- 测试地图1 -->
+      <aol-map class="map">
+        <aol-layer-tile>
+          <aol-source-xyz
+            url="'http://mt2.google.cn/vt/lyrs=m@180000000&hl=zh-CN&gl=cn&src=app&x={x}&y={y}&z={z}&s=Gal'"
+          ></aol-source-xyz>
+        </aol-layer-tile>
+        <div ng-include="'template'"></div>
+      </aol-map>
+      <aol-map class="map">
+        <aol-layer-tile>
+          <aol-source-osm></aol-source-osm>
+        </aol-layer-tile>
+        <div ng-include="'template'"></div>
+      </aol-map>
+      <script type="text/ng-template" id="template">
+          <aol-view zoom="14" >
+            <aol-coordinate x="121.55" y="29.88"></aol-coordinate>
+          </aol-view>
+          <aol-layer-vector>
+            <aol-source-vector>
+              <aol-feature>
+                <aol-geometry-point>
+                  <aol-coordinate x="121.55" y="29.88"></aol-coordinate>
+                </aol-geometry-point>
+                <aol-style>
+                  <aol-style-circle radius="5">
+                    <aol-fill color="'#FF0000'"></aol-fill>
+                  </aol-style-circle>
+                  <aol-style-text text="'[121.55,29.88]'" offset-y='10'></aol-style-text>
+                </aol-style>
+              </aol-feature>
+            </aol-source-vector>
+          </aol-layer-vector>
+          <aol-interaction-defaults
+          double-click-zoom="false"
+          mouse-wheel-zoom="true"
+        ></aol-interaction-defaults>
+      </script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <script src="../dist/aol.js"></script>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
