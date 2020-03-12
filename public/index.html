@@ -21,9 +21,14 @@
     />
     <!-- <link rel="stylesheet" href="22" /> -->
     <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
       .map {
-        height: 500px;
-        width: 500px;
+        height: 100%;
+        width: 100%;
         display: inline-block;
       }
     </style>
@@ -31,54 +36,24 @@
 
   <body ng-app="app" ng-cloak>
     <!-- 测试地图1 -->
-    <aol-map class="map" on-pointer-move="map.pointermove(event)">
-      <aol-view zoom="map.zoom" center="map.center">
+    <aol-map class="map">
+      <aol-view zoom="8">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
       <aol-layer-tile>
-        <aol-source-osm></aol-source-osm>
+        <aol-source-xyz
+          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+        ></aol-source-xyz>
       </aol-layer-tile>
       <aol-layer-vector>
-        <aol-source-vector features="map.features" instance="map.source[1]">
-          <aol-feature>
-            <aol-geometry-point>
-              <aol-coordinate x="122.2" y="24"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-circle radius="map.styleCircle.radius">
-                <aol-fill color="map.styleCircle.fill"></aol-fill>
-                <aol-stroke
-                  width="map.stroke.width"
-                  line-dash="map.stroke.lineDash"
-                  line-dash-offset="map.stroke.LineDashOffet"
-                  miter-limit="map.stroke.MiterLimit"
-                ></aol-stroke>
-              </aol-style-circle>
-            </aol-style>
-          </aol-feature>
-          <aol-feature>
-            <aol-geometry-point>
-              <aol-coordinate x="122.4" y="24"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-circle radius="map.styleCircle.radius">
-                <aol-fill color="map.styleCircle.fill"></aol-fill>
-                <aol-stroke
-                  width="map.stroke.width"
-                  line-dash="map.stroke.lineDash"
-                  line-dash-offset="map.stroke.LineDashOffet"
-                  miter-limit="map.stroke.MiterLimit"
-                ></aol-stroke>
-              </aol-style-circle>
-            </aol-style>
-          </aol-feature>
-        </aol-source-vector>
+        <aol-source-vector instance="source"></aol-source-vector>
       </aol-layer-vector>
-      <aol-layer-webgl source="map.source[1]"></aol-layer-webgl>
-      <aol-interaction-select
-        condition="'click'"
-        multi="false"
-      ></aol-interaction-select>
+      <aol-interaction-draw
+        type="'Circle'"
+        source="source"
+        on-draw-end="map.interaction.drawend(event)"
+      ></aol-interaction-draw>
+      <aol-interaction-modify source="source"></aol-interaction-modify>
     </aol-map>
 
     <textarea

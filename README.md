@@ -34,7 +34,7 @@ Alternatively you can download this repository and then:
 
 ```base
 npm i
-npm run dev
+npm run start
 ```
 
 ## directive
