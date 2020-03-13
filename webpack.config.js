@@ -2,23 +2,26 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-10 16:54:44
+ * @Last Modified time: 2020-03-13 15:32:42
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
 /** @type { import("webpack").Configuration } */
-module.exports = {
-  mode: 'development',
+const webpackConfig = {
+  // mode: 'development',
   entry: path.join(__dirname, 'src', 'index'),
   // watch: true,
   output: {
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/dist/',
-    filename: 'aol.js',
+    filename: () => {
+      return webpackConfig.mode === 'production' ? 'aol.min.js' : 'aol.js';
+    },
     chunkFilename: '[name].js',
   },
   module: {
@@ -75,9 +78,9 @@ module.exports = {
     },
   },
   // https://webpack.docschina.org/concepts/mode/#mode-production
-  optimization: {
-    minimize: false,
-  },
+  // optimization: {
+  //   minimize: false,
+  // },
   target: 'web',
   devtool: 'source-map',
   devServer: {
@@ -102,7 +105,8 @@ module.exports = {
         // console.log(request);
         // https://segmentfault.com/q/1010000021965610?_ea=33440450
         // https://blog.meathill.com/fe-tool-chain/webpack-4-notes.html
-        if (request === 'ol/layer/WebGLPoints') return callback();
+        /** 先关闭webgl */
+        // if (request === 'ol/layer/WebGLPoints') return callback();
 
         return callback(null, request.replace(/\//g, '.'));
       }
@@ -110,3 +114,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = webpackConfig;
