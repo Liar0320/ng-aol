@@ -4,8 +4,9 @@
 
 ## demo
 
-[https://liar0320.github.io/ng-aol/example.project/](https://liar0320.github.io/ng-aol/example.project/);
-[https://liar0320.github.io/ng-aol/example/](https://liar0320.github.io/ng-aol/example/);
+[https://liar0320.github.io/ng-aol/example.project/](https://liar0320.github.io/ng-aol/example.project/)
+
+[https://liar0320.github.io/ng-aol/example/](https://liar0320.github.io/ng-aol/example/)
 
 ## used
 
