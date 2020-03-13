@@ -1,5 +1,11 @@
 # openlayers and angularjs
->refer https://github.com/quentin-ol/ngx-openlayers
+
+> refer [https://github.com/quentin-ol/ngx-openlayers](https://github.com/quentin-ol/ngx-openlayers);
+
+## demo
+
+[https://liar0320.github.io/ng-aol/example.project/](https://liar0320.github.io/ng-aol/example.project/);
+[https://liar0320.github.io/ng-aol/example/](https://liar0320.github.io/ng-aol/example/);
 
 ## used
 
@@ -40,30 +46,32 @@ npm run start
 
 ## directive
 
-| name                       | src |
-| -------------------------- | --- |
-| aol-map                    |     |
-| aol-view                   |     |
-| aol-coordinate             |     |
-| aol-collection-coordinates |     |
-| aol-layer-group            |     |
-| aol-layer-tile             |     |
-| aol-layer-vector           |     |
-| aol-layer-webgl            |     |
-| aol-source-osm             |     |
-| aol-source-vector          |     |
-| aol-feature                |     |
-| aol-geometry-point         |     |
-| aol-geometry-linestring    |     |
-| aol-geometry-polygon       |     |
-| aol-overlay                |     |
-| aol-style                  |     |
-| aol-style-circle           |     |
-| aol-style-icon             |     |
-| aol-style-fill             |     |
-| aol-style-stroke           |     |
-| aol-style-text             |     |
-| aol-interaction-default    |     |
-| aol-interaction-select     |     |
-| aol-interaction-draw       |     |
-| aol-interaction-modify     |     |
+| name                        | src |
+| --------------------------- | --- |
+| aol-map                     |     |
+| aol-view                    |     |
+| aol-coordinate              |     |
+| aol-collection-coordinates  |     |
+| aol-layer-group             |     |
+| aol-layer-tile              |     |
+| aol-layer-vector            |     |
+| aol-layer-webgl             |     |
+| aol-source-osm              |     |
+| aol-source-tiledebug        |     |
+| aol-source-vector           |     |
+| aol-feature                 |     |
+| aol-geometry-point          |     |
+| aol-geometry-linestring     |     |
+| aol-geometry-polygon        |     |
+| aol-overlay                 |     |
+| aol-style                   |     |
+| aol-style-circle            |     |
+| aol-style-icon              |     |
+| aol-style-fill              |     |
+| aol-style-stroke            |     |
+| aol-style-text              |     |
+| aol-interaction-default     |     |
+| aol-interaction-select      |     |
+| aol-interaction-draw        |     |
+| aol-interaction-modify      |     |
+| aol-interaction-draganddrop |     |
