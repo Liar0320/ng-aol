@@ -22,8 +22,8 @@ import {
 } from './coordinate.component';
 import {
   aolStyle,
-  aolStroke,
-  aolFill,
+  aolStyleStroke,
+  aolStyleFill,
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
@@ -65,11 +65,11 @@ function registerComponent(component: any) {
   aolCollectionCoordinates,
   /**样式组件 */
   aolStyle,
-  aolStroke,
+  aolStyleStroke,
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
-  aolFill,
+  aolStyleFill,
   /**domTOMap */
   aolOverlay,
   /**交互 */
