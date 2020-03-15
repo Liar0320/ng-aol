@@ -60,6 +60,7 @@ npm run start
 | aol-source-osm              |     |
 | aol-source-tiledebug        |     |
 | aol-source-vector           |     |
+| aol-source-cluster          |     |
 | aol-feature                 |     |
 | aol-geometry-point          |     |
 | aol-geometry-linestring     |     |

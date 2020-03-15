@@ -1,5 +1,6 @@
 import { SourceComponent, sourceComponentConfig } from "./source.component";
-import Cluster, { Options } from "ol/source/Cluster";
+import { Cluster  } from "ol/source";
+import { Options  } from "ol/source/Cluster";
 import { Feature } from "ol";
 import { Geometry, Point } from "ol/geom";
 import { Vector } from "ol/source";
@@ -21,6 +22,7 @@ export class SourceClusterComponent extends SourceComponent
   //   }
 
   $onInit() {
+    if(!this.source) return ;
     this.instance = new Cluster(this);
     this._register(this.instance);
   }
@@ -29,6 +31,7 @@ export class SourceClusterComponent extends SourceComponent
     let properties: { [index: string]: any } = {};
 
     if (!this.instance) {
+      this.$onInit();
       return;
     }
     for (let key in changes) {
@@ -38,10 +41,11 @@ export class SourceClusterComponent extends SourceComponent
     }
 
     this.instance.setProperties(properties, false);
-    // if (changes.hasOwnProperty('url')) {
-    //   this.instance = new XYZ(this);
-    //   this._register(this.instance);
-    // }
+    if (changes.hasOwnProperty('source')) {
+      this.$onDestroy();
+      this.instance = new Cluster(this);
+      this._register(this.instance);
+    }
   }
 }
 

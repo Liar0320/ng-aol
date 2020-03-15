@@ -45,35 +45,84 @@
           url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
         ></aol-source-xyz>
       </aol-layer-tile>
+      <aol-layer-group>
+        <aol-layer-vector max-resolution="0.051243">
+          <aol-source-vector instance="map.source[1]">
+            <aol-feature ng-repeat="feature in map.collection track by $index">
+              <aol-geometry-point>
+                <aol-coordinate
+                  x="feature.lat"
+                  y="feature.lon"
+                ></aol-coordinate>
+                <aol-style>
+                  <aol-style-icon
+                    src="feature.logo"
+                    scale="0.5"
+                    rotation="feature.rotation"
+                  ></aol-style-icon>
+                </aol-style>
+              </aol-geometry-point>
+            </aol-feature>
+          </aol-source-vector>
+        </aol-layer-vector>
+      </aol-layer-group>
       <aol-layer-vector>
-        <aol-source-vector instance="source"></aol-source-vector>
+        <aol-source-cluster source="map.source[1]"></aol-source-cluster>
+        <aol-style>
+          <aol-style-circle radius="10">
+            <aol-style-fill color="'#FF0000'"></aol-style-fill>
+            <aol-style-stroke width="2" ></aol-style-stroke>
+          </aol-style-circle>
+        </aol-style>
       </aol-layer-vector>
-      <aol-interaction-draw
-        type="'Circle'"
-        source="source"
-        on-draw-end="map.interaction.drawend(event)"
-      ></aol-interaction-draw>
-      <aol-interaction-modify source="source"></aol-interaction-modify>
+      <aol-interaction-defaults
+        double-click-zoom="false"
+        mouse-wheel-zoom="true"
+      ></aol-interaction-defaults>
     </aol-map>
-
-    <textarea
-      name=""
-      id=""
-      cols="30"
-      rows="10"
-      ng-model="property"
-      ng-change="reset()"
-    ></textarea>
-    <button ng-click="reset()">更改属性</button>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    gis开发
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
   </body>
+  <script>
+    angular
+  .module('app', ['aol'])
+  .run([
+    '$log',
+    '$rootScope',
+    'apiCollection',
+    function($log, $rootScope, apiCollection) {
+      $log.log('项目启动');
+      const map = {};
+
+      function init() {
+        map.collection = apiCollection.queryCollection();
+      }
+      init();
+
+      $rootScope.map = map;
+    },
+  ])
+  .service('apiCollection', [
+    '$http',
+    function($http) {
+      this.queryCollection = function() {
+        return Mock.mock({
+          'list|3000': [
+            {
+              'id|+1': 1,
+              'name|2': '@first',
+              'lon|20-30.3': 1,
+              'lat|120-130.3': 1,
+              'rotation|-3-3.5': 1,
+              logo: 'https://lanshuimu.com/images/ship.png',
+            },
+          ],
+        }).list;
+      };
+    },
+  ]);
+
+  </script>
 </html>
