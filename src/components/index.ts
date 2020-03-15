@@ -10,7 +10,13 @@ import {
   aolLayerGroup,
   aolLayerWebgl,
 } from './layers/index';
-import { aolSourceXyz, aolSourceOsm, aolSourceVector, aolSourceCluster } from './sources/index';
+import {
+  aolSourceXyz,
+  aolSourceOsm,
+  aolSourceVector,
+  aolSourceCluster,
+  aolSourceTiledebug,
+} from './sources/index';
 import {
   aolGeometryLinestring,
   aolGeometryPoint,
@@ -22,8 +28,8 @@ import {
 } from './coordinate.component';
 import {
   aolStyle,
-  aolStroke,
-  aolFill,
+  aolStyleStroke,
+  aolStyleFill,
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
@@ -34,6 +40,7 @@ import {
   aolInteractionDefaults,
   aolInteractionModify,
   aolInteractionSelect,
+  aolInteractionDraganddrop,
 } from './interactions';
 import { aolInteractionDraw } from './interactions/draw.component';
 
@@ -55,6 +62,7 @@ function registerComponent(component: any) {
   aolSourceOsm,
   aolSourceVector,
   aolSourceCluster,
+  aolSourceTiledebug,
   /**要素组件 */
   aolFeature,
   /**geo组件 */
@@ -66,11 +74,11 @@ function registerComponent(component: any) {
   aolCollectionCoordinates,
   /**样式组件 */
   aolStyle,
-  aolStroke,
+  aolStyleStroke,
   aolStyleCircle,
   aolStyleIcon,
   aolStyleText,
-  aolFill,
+  aolStyleFill,
   /**domTOMap */
   aolOverlay,
   /**交互 */
@@ -78,6 +86,7 @@ function registerComponent(component: any) {
   aolInteractionDraw,
   aolInteractionModify,
   aolInteractionSelect,
+  aolInteractionDraganddrop,
 ].forEach(component => {
   registerComponent(component);
 });

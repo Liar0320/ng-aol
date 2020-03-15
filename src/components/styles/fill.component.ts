@@ -28,7 +28,7 @@ export class FillComponent implements ng.IController, Options {
       this.host = this.styleHost;
     } else {
       throw new Error(
-        'aol-fill must be applied to a Style or styleCircleHost or StyleText component',
+        'aol-style-fill must be applied to a Style or styleCircleHost or StyleText component',
       );
     }
     this.instance = new Fill(this);
@@ -109,7 +109,7 @@ var aolFillComponent: angular.IComponentOptions = {
   controller: [FillComponent],
 };
 
-export const aolFill = {
-  name: 'aolFill',
+export const aolStyleFill = {
+  name: 'aolStyleFill',
   ...aolFillComponent,
 };

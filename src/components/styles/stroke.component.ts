@@ -116,7 +116,7 @@ var aolStrokeComponent: angular.IComponentOptions = {
   controller: [StrokeComponent],
 };
 
-export const aolStroke = {
-  name: 'aolStroke',
+export const aolStyleStroke = {
+  name: 'aolStyleStroke',
   ...aolStrokeComponent,
 };

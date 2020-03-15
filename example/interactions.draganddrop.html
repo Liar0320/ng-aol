@@ -31,6 +31,12 @@
         width: 100%;
         display: inline-block;
       }
+      .mapController {
+        position: fixed;
+        width: 100%;
+        top: 15px;
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -46,29 +52,26 @@
           url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
         ></aol-source-xyz>
       </aol-layer-tile>
-      <aol-layer-tile>
-        <aol-source-tiledebug></aol-source-tiledebug>
-      </aol-layer-tile>
+      <aol-layer-vector>
+        <aol-source-vector instance="source"></aol-source-vector>
+      </aol-layer-vector>
+      <aol-interaction-draganddrop
+        format-constructors="['GeoJSON']"
+        source="source"
+      ></aol-interaction-draganddrop>
     </aol-map>
-
-    <textarea
-      name=""
-      id=""
-      cols="30"
-      rows="10"
-      ng-model="property"
-      ng-change="reset()"
-    ></textarea>
-    <button ng-click="reset()">更改属性</button>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    gis开发
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <div class="mapController">
+      <div>
+        <p>
+          本示例实现了从文件夹中拖拉文件到浏览器从而加载地理数据的功能，地理数据是以图片的形式展示在浏览器。
+        </p>
+        <a href="./assets/01.GeoJSON" download>下载geoJson文件</a>
+      </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
-  <script type="text/javascript" src="aol.min.js"></script></body>
+    <script src="../dist/aol.min.js"></script>
+    <script src="./bootstrap.js"></script>
+  </body>
 </html>
