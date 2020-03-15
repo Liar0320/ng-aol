@@ -10,7 +10,7 @@ import {
   aolLayerGroup,
   aolLayerWebgl,
 } from './layers/index';
-import { aolSourceXyz, aolSourceOsm, aolSourceVector } from './sources/index';
+import { aolSourceXyz, aolSourceOsm, aolSourceVector, aolSourceCluster } from './sources/index';
 import {
   aolGeometryLinestring,
   aolGeometryPoint,
@@ -54,6 +54,7 @@ function registerComponent(component: any) {
   aolSourceXyz,
   aolSourceOsm,
   aolSourceVector,
+  aolSourceCluster,
   /**要素组件 */
   aolFeature,
   /**geo组件 */
