@@ -55,7 +55,18 @@ export class StrokeComponent implements ng.IController, Options {
   //   }
 
   $onDestroy() {
-    this.host.instance.setStroke(null);
+    // this.host.instance.setStroke(null);
+    switch (this.host.componentType) {
+      case 'style':
+        this.host.instance.setStroke(null);
+        break;
+      case 'style-circle':
+        this.host.stroke = null;
+        this.host.update();
+        break;
+      default:
+        break;
+    }
   }
 
   $onChanges(changes: angular.IOnChangesObject) {

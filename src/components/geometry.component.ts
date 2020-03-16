@@ -1,6 +1,8 @@
+import * as angular from 'angular';
 import aolFeature from './feature.component';
 import { FeatureComponent } from './feature.component';
 import { LineString, Point, Polygon } from 'ol/geom';
+import BaseEvent from 'ol/events/Event';
 
 export class GeometryLinestringComponent implements ng.IController {
   public componentType: string = 'geometry-linestring';
@@ -10,9 +12,11 @@ export class GeometryLinestringComponent implements ng.IController {
   //   constructor() {
   //     // console.log('instancing aol-geometry-linestring');
   //   }
+  public change: Function = angular.noop;
 
   $onInit() {
     this.instance = new LineString([]);
+    this.instance.on('change', (event: BaseEvent) => this.change({ event }));
     this.host.instance.setGeometry(this.instance);
   }
   $onDestroy() {
@@ -20,7 +24,9 @@ export class GeometryLinestringComponent implements ng.IController {
   }
 }
 var aolGeometryLinestringComponent: angular.IComponentOptions = {
-  bindings: {},
+  bindings: {
+    change: '&?',
+  },
   require: {
     host: `^${aolFeature.name}`,
   },
