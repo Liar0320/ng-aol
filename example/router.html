@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      轨迹图层案例
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
+      type="text/css"
+    />
+    <!-- <link rel="stylesheet" href="22" /> -->
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .map {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body ng-app="app" ng-cloak>
+    <!-- 测试地图1 -->
+    <aol-map class="map">
+      <aol-view zoom="8">
+        <aol-coordinate x="122" y="24"></aol-coordinate>
+      </aol-view>
+      <aol-layer-tile>
+        <aol-source-xyz
+          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+        ></aol-source-xyz>
+      </aol-layer-tile>
+      <aol-interaction-defaults></aol-interaction-defaults>
+
+      <!-- 轨迹图层 轨迹点 和 轨迹线 -->
+      <aol-layer-vector declutter="true">
+        <aol-source-vector>
+          <!-- 轨迹线 -->
+          <aol-feature>
+            <aol-geometry-linestring>
+              <aol-collection-coordinates
+                coordinates="tracks.linestring"
+              ></aol-collection-coordinates>
+            </aol-geometry-linestring>
+          </aol-feature>
+          <!-- 轨迹箭头 -->
+          <aol-feature ng-repeat="item in tracks.arrow">
+            <aol-geometry-point>
+              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-icon
+                src="'https://openlayers.org/en/latest/examples/data/arrow.png'"
+                rotation="item.rotate"
+              ></aol-style-icon>
+              <!-- <aol-style-text
+                text="item.time"
+                rotation="item.rotate"
+                offset-y="10"
+              ></aol-style-text> -->
+            </aol-style>
+          </aol-feature>
+          <!-- 轨迹点 -->
+          <aol-feature ng-repeat="item in tracks.point">
+            <aol-geometry-point>
+              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-circle radius="5">
+                <aol-style-fill color="'#FF0000'"></aol-style-fill>
+                <aol-style-stroke width="1" line-dash="[10]"></aol-style-stroke>
+              </aol-style-circle>
+              <aol-style-text
+                text="item.time"
+                rotation="item.rotate"
+                offset-y="-15"
+                offset-x="60"
+              >
+              </aol-style-text>
+            </aol-style>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
+
+      <!-- 开始坐标 -->
+      <aol-overlay
+        ng-if="tracks.startMarker"
+        position="tracks.startMarker.position"
+        positioning="'center-center'"
+      >
+        <div style="position: relative;">
+          <img
+            src="https://openlayers.org/en/latest/examples/data/icon.png"
+            width="25"
+            height="25"
+            alt=""
+          />
+          <p style="position: absolute;">
+            {{tracks.startMarker.msg || '开始'}}
+          </p>
+        </div>
+      </aol-overlay>
+      <!-- 截至坐标 -->
+      <aol-overlay
+        ng-if="tracks.endMarker"
+        position="tracks.endMarker.position"
+        positioning="'center-center'"
+      >
+        <div style="position: relative;">
+          <img
+            src="https://openlayers.org/en/latest/examples/data/icon.png"
+            width="25"
+            height="25"
+            alt=""
+          />
+          <p style="position: absolute;">
+            {{tracks.startMarker.msg || '结束'}}
+          </p>
+        </div>
+      </aol-overlay>
+    </aol-map>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <script src="../dist/aol.min.js"></script>
+    <script>
+      angular.module('app', ['aol']).run([
+        '$log',
+        '$rootScope',
+        '$http',
+        '$interval',
+        function($log, $rootScope, $http, $interval) {
+          $log.log('项目启动');
+          // 轨迹类
+          function Tracks(resource) {
+            var instance = this;
+            // 路径
+            this.linestring = [];
+            // 点
+            this.point = [];
+            // 线
+            this.arrow = [];
+            // 开始坐标
+            this.startMarker = null;
+            // 结束坐标
+            this.endMarker = null;
+
+            function createMarker(point) {
+              if (!point) return null;
+              point.position = [point.lon, point.lat];
+              return point;
+            }
+
+            var average = function(nums) {
+              return nums.reduce(function(acc, val) {
+                return (acc + val) / nums.length;
+              }, nums[0]);
+            };
+
+            this.init = function() {
+              resource = resource || [];
+              resource.forEach(function(item, index, arr) {
+                instance.linestring.push([item.lon, item.lat]);
+                if (index !== 0) {
+                  let prevItem = arr[index - 1];
+                  item.__rotate = getRotation(
+                    [item.lon, item.lat],
+                    [prevItem.lon, prevItem.lat],
+                  );
+                  instance.arrow.push({
+                    lon: average.call(null, [item.lon, prevItem.lon]),
+                    lat: average.call(null, [item.lat, prevItem.lat]),
+                    rotate: item.__rotate,
+                  });
+                }
+              });
+              this.startMarker = createMarker(resource[0] || null);
+              this.endMarker = createMarker(
+                resource.length > 0 ? resource[resource.length - 1] : null,
+              );
+              this.point = resource;
+            };
+            this.init();
+          }
+          /**
+           * 处理点的方向
+           * @param {[number,number]} start;
+           * @param {[number,number]} end;
+           */
+          function getRotation(start, end) {
+            const dx = end[0] - start[0];
+            const dy = end[1] - start[1];
+            const rotation = Math.atan2(dy, dx);
+
+            return Math.PI - rotation;
+          }
+
+          function getTracksList() {
+            return $http.get('./assets/01.json').then(function(res) {
+              return res.data;
+            });
+          }
+
+          function init() {
+            getTracksList().then(function(resource) {
+              $rootScope.tracks = new Tracks(resource);
+            });
+          }
+          init();
+        },
+      ]);
+    </script>
+  </body>
+</html>
