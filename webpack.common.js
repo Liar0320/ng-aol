@@ -2,7 +2,7 @@
  * @Author: lich
  * @Date: 2019-10-24 17:56:09
  * @Last Modified by: lich
- * @Last Modified time: 2020-03-13 15:32:42
+ * @Last Modified time: 2020-03-17 10:47:20
  * @TODO:采用cdn加速
  */
 // / <reference types="./nodejs.d.ts" />
@@ -19,11 +19,10 @@ const webpackConfig = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/dist/',
-    filename: () => {
-      return webpackConfig.mode === 'production' ? 'aol.min.js' : 'aol.js';
-    },
+    filename: 'aol.js',
     chunkFilename: '[name].js',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
@@ -82,35 +81,11 @@ const webpackConfig = {
   //   minimize: false,
   // },
   target: 'web',
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    // inline: true,
-    // compress: true,
-    host: '127.0.0.1',
-    port: 8080,
-    open: true,
-  },
   plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
   externals: [
     // 引入包的默认 entry
     {
-      jquery: 'jQuery',
       angular: 'angular',
-    },
-    // 引入包里的特定部分
-    function(context, request, callback) {
-      // 所有 ol 包里的内容
-      if (/^ol\/?/.test(request)) {
-        // console.log(request);
-        // https://segmentfault.com/q/1010000021965610?_ea=33440450
-        // https://blog.meathill.com/fe-tool-chain/webpack-4-notes.html
-        /** 先关闭webgl */
-        // if (request === 'ol/layer/WebGLPoints') return callback();
-
-        return callback(null, request.replace(/\//g, '.'));
-      }
-      callback();
     },
   ],
 };

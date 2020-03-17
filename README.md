@@ -2,13 +2,13 @@
 
 > refer [https://github.com/quentin-ol/ngx-openlayers](https://github.com/quentin-ol/ngx-openlayers);
 
-## demo
+## 案例
 
 [https://liar0320.github.io/ng-aol/example.project/](https://liar0320.github.io/ng-aol/example.project/)
 
 [https://liar0320.github.io/ng-aol/example/](https://liar0320.github.io/ng-aol/example/)
 
-## used
+## 使用
 
 ```html
 <aol-map class="map">
@@ -25,12 +25,12 @@
 </aol-map>
 ```
 
-## Depedency
+## 主要依赖
 
 - [openlayers](https://openlayers.org/) A high-performance, feature-packed library for all your mapping needs.
 - [angularjs](https://angularjs.org/)
 
-## Install
+## 安装
 
 Clone the repo using Git:
 
@@ -45,7 +45,17 @@ npm i
 npm run start
 ```
 
-## directive
+## 打包
+
+此处拆分 webgl 模块 因为没有找到好的引入方式 打包体积会翻倍增长
+
+```base
+npm run build #打包当前项目
+npm run core  #ngol模块不包含webgl
+npm run all   #打包ngol全部ngol模块
+```
+
+## 指令
 
 | name                        | src |
 | --------------------------- | --- |
