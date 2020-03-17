@@ -1,39 +1,44 @@
-import { SourceComponent, sourceComponentConfig } from './source.component';
+import { sourceComponentConfig } from './source.component';
 import { XYZ } from 'ol/source';
+import { Options } from 'ol/source/XYZ';
 import { LayerTileComponent, aolLayerTile } from '../layers';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import { LoadFunction, UrlFunction } from 'ol/Tile';
 import { Size } from 'ol/size';
+import { ProjectionLike } from 'ol/proj';
+import { SourceXYZExtend } from './xyz.component.extend';
 
-export class SourceXYZComponent extends SourceComponent
-  implements angular.IController {
+export class SourceXYZComponent extends SourceXYZExtend
+  implements angular.IController, Options {
   public instance: XYZ;
   public componentType: string = 'sourceXYZComponent';
   public host: LayerTileComponent;
 
-  cacheSize: number;
-  crossOrigin: string;
-  opaque: boolean;
-  projection: string;
-  reprojectionErrorThreshold: number;
-  minZoom: number;
-  maxZoom: number;
-  tileGrid: TileGrid;
+  cacheSize?: number;
+  crossOrigin?: string;
+  opaque?: boolean;
+  projection?: ProjectionLike;
+  reprojectionErrorThreshold?: number;
+  maxZoom?: number;
+  minZoom?: number;
+  tileGrid?: TileGrid;
   tileLoadFunction?: LoadFunction;
-  tilePixelRatio: number;
-  tileSize: number | Size;
-  tileUrlFunction: UrlFunction;
-  url: string;
-  urls: string[];
-  wrapX: boolean;
-  transition: number;
-  zDirection: number;
+  tilePixelRatio?: number;
+  tileSize?: number | Size;
+  tileUrlFunction?: UrlFunction;
+  url?: string;
+  urls?: string[];
+  wrapX?: boolean;
+  transition?: number;
+  zDirection?: number;
 
   //   constructor(host: angular.IRootElementService) {
 
   //   }
 
   $onInit() {
+    super.decorate();
+
     this.instance = new XYZ(this);
     this._register(this.instance);
   }
@@ -51,9 +56,10 @@ export class SourceXYZComponent extends SourceComponent
     }
 
     this.instance.setProperties(properties, false);
-    if (changes.hasOwnProperty('url')) {
-      this.instance = new XYZ(this);
-      this._register(this.instance);
+    if (changes.hasOwnProperty('url') || changes.hasOwnProperty('tileGrid')) {
+      // this.instance = new XYZ(this);
+      // this._register(this.instance);
+      this.$onInit();
     }
   }
 }

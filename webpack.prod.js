@@ -20,7 +20,9 @@ const prodConfig = merge(common, {
         // https://segmentfault.com/q/1010000021965610?_ea=33440450
         // https://blog.meathill.com/fe-tool-chain/webpack-4-notes.html
         /** 先关闭webgl */
-        // if (request === 'ol/layer/WebGLPoints') return callback();
+        const exclude = ['ol/layer/WebGLPoints', 'ol/tilegrid/TileGrid'];
+
+        if (request === exclude[1]) return callback();
 
         return callback(null, request.replace(/\//g, '.'));
       }
@@ -28,7 +30,5 @@ const prodConfig = merge(common, {
     },
   ],
 });
-
-console.log(prodConfig);
 
 module.exports = prodConfig;
