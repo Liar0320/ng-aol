@@ -1,5 +1,5 @@
 import * as angular from 'angular';
-import aolModule from './components/index';
+import aolModule from './core/index';
 
 angular.module('app', [aolModule.name]).run([
   '$log',
