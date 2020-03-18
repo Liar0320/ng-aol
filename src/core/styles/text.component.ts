@@ -36,10 +36,12 @@ export class styleTextComponent implements ng.IController, Options {
     }
     this.instance = new Text(this);
     this.host.instance.setText(this.instance);
+    this.host.update();
   }
 
   $onDestroy() {
     this.host.instance.setText(null);
+    this.host.update();
   }
 
   //@TODO: 增加其他属性的监听
