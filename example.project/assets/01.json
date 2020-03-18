@@ -1,0 +1,7022 @@
+[
+  {
+    "cog": 238.1,
+    "lat": 23.3271,
+    "lon": 117.4595,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "JIE FU ZHOU 3",
+    "zwcm": "介甫舟3"
+  },
+  {
+    "cog": 21.0,
+    "lat": 27.86382,
+    "lon": 49.58092,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "MO ZHI",
+    "zwcm": "莫枝"
+  },
+  {
+    "cog": 176.3,
+    "lat": 22.90578,
+    "lon": 113.58562,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DE SHANG FU",
+    "zwcm": "德尚福"
+  },
+  {
+    "cog": 105.8,
+    "lat": 30.08643,
+    "lon": 121.95355,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XINHAIZHOU7",
+    "zwcm": "新海洲7"
+  },
+  {
+    "cog": 101.0,
+    "lat": 29.88986,
+    "lon": 121.97907,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 0713",
+    "zwcm": "海巡0713"
+  },
+  {
+    "cog": 259.5,
+    "lat": 29.98002,
+    "lon": 121.91472,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07108",
+    "zwcm": "海巡07108"
+  },
+  {
+    "cog": 360.0,
+    "lat": 23.5957,
+    "lon": 117.26973,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07115",
+    "zwcm": "海巡07115"
+  },
+  {
+    "cog": 280.4,
+    "lat": 29.46147,
+    "lon": 121.53337,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07125",
+    "zwcm": "海巡07125"
+  },
+  {
+    "cog": 280.0,
+    "lat": 29.88978,
+    "lon": 121.97883,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 0715",
+    "zwcm": "海巡0715"
+  },
+  {
+    "cog": 112.7,
+    "lat": 21.29226,
+    "lon": 108.578,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG GANG HUAN YOU 1 HAO",
+    "zwcm": "甬港环油1号"
+  },
+  {
+    "cog": 270.0,
+    "lat": 29.76279,
+    "lon": 121.99433,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 18",
+    "zwcm": "甬港拖18"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.96171,
+    "lon": 121.72373,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG GANG GONG SHUI ER HAO",
+    "zwcm": "甬港供水二号"
+  },
+  {
+    "cog": 203.0,
+    "lat": 29.95652,
+    "lon": 121.72143,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG GANG BO 1006",
+    "zwcm": "甬港驳1006"
+  },
+  {
+    "cog": 122.7,
+    "lat": 29.96165,
+    "lon": 121.7238,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 6",
+    "zwcm": "甬港拖6"
+  },
+  {
+    "cog": 0.0,
+    "lat": 27.97143,
+    "lon": 120.78659,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 7",
+    "zwcm": "甬港拖7"
+  },
+  {
+    "cog": 193.2,
+    "lat": 29.98071,
+    "lon": 121.75031,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 8",
+    "zwcm": "甬港拖8"
+  },
+  {
+    "cog": 48.0,
+    "lat": 29.82538,
+    "lon": 122.22757,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 9",
+    "zwcm": "甬港拖9"
+  },
+  {
+    "cog": 345.1,
+    "lat": 29.9747,
+    "lon": 121.7418,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 1 HAO",
+    "zwcm": "甬港消拖1号"
+  },
+  {
+    "cog": 197.3,
+    "lat": 29.9567,
+    "lon": 121.72165,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG GANG HUAN BAO 1 HAO",
+    "zwcm": "甬港环保1号"
+  },
+  {
+    "cog": 297.0,
+    "lat": 29.8957,
+    "lon": 122.0867,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 2 HAO",
+    "zwcm": "甬港消拖2号"
+  },
+  {
+    "cog": 223.4,
+    "lat": 29.96375,
+    "lon": 121.72523,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 4 HAO",
+    "zwcm": "甬港引4号"
+  },
+  {
+    "cog": 132.0,
+    "lat": 29.97636,
+    "lon": 121.77776,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 20",
+    "zwcm": "甬港拖20"
+  },
+  {
+    "cog": 107.2,
+    "lat": 29.93605,
+    "lon": 121.88707,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 21",
+    "zwcm": "甬港拖21"
+  },
+  {
+    "cog": 46.2,
+    "lat": 27.97133,
+    "lon": 120.78656,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 15",
+    "zwcm": "甬港拖15"
+  },
+  {
+    "cog": 241.5,
+    "lat": 29.8958,
+    "lon": 122.0866,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 22",
+    "zwcm": "甬港拖22"
+  },
+  {
+    "cog": 93.0,
+    "lat": 21.3172,
+    "lon": 108.56327,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 3 HAO",
+    "zwcm": "甬港消拖3号"
+  },
+  {
+    "cog": 285.4,
+    "lat": 29.963,
+    "lon": 121.7243,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 52",
+    "zwcm": "甬港拖52"
+  },
+  {
+    "cog": 116.1,
+    "lat": 29.1911,
+    "lon": 121.91885,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HAI XUN 16403",
+    "zwcm": "海巡16403"
+  },
+  {
+    "cog": 96.6,
+    "lat": 30.00987,
+    "lon": 122.07481,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HAI XUN 16405",
+    "zwcm": "海巡16405"
+  },
+  {
+    "cog": 295.2,
+    "lat": 30.23356,
+    "lon": 122.22085,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HAI XUN 16401",
+    "zwcm": "海巡16401"
+  },
+  {
+    "cog": 299.4,
+    "lat": 29.90546,
+    "lon": 121.92785,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HANG JUN 1003",
+    "zwcm": "航浚1003"
+  },
+  {
+    "cog": 37.3,
+    "lat": 29.7883,
+    "lon": 122.02627,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SAN HANG TUO 911",
+    "zwcm": "三航拖911"
+  },
+  {
+    "cog": 211.3,
+    "lat": 29.9545,
+    "lon": 121.7207,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SAN HANG TUO 1004",
+    "zwcm": "三航拖1004"
+  },
+  {
+    "cog": 180.7,
+    "lat": -35.03667,
+    "lon": -56.04767,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HANG JUN 4011",
+    "zwcm": "航浚4011"
+  },
+  {
+    "cog": 235.0,
+    "lat": 22.07128,
+    "lon": 114.07465,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 11",
+    "zwcm": "永星11"
+  },
+  {
+    "cog": 325.0,
+    "lat": 38.504,
+    "lon": 118.31857,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA JIANG 606",
+    "zwcm": "华江606"
+  },
+  {
+    "cog": 334.4,
+    "lat": 29.9246,
+    "lon": 122.2455,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "BO HAI GONG 7",
+    "zwcm": "渤海供7"
+  },
+  {
+    "cog": 181.0,
+    "lat": 32.27506,
+    "lon": 122.56337,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "CHANG XIN 17",
+    "zwcm": "长鑫17"
+  },
+  {
+    "cog": 7.5,
+    "lat": 29.6698,
+    "lon": 122.13544,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HAI JIAN 169",
+    "zwcm": "海建169"
+  },
+  {
+    "cog": 178.0,
+    "lat": 39.91643,
+    "lon": 119.67675,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA JIANG 807",
+    "zwcm": "华江807"
+  },
+  {
+    "cog": 315.4,
+    "lat": 29.20282,
+    "lon": 121.94945,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "XIANG NONG DU 13",
+    "zwcm": "象农渡13"
+  },
+  {
+    "cog": 243.4,
+    "lat": 22.8622,
+    "lon": 116.56649,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 6",
+    "zwcm": "金富星6"
+  },
+  {
+    "cog": 303.0,
+    "lat": 27.86142,
+    "lon": 121.49223,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 20",
+    "zwcm": "明州20"
+  },
+  {
+    "cog": 138.2,
+    "lat": 29.93248,
+    "lon": 121.68447,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG GONG JUN 906",
+    "zwcm": "浙甬工浚906"
+  },
+  {
+    "cog": 331.0,
+    "lat": 29.88527,
+    "lon": 121.55988,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "ZHE YONG GONG TUO 921",
+    "zwcm": "浙甬工拖921"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.14548,
+    "lon": 122.02788,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "DA QIAO 001",
+    "zwcm": "大桥001"
+  },
+  {
+    "cog": 74.0,
+    "lat": 22.82314,
+    "lon": 116.60465,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 1",
+    "zwcm": "兴宁1"
+  },
+  {
+    "cog": 234.1,
+    "lat": 27.63344,
+    "lon": 121.08204,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "LE YANG 7",
+    "zwcm": "乐洋7"
+  },
+  {
+    "cog": 312.9,
+    "lat": 29.93522,
+    "lon": 121.8715,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 6",
+    "zwcm": "国海6"
+  },
+  {
+    "cog": 66.4,
+    "lat": 27.77688,
+    "lon": 121.11475,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 181",
+    "zwcm": "鄞通顺181"
+  },
+  {
+    "cog": 76.6,
+    "lat": 29.94864,
+    "lon": 121.71498,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "ZHE GONG TUO 2",
+    "zwcm": "浙工拖2"
+  },
+  {
+    "cog": 196.2,
+    "lat": 29.00491,
+    "lon": 121.86003,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 185",
+    "zwcm": "荣宁185"
+  },
+  {
+    "cog": 133.7,
+    "lat": 29.9004,
+    "lon": 121.5921,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN JUN 16",
+    "zwcm": "顺浚16"
+  },
+  {
+    "cog": 356.0,
+    "lat": 19.76274,
+    "lon": 109.15998,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XV YANG 7",
+    "zwcm": "绪扬7"
+  },
+  {
+    "cog": 357.4,
+    "lat": 29.39336,
+    "lon": 122.03364,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 195",
+    "zwcm": "荣宁195"
+  },
+  {
+    "cog": 187.9,
+    "lat": 29.4739,
+    "lon": 121.5699,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HONG YANG GONG 101",
+    "zwcm": "宏阳工101"
+  },
+  {
+    "cog": 260.0,
+    "lat": 30.3008,
+    "lon": 121.93508,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG LONG YUN 2",
+    "zwcm": "港龙运2"
+  },
+  {
+    "cog": 75.0,
+    "lat": 35.96444,
+    "lon": 120.36936,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 6",
+    "zwcm": "浙甬油6"
+  },
+  {
+    "cog": 262.0,
+    "lat": 29.1178,
+    "lon": 121.6616,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 166",
+    "zwcm": "顺行海166"
+  },
+  {
+    "cog": 259.3,
+    "lat": 29.7019,
+    "lon": 121.8255,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 122",
+    "zwcm": "荣宁122"
+  },
+  {
+    "cog": 237.7,
+    "lat": 32.02225,
+    "lon": 120.79028,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 76",
+    "zwcm": "荣宁76"
+  },
+  {
+    "cog": 221.0,
+    "lat": 23.3284,
+    "lon": 117.0313,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 518",
+    "zwcm": "永大518"
+  },
+  {
+    "cog": 79.7,
+    "lat": 26.50828,
+    "lon": 119.83744,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 289",
+    "zwcm": "永大289"
+  },
+  {
+    "cog": 127.0,
+    "lat": 30.12471,
+    "lon": 121.8203,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 12",
+    "zwcm": "联合12"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.16732,
+    "lon": 121.8727,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 100",
+    "zwcm": "荣宁100"
+  },
+  {
+    "cog": 250.0,
+    "lat": 30.19223,
+    "lon": 121.75108,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG HAI 210",
+    "zwcm": "东海210"
+  },
+  {
+    "cog": 62.3,
+    "lat": 31.92734,
+    "lon": 120.14637,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 95",
+    "zwcm": "荣宁95"
+  },
+  {
+    "cog": 317.4,
+    "lat": 29.8998,
+    "lon": 121.9824,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "GANG AN 3",
+    "zwcm": "港安3"
+  },
+  {
+    "cog": 253.1,
+    "lat": 32.19363,
+    "lon": 119.32945,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 28",
+    "zwcm": "金富星28"
+  },
+  {
+    "cog": 107.5,
+    "lat": 29.96925,
+    "lon": 121.79367,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIANG YONG 58",
+    "zwcm": "江甬58"
+  },
+  {
+    "cog": 250.0,
+    "lat": 29.49175,
+    "lon": 121.9616,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 81",
+    "zwcm": "兴宁81"
+  },
+  {
+    "cog": 57.3,
+    "lat": 29.16753,
+    "lon": 121.87273,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 38",
+    "zwcm": "荣宁38"
+  },
+  {
+    "cog": 164.1,
+    "lat": 29.19368,
+    "lon": 121.93681,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 89",
+    "zwcm": "荣宁89"
+  },
+  {
+    "cog": 46.0,
+    "lat": 24.1784,
+    "lon": 118.2807,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 518",
+    "zwcm": "双宁518"
+  },
+  {
+    "cog": 77.3,
+    "lat": 30.07705,
+    "lon": 121.98853,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 777",
+    "zwcm": "浙奉777"
+  },
+  {
+    "cog": 237.6,
+    "lat": 36.80734,
+    "lon": 122.52571,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 11",
+    "zwcm": "金富星11"
+  },
+  {
+    "cog": 245.8,
+    "lat": 29.92941,
+    "lon": 121.89533,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 3 HAO",
+    "zwcm": "甬港众联3号"
+  },
+  {
+    "cog": 165.8,
+    "lat": 29.9302,
+    "lon": 121.8897,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SI JIE 16",
+    "zwcm": "思杰16"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.18817,
+    "lon": 121.7577,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG LONG YUN 6",
+    "zwcm": "港龙运6"
+  },
+  {
+    "cog": 211.0,
+    "lat": 21.98045,
+    "lon": 113.6893,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG XING 98",
+    "zwcm": "宏兴98"
+  },
+  {
+    "cog": 1.9,
+    "lat": 29.5553,
+    "lon": 122.11162,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 11",
+    "zwcm": "宏隆11"
+  },
+  {
+    "cog": 244.0,
+    "lat": 29.89558,
+    "lon": 121.94125,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG HUAN ZHI",
+    "zwcm": "甬港环指"
+  },
+  {
+    "cog": 283.5,
+    "lat": 29.89544,
+    "lon": 121.94134,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 3",
+    "zwcm": "甬港引3"
+  },
+  {
+    "cog": 354.0,
+    "lat": 40.37701,
+    "lon": 120.6001,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN ZHAO 29",
+    "zwcm": "金兆29"
+  },
+  {
+    "cog": 219.2,
+    "lat": 29.9317,
+    "lon": 121.87534,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 1 HAO",
+    "zwcm": "甬港众联1号"
+  },
+  {
+    "cog": 212.0,
+    "lat": 29.96215,
+    "lon": 121.72393,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 2 HAO",
+    "zwcm": "甬港众联2号"
+  },
+  {
+    "cog": 234.9,
+    "lat": 29.9635,
+    "lon": 121.7248,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 6 HAO",
+    "zwcm": "甬港引6号"
+  },
+  {
+    "cog": 293.2,
+    "lat": 30.0801,
+    "lon": 121.9273,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "ZHE GANG GONG TUO 5 HAO",
+    "zwcm": "浙港工拖5号"
+  },
+  {
+    "cog": 30.9,
+    "lat": 36.83741,
+    "lon": 122.40116,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 566",
+    "zwcm": "浙奉566"
+  },
+  {
+    "cog": 63.8,
+    "lat": 29.96738,
+    "lon": 122.15858,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XV YANG 11",
+    "zwcm": "绪扬11"
+  },
+  {
+    "cog": 79.5,
+    "lat": 21.89142,
+    "lon": 113.59453,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "LE YANG 2",
+    "zwcm": "乐洋2"
+  },
+  {
+    "cog": 238.0,
+    "lat": 29.98229,
+    "lon": 122.02215,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "LE YANG 3",
+    "zwcm": "乐洋3"
+  },
+  {
+    "cog": 188.1,
+    "lat": 29.8884,
+    "lon": 122.3721,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 9",
+    "zwcm": "利安9"
+  },
+  {
+    "cog": 348.4,
+    "lat": 39.10313,
+    "lon": 118.56813,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 78",
+    "zwcm": "兴宁78"
+  },
+  {
+    "cog": 143.7,
+    "lat": 38.95546,
+    "lon": 121.62683,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHENG HAI 2",
+    "zwcm": "翔晟海2"
+  },
+  {
+    "cog": 96.7,
+    "lat": 29.95387,
+    "lon": 121.72068,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG GONG 1",
+    "zwcm": "港供1"
+  },
+  {
+    "cog": 267.9,
+    "lat": 31.66218,
+    "lon": 121.22377,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 595",
+    "zwcm": "双宁595"
+  },
+  {
+    "cog": 260.7,
+    "lat": 29.91547,
+    "lon": 122.33278,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 696",
+    "zwcm": "利安696"
+  },
+  {
+    "cog": 304.7,
+    "lat": 22.5413,
+    "lon": 113.18362,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 9",
+    "zwcm": "永大9"
+  },
+  {
+    "cog": 160.4,
+    "lat": 30.0673,
+    "lon": 121.8502,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 181",
+    "zwcm": "荣宁181"
+  },
+  {
+    "cog": 34.1,
+    "lat": 29.86583,
+    "lon": 122.13587,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 187",
+    "zwcm": "荣宁187"
+  },
+  {
+    "cog": 182.3,
+    "lat": 36.9375,
+    "lon": 122.7603,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN YUAN DA 2",
+    "zwcm": "鑫远达2"
+  },
+  {
+    "cog": 0.0,
+    "lat": 31.47975,
+    "lon": 121.74914,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 122",
+    "zwcm": "浙奉122"
+  },
+  {
+    "cog": 261.9,
+    "lat": 30.27978,
+    "lon": 121.94047,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHENG ZE 6",
+    "zwcm": "圣泽6"
+  },
+  {
+    "cog": 97.4,
+    "lat": 29.50845,
+    "lon": 121.6477,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 8",
+    "zwcm": "金川8"
+  },
+  {
+    "cog": 357.9,
+    "lat": 30.58323,
+    "lon": 121.07705,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 16",
+    "zwcm": "联合16"
+  },
+  {
+    "cog": 251.4,
+    "lat": 29.49616,
+    "lon": 121.51011,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 25",
+    "zwcm": "明州25"
+  },
+  {
+    "cog": 334.0,
+    "lat": 29.99518,
+    "lon": 122.10046,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "GANG TONG 2",
+    "zwcm": "港通2"
+  },
+  {
+    "cog": 248.0,
+    "lat": 19.72493,
+    "lon": 109.14117,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XV YANG 9",
+    "zwcm": "绪扬9"
+  },
+  {
+    "cog": 225.5,
+    "lat": 22.92987,
+    "lon": 113.60366,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 22",
+    "zwcm": "永星22"
+  },
+  {
+    "cog": 206.7,
+    "lat": 29.93213,
+    "lon": 121.87409,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 6 HAO",
+    "zwcm": "甬港众联6号"
+  },
+  {
+    "cog": 251.0,
+    "lat": 29.90336,
+    "lon": 121.92942,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 7 HAO",
+    "zwcm": "甬港众联7号"
+  },
+  {
+    "cog": 300.0,
+    "lat": 29.9766,
+    "lon": 122.0744,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YI DING 1",
+    "zwcm": "壹鼎1"
+  },
+  {
+    "cog": 346.6,
+    "lat": 30.27919,
+    "lon": 121.82678,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHENG YUN 2",
+    "zwcm": "晟运2"
+  },
+  {
+    "cog": 268.7,
+    "lat": 27.9207,
+    "lon": 121.22701,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 201",
+    "zwcm": "明州201"
+  },
+  {
+    "cog": 82.2,
+    "lat": 22.7045,
+    "lon": 116.278,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA TANG 1",
+    "zwcm": "大唐1"
+  },
+  {
+    "cog": 122.8,
+    "lat": 31.88821,
+    "lon": 120.90147,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG LONG YUN 8",
+    "zwcm": "港龙运8"
+  },
+  {
+    "cog": 85.4,
+    "lat": 35.99415,
+    "lon": 120.64976,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 6",
+    "zwcm": "宏隆6"
+  },
+  {
+    "cog": 190.7,
+    "lat": 32.02226,
+    "lon": 120.7909,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 888",
+    "zwcm": "浙奉888"
+  },
+  {
+    "cog": 111.6,
+    "lat": 29.6175,
+    "lon": 121.8342,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 69",
+    "zwcm": "荣宁69"
+  },
+  {
+    "cog": 234.3,
+    "lat": 23.05488,
+    "lon": 116.90163,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHEN YANG 18",
+    "zwcm": "振洋18"
+  },
+  {
+    "cog": 222.0,
+    "lat": 29.89476,
+    "lon": 121.94827,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "FU HAI 1 HAO",
+    "zwcm": "福海1号"
+  },
+  {
+    "cog": 277.8,
+    "lat": 30.96642,
+    "lon": 122.47869,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 611",
+    "zwcm": "海鑫油611"
+  },
+  {
+    "cog": 266.3,
+    "lat": 29.90388,
+    "lon": 122.25453,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG HAI 301",
+    "zwcm": "东海301"
+  },
+  {
+    "cog": 24.8,
+    "lat": 30.40501,
+    "lon": 122.53144,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 6",
+    "zwcm": "北仑6"
+  },
+  {
+    "cog": 3.9,
+    "lat": 31.91683,
+    "lon": 120.16321,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 159",
+    "zwcm": "荣宁159"
+  },
+  {
+    "cog": 183.0,
+    "lat": 31.94445,
+    "lon": 118.62051,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 9",
+    "zwcm": "浙甬油9"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.1873,
+    "lon": 121.81974,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 5",
+    "zwcm": "北仑5"
+  },
+  {
+    "cog": 53.7,
+    "lat": 29.82636,
+    "lon": 122.22721,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 31 HAO",
+    "zwcm": "甬港引31号"
+  },
+  {
+    "cog": 179.8,
+    "lat": 29.18317,
+    "lon": 121.9369,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG QI DU 7",
+    "zwcm": "浙象汽渡7"
+  },
+  {
+    "cog": 289.6,
+    "lat": 29.19338,
+    "lon": 121.92981,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG QI DU 8",
+    "zwcm": "浙象汽渡8"
+  },
+  {
+    "cog": 189.1,
+    "lat": 29.17852,
+    "lon": 121.9278,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG QI DU 9",
+    "zwcm": "浙象汽渡9"
+  },
+  {
+    "cog": 45.2,
+    "lat": 29.19336,
+    "lon": 121.92927,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG QI DU 10",
+    "zwcm": "浙象汽渡10"
+  },
+  {
+    "cog": 334.3,
+    "lat": 29.82646,
+    "lon": 122.22692,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 32 HAO",
+    "zwcm": "甬港引32号"
+  },
+  {
+    "cog": 237.2,
+    "lat": 24.64136,
+    "lon": 118.43032,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHONG YANG 1 HAO",
+    "zwcm": "中洋1号"
+  },
+  {
+    "cog": 297.3,
+    "lat": 30.64226,
+    "lon": 121.18083,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "GUANG TONG 33",
+    "zwcm": "广通33"
+  },
+  {
+    "cog": 156.7,
+    "lat": 29.9084,
+    "lon": 121.92912,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN ZENG 5",
+    "zwcm": "金增5"
+  },
+  {
+    "cog": 255.8,
+    "lat": 29.4918,
+    "lon": 121.9617,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 69",
+    "zwcm": "兴宁69"
+  },
+  {
+    "cog": 186.7,
+    "lat": 31.84408,
+    "lon": 118.53302,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 58",
+    "zwcm": "金富星58"
+  },
+  {
+    "cog": 135.0,
+    "lat": 29.91033,
+    "lon": 121.64666,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "NING DA 10",
+    "zwcm": "宁大10"
+  },
+  {
+    "cog": 297.6,
+    "lat": 29.93445,
+    "lon": 121.88773,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG GONG BO 9051",
+    "zwcm": "浙甬工驳9051"
+  },
+  {
+    "cog": 289.3,
+    "lat": 28.09483,
+    "lon": 121.13483,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 56",
+    "zwcm": "荣宁56"
+  },
+  {
+    "cog": 223.6,
+    "lat": 29.7416,
+    "lon": 121.9921,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIE HAI 86",
+    "zwcm": "捷海86"
+  },
+  {
+    "cog": 268.0,
+    "lat": 28.66728,
+    "lon": 121.81209,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 65",
+    "zwcm": "明州65"
+  },
+  {
+    "cog": 192.6,
+    "lat": 29.42009,
+    "lon": 121.51452,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 19",
+    "zwcm": "永大19"
+  },
+  {
+    "cog": 211.1,
+    "lat": 29.92552,
+    "lon": 122.1957,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 11",
+    "zwcm": "浙甬油11"
+  },
+  {
+    "cog": 29.9,
+    "lat": 29.97762,
+    "lon": 122.062,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 86",
+    "zwcm": "金川86"
+  },
+  {
+    "cog": 350.0,
+    "lat": 30.18493,
+    "lon": 121.76503,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIN FU XING 9",
+    "zwcm": "金富星9"
+  },
+  {
+    "cog": 98.8,
+    "lat": 29.98603,
+    "lon": 122.06149,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHENG ZE 2",
+    "zwcm": "圣泽2"
+  },
+  {
+    "cog": 278.0,
+    "lat": 31.49615,
+    "lon": 121.37126,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 212",
+    "zwcm": "鄞通顺212"
+  },
+  {
+    "cog": 298.9,
+    "lat": 29.9682,
+    "lon": 121.801,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 219",
+    "zwcm": "鄞通顺219"
+  },
+  {
+    "cog": 124.5,
+    "lat": 30.2537,
+    "lon": 121.5898,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE GONG MAO",
+    "zwcm": "浙工锚"
+  },
+  {
+    "cog": 233.0,
+    "lat": 25.6488,
+    "lon": 119.4739,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 138",
+    "zwcm": "利安138"
+  },
+  {
+    "cog": 180.8,
+    "lat": 29.8737,
+    "lon": 121.5566,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 191",
+    "zwcm": "鄞通顺191"
+  },
+  {
+    "cog": 186.2,
+    "lat": 29.8734,
+    "lon": 121.5566,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 168",
+    "zwcm": "鄞通顺168"
+  },
+  {
+    "cog": 303.2,
+    "lat": 29.95235,
+    "lon": 121.90799,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHONG HAI 6",
+    "zwcm": "中海6"
+  },
+  {
+    "cog": 18.9,
+    "lat": 29.8791,
+    "lon": 121.5582,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIANG YONG 19",
+    "zwcm": "江甬19"
+  },
+  {
+    "cog": 247.4,
+    "lat": 38.94036,
+    "lon": 118.95098,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIANG HAI YOU 1",
+    "zwcm": "江海油1"
+  },
+  {
+    "cog": 80.0,
+    "lat": 23.06334,
+    "lon": 118.06675,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 77",
+    "zwcm": "兴宁77"
+  },
+  {
+    "cog": 275.7,
+    "lat": 31.94606,
+    "lon": 120.18261,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DING SHENG 12",
+    "zwcm": "顶盛12"
+  },
+  {
+    "cog": 279.8,
+    "lat": 38.96519,
+    "lon": 117.82794,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YI HANG 77",
+    "zwcm": "益航77"
+  },
+  {
+    "cog": 67.4,
+    "lat": 29.90229,
+    "lon": 122.10512,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG JUN 1",
+    "zwcm": "甬港工浚1"
+  },
+  {
+    "cog": 30.7,
+    "lat": 29.77062,
+    "lon": 122.00576,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG JUN 2",
+    "zwcm": "甬港工浚2"
+  },
+  {
+    "cog": 19.2,
+    "lat": 29.90243,
+    "lon": 122.10503,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG BO 101",
+    "zwcm": "甬港工驳101"
+  },
+  {
+    "cog": 105.1,
+    "lat": 29.90269,
+    "lon": 122.10487,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG BO 102",
+    "zwcm": "甬港工驳102"
+  },
+  {
+    "cog": 203.0,
+    "lat": 29.87079,
+    "lon": 122.13692,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG BO 201",
+    "zwcm": "甬港工驳201"
+  },
+  {
+    "cog": 159.7,
+    "lat": 29.9623,
+    "lon": 121.88671,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG GANG GONG BO 202",
+    "zwcm": "甬港工驳202"
+  },
+  {
+    "cog": 28.1,
+    "lat": 29.21072,
+    "lon": 121.94417,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "YV GUANG QV 3 HAO",
+    "zwcm": "渔光曲3号"
+  },
+  {
+    "cog": 86.6,
+    "lat": 22.11768,
+    "lon": 114.31903,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YI HANG 76",
+    "zwcm": "益航76"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.94763,
+    "lon": 122.26155,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHAN 11",
+    "zwcm": "象山11"
+  },
+  {
+    "cog": 55.0,
+    "lat": 31.26569,
+    "lon": 122.49529,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HAI BAI 15",
+    "zwcm": "海百15"
+  },
+  {
+    "cog": 170.6,
+    "lat": 37.40944,
+    "lon": 122.76537,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 5",
+    "zwcm": "永大5"
+  },
+  {
+    "cog": 320.4,
+    "lat": 30.2482,
+    "lon": 122.1445,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE FENG GONG 18 HAO",
+    "zwcm": "浙奉工18号"
+  },
+  {
+    "cog": 155.0,
+    "lat": 38.53474,
+    "lon": 122.08735,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIE TAI 8",
+    "zwcm": "杰泰8"
+  },
+  {
+    "cog": 399.1,
+    "lat": 31.34009,
+    "lon": 121.79201,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 508",
+    "zwcm": "利安508"
+  },
+  {
+    "cog": 92.6,
+    "lat": 29.96238,
+    "lon": 121.95409,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIANG YONG 29",
+    "zwcm": "江甬29"
+  },
+  {
+    "cog": 92.5,
+    "lat": 29.95684,
+    "lon": 121.72516,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YONG ZHONG YOU 7",
+    "zwcm": "甬中油7"
+  },
+  {
+    "cog": 206.0,
+    "lat": 38.9871,
+    "lon": 117.72065,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "MING YUAN 6",
+    "zwcm": "铭远6"
+  },
+  {
+    "cog": 94.5,
+    "lat": 29.88878,
+    "lon": 121.95359,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIN LE 98",
+    "zwcm": "鑫乐98"
+  },
+  {
+    "cog": 75.1,
+    "lat": 30.56858,
+    "lon": 121.16404,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 50",
+    "zwcm": "联合50"
+  },
+  {
+    "cog": 86.0,
+    "lat": 29.98483,
+    "lon": 121.84148,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 52",
+    "zwcm": "联合52"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.98468,
+    "lon": 122.10537,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIANG TONG 1 HAO",
+    "zwcm": "翔通1号"
+  },
+  {
+    "cog": 250.0,
+    "lat": 30.0773,
+    "lon": 121.8889,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 171",
+    "zwcm": "鄞通顺171"
+  },
+  {
+    "cog": 184.3,
+    "lat": 29.96749,
+    "lon": 122.1587,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XU YANG 12",
+    "zwcm": "绪扬12"
+  },
+  {
+    "cog": 177.7,
+    "lat": 29.79198,
+    "lon": 121.47338,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 177",
+    "zwcm": "顺行海177"
+  },
+  {
+    "cog": 24.1,
+    "lat": 30.1373,
+    "lon": 122.125,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HENG GONG 18",
+    "zwcm": "恒工18"
+  },
+  {
+    "cog": 128.4,
+    "lat": 29.94384,
+    "lon": 121.68944,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONG MAO 8",
+    "zwcm": "众茂8"
+  },
+  {
+    "cog": 55.6,
+    "lat": 29.92987,
+    "lon": 121.68687,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 11",
+    "zwcm": "宏达海11"
+  },
+  {
+    "cog": 24.9,
+    "lat": 29.92885,
+    "lon": 121.68596,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 21",
+    "zwcm": "宏达海21"
+  },
+  {
+    "cog": 101.1,
+    "lat": 31.3427,
+    "lon": 121.5299,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 22",
+    "zwcm": "宏达海22"
+  },
+  {
+    "cog": 49.5,
+    "lat": 31.93926,
+    "lon": 118.61173,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 298",
+    "zwcm": "双宁298"
+  },
+  {
+    "cog": 1.0,
+    "lat": 32.76608,
+    "lon": 122.62863,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RUI XIANG 5",
+    "zwcm": "瑞祥5"
+  },
+  {
+    "cog": 227.9,
+    "lat": 29.93381,
+    "lon": 121.89294,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG GONG BO 9019",
+    "zwcm": "浙甬工驳9019"
+  },
+  {
+    "cog": 357.7,
+    "lat": 29.93276,
+    "lon": 121.68448,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HANG SHUN 11",
+    "zwcm": "航顺11"
+  },
+  {
+    "cog": 9.6,
+    "lat": 27.7431,
+    "lon": 121.963,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN HANG 78",
+    "zwcm": "锦航78"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.90843,
+    "lon": 122.1132,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG FENG 3",
+    "zwcm": "港丰3"
+  },
+  {
+    "cog": 255.3,
+    "lat": 29.90567,
+    "lon": 121.60932,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN LIN LONG 1",
+    "zwcm": "新林龙1"
+  },
+  {
+    "cog": 253.5,
+    "lat": 30.2738,
+    "lon": 121.9424,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN LIN LONG 2",
+    "zwcm": "新林龙2"
+  },
+  {
+    "cog": 231.8,
+    "lat": 29.99058,
+    "lon": 121.79061,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN LIN LONG 3",
+    "zwcm": "新林龙3"
+  },
+  {
+    "cog": 175.1,
+    "lat": 29.9281,
+    "lon": 122.2053,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XU YANG 17",
+    "zwcm": "绪扬17"
+  },
+  {
+    "cog": 119.0,
+    "lat": 29.89971,
+    "lon": 121.98185,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "XIN FA 28",
+    "zwcm": "鑫发28"
+  },
+  {
+    "cog": 165.0,
+    "lat": 29.60794,
+    "lon": 122.35222,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 56",
+    "zwcm": "兴宁56"
+  },
+  {
+    "cog": 288.0,
+    "lat": -25.64797,
+    "lon": -48.17983,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN HAI HU 9",
+    "zwcm": "新海虎9"
+  },
+  {
+    "cog": 144.6,
+    "lat": 29.94869,
+    "lon": 121.70671,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "SHUN YI HUAN CE 7",
+    "zwcm": "顺义环测7"
+  },
+  {
+    "cog": 145.8,
+    "lat": 29.93445,
+    "lon": 121.8736,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE FENG GONG 8 HAO",
+    "zwcm": "浙奉工8号"
+  },
+  {
+    "cog": 7.6,
+    "lat": 29.90513,
+    "lon": 122.10756,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHEN YU 68",
+    "zwcm": "神鱼68"
+  },
+  {
+    "cog": 183.8,
+    "lat": 29.9543,
+    "lon": 121.7242,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "SAN HANG ZHUANG 5",
+    "zwcm": "三航桩5"
+  },
+  {
+    "cog": 64.4,
+    "lat": 29.8252,
+    "lon": 122.22925,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 30 HAO",
+    "zwcm": "甬港引30号"
+  },
+  {
+    "cog": 344.2,
+    "lat": 29.9456,
+    "lon": 122.2694,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "ZHUO HANG 16",
+    "zwcm": "卓航16"
+  },
+  {
+    "cog": 5.2,
+    "lat": 29.9869,
+    "lon": 122.1302,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DING HAO JI 9",
+    "zwcm": "定浩记9"
+  },
+  {
+    "cog": 92.0,
+    "lat": 28.69896,
+    "lon": 121.75926,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DING HAO JI 7",
+    "zwcm": "定浩记7"
+  },
+  {
+    "cog": 281.0,
+    "lat": 38.14494,
+    "lon": 119.86067,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU 1",
+    "zwcm": "宏桥达羽1"
+  },
+  {
+    "cog": 70.0,
+    "lat": 29.76066,
+    "lon": 122.22039,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 78",
+    "zwcm": "新明州78"
+  },
+  {
+    "cog": 168.0,
+    "lat": 30.11646,
+    "lon": 122.17816,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 67",
+    "zwcm": "明州67"
+  },
+  {
+    "cog": 312.1,
+    "lat": 29.99103,
+    "lon": 122.13393,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "TONG HENG TUO",
+    "zwcm": "同恒拖"
+  },
+  {
+    "cog": 302.9,
+    "lat": 29.6043,
+    "lon": 121.7403,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "HAI FENG ZHI YE",
+    "zwcm": "海丰纸业"
+  },
+  {
+    "cog": 116.9,
+    "lat": 29.15765,
+    "lon": 121.89557,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "XIN LE 11",
+    "zwcm": "鑫乐11"
+  },
+  {
+    "cog": 132.0,
+    "lat": 29.21582,
+    "lon": 121.95346,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "XIN LE 19",
+    "zwcm": "鑫乐19"
+  },
+  {
+    "cog": 350.4,
+    "lat": 30.02022,
+    "lon": 121.80912,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 82",
+    "zwcm": "新明州82"
+  },
+  {
+    "cog": 328.5,
+    "lat": 30.0076,
+    "lon": 121.8014,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "MAN YANG 09",
+    "zwcm": "满洋09"
+  },
+  {
+    "cog": 173.9,
+    "lat": 29.8899,
+    "lon": 121.978,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 22",
+    "zwcm": "海巡22"
+  },
+  {
+    "cog": 212.0,
+    "lat": 32.12413,
+    "lon": 119.90831,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA JIANG 601",
+    "zwcm": "华江601"
+  },
+  {
+    "cog": 302.0,
+    "lat": 29.95288,
+    "lon": 121.71988,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07128",
+    "zwcm": "海巡07128"
+  },
+  {
+    "cog": 244.5,
+    "lat": 29.80562,
+    "lon": 122.08058,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07008",
+    "zwcm": "海巡07008"
+  },
+  {
+    "cog": 49.3,
+    "lat": 29.26721,
+    "lon": 122.07875,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 0717",
+    "zwcm": "海巡0717"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.88522,
+    "lon": 122.02157,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 0718",
+    "zwcm": "海巡0718"
+  },
+  {
+    "cog": 269.3,
+    "lat": 29.82536,
+    "lon": 122.00995,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07105",
+    "zwcm": "海巡07105"
+  },
+  {
+    "cog": 252.6,
+    "lat": 29.79537,
+    "lon": 122.03703,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07112",
+    "zwcm": "海巡07112"
+  },
+  {
+    "cog": 280.9,
+    "lat": 29.8875,
+    "lon": 121.5616,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07116",
+    "zwcm": "海巡07116"
+  },
+  {
+    "cog": 312.7,
+    "lat": 29.8873,
+    "lon": 121.5613,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07124",
+    "zwcm": "海巡07124"
+  },
+  {
+    "cog": 220.2,
+    "lat": 29.8897,
+    "lon": 121.9794,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07119",
+    "zwcm": "海巡07119"
+  },
+  {
+    "cog": 104.5,
+    "lat": 29.2093,
+    "lon": 121.9439,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07120",
+    "zwcm": "海巡07120"
+  },
+  {
+    "cog": 196.8,
+    "lat": 29.901,
+    "lon": 121.5452,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07133",
+    "zwcm": "海巡07133"
+  },
+  {
+    "cog": 226.7,
+    "lat": 29.841,
+    "lon": 121.5228,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07134",
+    "zwcm": "海巡07134"
+  },
+  {
+    "cog": 17.8,
+    "lat": 29.9531,
+    "lon": 121.7201,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "HAI XUN 07135",
+    "zwcm": "海巡07135"
+  },
+  {
+    "cog": 144.4,
+    "lat": 29.7141,
+    "lon": 122.2028,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HAI XUN 163",
+    "zwcm": "海巡163"
+  },
+  {
+    "cog": 136.1,
+    "lat": 29.9367,
+    "lon": 121.8848,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 5 HAO",
+    "zwcm": "甬港消拖5号"
+  },
+  {
+    "cog": 110.9,
+    "lat": 29.92962,
+    "lon": 121.89343,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 25",
+    "zwcm": "甬港拖25"
+  },
+  {
+    "cog": 154.0,
+    "lat": 29.88984,
+    "lon": 121.96676,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 15 HAO",
+    "zwcm": "甬港众联15号"
+  },
+  {
+    "cog": 298.7,
+    "lat": 29.9749,
+    "lon": 121.7418,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 16 HAO",
+    "zwcm": "甬港众联16号"
+  },
+  {
+    "cog": 207.5,
+    "lat": 3.90381,
+    "lon": 9.54686,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HANG JUN 4012",
+    "zwcm": "航浚4012"
+  },
+  {
+    "cog": 315.0,
+    "lat": 29.1196,
+    "lon": 121.6567,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN HAI KUN",
+    "zwcm": "新海鲲"
+  },
+  {
+    "cog": 199.6,
+    "lat": 29.81375,
+    "lon": 122.43549,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SAN HANG TUO 2012",
+    "zwcm": "三航拖2012"
+  },
+  {
+    "cog": 278.1,
+    "lat": 29.95488,
+    "lon": 121.72095,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SAN HANG TUO 2008",
+    "zwcm": "三航拖2008"
+  },
+  {
+    "cog": 224.0,
+    "lat": 29.8903,
+    "lon": 121.9741,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SAN HANG TUO 3002",
+    "zwcm": "三航拖3002"
+  },
+  {
+    "cog": 304.8,
+    "lat": 29.95203,
+    "lon": 121.71953,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HAI XUN 1640",
+    "zwcm": "海巡1640"
+  },
+  {
+    "cog": 192.0,
+    "lat": 29.92877,
+    "lon": 122.60468,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 15",
+    "zwcm": "北仑15"
+  },
+  {
+    "cog": 336.2,
+    "lat": 30.0418,
+    "lon": 121.6707,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "HAI SHUN DA JIAO CE 9",
+    "zwcm": "海顺达交测9"
+  },
+  {
+    "cog": 308.0,
+    "lat": -3.90718,
+    "lon": 115.66403,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN CHUN XIAO",
+    "zwcm": "新春晓"
+  },
+  {
+    "cog": 295.8,
+    "lat": 30.29536,
+    "lon": 121.96091,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 668",
+    "zwcm": "顺行海668"
+  },
+  {
+    "cog": 55.6,
+    "lat": 22.6436,
+    "lon": 117.0628,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING YU 68",
+    "zwcm": "兴宇68"
+  },
+  {
+    "cog": 41.5,
+    "lat": 29.19379,
+    "lon": 121.93118,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG NONG DU 101",
+    "zwcm": "浙象农渡101"
+  },
+  {
+    "cog": 229.3,
+    "lat": 29.94661,
+    "lon": 121.99264,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 60 HAO",
+    "zwcm": "甬港消拖60号"
+  },
+  {
+    "cog": 359.2,
+    "lat": 29.76286,
+    "lon": 122.54016,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 58",
+    "zwcm": "明州58"
+  },
+  {
+    "cog": 41.0,
+    "lat": 23.81023,
+    "lon": 117.84734,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 7",
+    "zwcm": "利安7"
+  },
+  {
+    "cog": 243.9,
+    "lat": 29.948,
+    "lon": 122.18743,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "SI JIE 21",
+    "zwcm": "思杰21"
+  },
+  {
+    "cog": 318.0,
+    "lat": 28.7463,
+    "lon": 121.28172,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIANG KUN 7",
+    "zwcm": "祥鲲7"
+  },
+  {
+    "cog": 183.0,
+    "lat": 35.33267,
+    "lon": 122.70537,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "PU HUI 2",
+    "zwcm": "普惠2"
+  },
+  {
+    "cog": 192.0,
+    "lat": 31.76464,
+    "lon": 121.11875,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN SHENG 18",
+    "zwcm": "天盛18"
+  },
+  {
+    "cog": 253.0,
+    "lat": 22.48874,
+    "lon": 113.86586,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "BAO YU FENG JIN",
+    "zwcm": "宝裕丰锦"
+  },
+  {
+    "cog": 232.5,
+    "lat": 29.78689,
+    "lon": 122.02588,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HAI HONG 6",
+    "zwcm": "海虹6"
+  },
+  {
+    "cog": 355.2,
+    "lat": 36.06759,
+    "lon": 120.21295,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 5",
+    "zwcm": "航海油5"
+  },
+  {
+    "cog": 196.4,
+    "lat": 24.64647,
+    "lon": 119.00183,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 602",
+    "zwcm": "海鑫油602"
+  },
+  {
+    "cog": 183.0,
+    "lat": 33.40995,
+    "lon": 122.63156,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG HAI 302",
+    "zwcm": "东海302"
+  },
+  {
+    "cog": 172.0,
+    "lat": 38.33759,
+    "lon": 118.42353,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 27",
+    "zwcm": "明州27"
+  },
+  {
+    "cog": 310.2,
+    "lat": 29.88991,
+    "lon": 121.96749,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "SI JIE 1",
+    "zwcm": "思杰1"
+  },
+  {
+    "cog": 265.5,
+    "lat": 22.62881,
+    "lon": 113.684,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIE YAO 16",
+    "zwcm": "捷耀16"
+  },
+  {
+    "cog": 136.7,
+    "lat": 29.94101,
+    "lon": 122.18967,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "SI JIE 15",
+    "zwcm": "思杰15"
+  },
+  {
+    "cog": 127.0,
+    "lat": 29.99085,
+    "lon": 122.10262,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHENG HAI 31",
+    "zwcm": "翔晟海31"
+  },
+  {
+    "cog": 268.3,
+    "lat": 31.0194,
+    "lon": 120.9311,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE XIANG JI 766",
+    "zwcm": "浙象机766"
+  },
+  {
+    "cog": 321.0,
+    "lat": 20.9317,
+    "lon": 110.7865,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG YANG JUN 2",
+    "zwcm": "甬阳浚2"
+  },
+  {
+    "cog": 184.0,
+    "lat": 29.89193,
+    "lon": 122.00325,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "HAI SHEN 1903",
+    "zwcm": "海申1903"
+  },
+  {
+    "cog": 46.0,
+    "lat": 21.6677,
+    "lon": 113.96099,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XV YANG 8",
+    "zwcm": "绪扬8"
+  },
+  {
+    "cog": 271.7,
+    "lat": 29.93009,
+    "lon": 121.98731,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 3",
+    "zwcm": "航海油3"
+  },
+  {
+    "cog": 245.0,
+    "lat": 38.9771,
+    "lon": 118.45505,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 202",
+    "zwcm": "明州202"
+  },
+  {
+    "cog": 127.7,
+    "lat": 38.23588,
+    "lon": 121.47559,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 68",
+    "zwcm": "明州68"
+  },
+  {
+    "cog": 16.1,
+    "lat": 29.9568,
+    "lon": 122.1153,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 9",
+    "zwcm": "国海9"
+  },
+  {
+    "cog": 133.3,
+    "lat": 36.09114,
+    "lon": 120.23462,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG YV 6",
+    "zwcm": "通宇6"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89358,
+    "lon": 121.94751,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 10",
+    "zwcm": "联合10"
+  },
+  {
+    "cog": 145.3,
+    "lat": 27.98614,
+    "lon": 121.28539,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "NING DA 16",
+    "zwcm": "宁大16"
+  },
+  {
+    "cog": 262.2,
+    "lat": 29.95097,
+    "lon": 122.25337,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG KAI YOU 2",
+    "zwcm": "东凯油2"
+  },
+  {
+    "cog": 249.3,
+    "lat": 29.7735,
+    "lon": 122.01484,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 8 HAO",
+    "zwcm": "甬港众联8号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89511,
+    "lon": 121.94807,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 9 HAO",
+    "zwcm": "甬港众联9号"
+  },
+  {
+    "cog": 220.9,
+    "lat": 29.77252,
+    "lon": 122.01623,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 11 HAO",
+    "zwcm": "甬港众联11号"
+  },
+  {
+    "cog": 274.2,
+    "lat": 29.8892,
+    "lon": 122.05033,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 12 HAO",
+    "zwcm": "甬港众联12号"
+  },
+  {
+    "cog": 270.4,
+    "lat": 27.94055,
+    "lon": 121.16591,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 66",
+    "zwcm": "明州66"
+  },
+  {
+    "cog": 55.2,
+    "lat": 38.91613,
+    "lon": 118.38907,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG KAI YOU 6",
+    "zwcm": "东凯油6"
+  },
+  {
+    "cog": 3.5,
+    "lat": 29.17998,
+    "lon": 122.11808,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 18",
+    "zwcm": "联合18"
+  },
+  {
+    "cog": 284.0,
+    "lat": 29.96553,
+    "lon": 121.72628,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA ZHOU XIANG",
+    "zwcm": "大舟祥"
+  },
+  {
+    "cog": 0.0,
+    "lat": 36.86524,
+    "lon": 122.37468,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE XIANG 818",
+    "zwcm": "浙象818"
+  },
+  {
+    "cog": 250.8,
+    "lat": 39.84865,
+    "lon": 119.60617,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 9",
+    "zwcm": "北仑海9"
+  },
+  {
+    "cog": 282.0,
+    "lat": 29.82678,
+    "lon": 122.22638,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 9 HAO",
+    "zwcm": "甬港引9号"
+  },
+  {
+    "cog": 273.3,
+    "lat": 27.97037,
+    "lon": 120.79189,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA HAI XIANG",
+    "zwcm": "大海祥"
+  },
+  {
+    "cog": 287.9,
+    "lat": 29.93115,
+    "lon": 121.90436,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE GANG GONG TONG 2 HAO",
+    "zwcm": "浙港工砼2号"
+  },
+  {
+    "cog": 213.2,
+    "lat": 31.42609,
+    "lon": 121.47827,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 139",
+    "zwcm": "荣宁139"
+  },
+  {
+    "cog": 280.9,
+    "lat": 38.05463,
+    "lon": 120.56243,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN ZHOU 9",
+    "zwcm": "新洲9"
+  },
+  {
+    "cog": 272.2,
+    "lat": 31.10436,
+    "lon": 122.44717,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 61",
+    "zwcm": "永星61"
+  },
+  {
+    "cog": 228.0,
+    "lat": 38.08135,
+    "lon": 118.95259,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 603",
+    "zwcm": "海鑫油603"
+  },
+  {
+    "cog": 264.0,
+    "lat": 39.19911,
+    "lon": 118.98145,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONGZHOU7",
+    "zwcm": "宏舟7"
+  },
+  {
+    "cog": 192.9,
+    "lat": 30.01628,
+    "lon": 122.59242,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 8",
+    "zwcm": "北仑8"
+  },
+  {
+    "cog": 0.0,
+    "lat": 32.02144,
+    "lon": 120.78346,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 10",
+    "zwcm": "国海10"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.4319,
+    "lon": 121.9237,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE ZHUANG 8 HAO",
+    "zwcm": "浙桩8号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89436,
+    "lon": 121.94924,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHONG YANG 9",
+    "zwcm": "中洋9"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89088,
+    "lon": 121.99747,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 877",
+    "zwcm": "浙甬油877"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89024,
+    "lon": 121.97378,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 2004",
+    "zwcm": "满洋2004"
+  },
+  {
+    "cog": 289.9,
+    "lat": 29.93357,
+    "lon": 122.15418,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 10",
+    "zwcm": "浙甬油10"
+  },
+  {
+    "cog": 134.8,
+    "lat": 30.19337,
+    "lon": 121.80915,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN YI 28",
+    "zwcm": "金亿28"
+  },
+  {
+    "cog": 0.0,
+    "lat": 23.77513,
+    "lon": 117.57989,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 10",
+    "zwcm": "双宁10"
+  },
+  {
+    "cog": 211.2,
+    "lat": 30.0927,
+    "lon": 121.8418,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG BO 77",
+    "zwcm": "浙甬驳77"
+  },
+  {
+    "cog": 233.7,
+    "lat": 24.1895,
+    "lon": 118.1532,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 258",
+    "zwcm": "永大258"
+  },
+  {
+    "cog": 18.5,
+    "lat": 26.44128,
+    "lon": 120.04264,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 818",
+    "zwcm": "双宁818"
+  },
+  {
+    "cog": 316.8,
+    "lat": 31.2078,
+    "lon": 121.8237,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 58",
+    "zwcm": "荣宁58"
+  },
+  {
+    "cog": 113.5,
+    "lat": 31.7423,
+    "lon": 121.0379,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 16",
+    "zwcm": "永大16"
+  },
+  {
+    "cog": 56.9,
+    "lat": 30.00993,
+    "lon": 122.09932,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 278",
+    "zwcm": "双宁278"
+  },
+  {
+    "cog": 242.0,
+    "lat": 30.16514,
+    "lon": 121.77112,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 7",
+    "zwcm": "北仑7"
+  },
+  {
+    "cog": 223.0,
+    "lat": 27.88894,
+    "lon": 121.38374,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG XING 7",
+    "zwcm": "宏兴7"
+  },
+  {
+    "cog": 299.8,
+    "lat": 23.78431,
+    "lon": 117.57626,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHUO TAI 9 HAO",
+    "zwcm": "卓泰9号"
+  },
+  {
+    "cog": 245.4,
+    "lat": 29.9086,
+    "lon": 122.1115,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG GONG 8",
+    "zwcm": "港供8"
+  },
+  {
+    "cog": 314.3,
+    "lat": 29.48406,
+    "lon": 121.48379,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 589",
+    "zwcm": "永大589"
+  },
+  {
+    "cog": 55.3,
+    "lat": 21.1775,
+    "lon": 110.4051,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 28",
+    "zwcm": "永大28"
+  },
+  {
+    "cog": 139.7,
+    "lat": 24.419,
+    "lon": 117.8643,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 31",
+    "zwcm": "双宁31"
+  },
+  {
+    "cog": 328.2,
+    "lat": 29.41963,
+    "lon": 121.51436,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 185",
+    "zwcm": "双宁185"
+  },
+  {
+    "cog": 179.2,
+    "lat": 31.56758,
+    "lon": 121.51724,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 55",
+    "zwcm": "永大55"
+  },
+  {
+    "cog": 66.8,
+    "lat": 22.04438,
+    "lon": 113.81396,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 538",
+    "zwcm": "双宁538"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.08044,
+    "lon": 121.92741,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE ZHUANG 12",
+    "zwcm": "浙桩12号"
+  },
+  {
+    "cog": 35.1,
+    "lat": 36.85915,
+    "lon": 122.45306,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIA XIN 9 HAO",
+    "zwcm": "嘉信9号"
+  },
+  {
+    "cog": 268.0,
+    "lat": 30.19992,
+    "lon": 121.76154,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA HE XIANG",
+    "zwcm": "大河祥"
+  },
+  {
+    "cog": 262.5,
+    "lat": 29.50118,
+    "lon": 121.50793,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 59",
+    "zwcm": "金富星59"
+  },
+  {
+    "cog": 182.0,
+    "lat": 32.63325,
+    "lon": 122.91195,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 67",
+    "zwcm": "永星67"
+  },
+  {
+    "cog": 305.1,
+    "lat": 32.51139,
+    "lon": 121.42174,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 7",
+    "zwcm": "满洋7"
+  },
+  {
+    "cog": 37.3,
+    "lat": 39.8262,
+    "lon": 121.26344,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING YE 58",
+    "zwcm": "明叶58"
+  },
+  {
+    "cog": 357.8,
+    "lat": 29.99443,
+    "lon": 122.1063,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI TAI YOU 9",
+    "zwcm": "海泰油9"
+  },
+  {
+    "cog": 63.0,
+    "lat": 29.45306,
+    "lon": 121.52052,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YANG EN 1",
+    "zwcm": "仰恩1"
+  },
+  {
+    "cog": 182.6,
+    "lat": 20.0901,
+    "lon": 110.0524,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 58",
+    "zwcm": "永大58"
+  },
+  {
+    "cog": 117.6,
+    "lat": 29.49171,
+    "lon": 121.50261,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 69",
+    "zwcm": "利安69"
+  },
+  {
+    "cog": 206.5,
+    "lat": 25.9541,
+    "lon": 119.7701,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 150",
+    "zwcm": "双宁150"
+  },
+  {
+    "cog": 246.8,
+    "lat": 23.37631,
+    "lon": 117.11587,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 56",
+    "zwcm": "永大56"
+  },
+  {
+    "cog": 113.0,
+    "lat": 23.04731,
+    "lon": 113.2466,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUANG NING 698",
+    "zwcm": "双宁698"
+  },
+  {
+    "cog": 128.0,
+    "lat": 37.98516,
+    "lon": 121.85238,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 20",
+    "zwcm": "兴宁20"
+  },
+  {
+    "cog": 194.0,
+    "lat": 30.9059,
+    "lon": 122.1708,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 96",
+    "zwcm": "荣宁96"
+  },
+  {
+    "cog": 19.0,
+    "lat": 29.50867,
+    "lon": 122.52587,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XV YANG 16",
+    "zwcm": "绪扬16"
+  },
+  {
+    "cog": 180.1,
+    "lat": 32.1799,
+    "lon": 122.567,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 7",
+    "zwcm": "永星7"
+  },
+  {
+    "cog": 2.0,
+    "lat": 35.6182,
+    "lon": 122.85761,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 66",
+    "zwcm": "金川66"
+  },
+  {
+    "cog": 333.0,
+    "lat": 29.50703,
+    "lon": 121.64068,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 988",
+    "zwcm": "利安988"
+  },
+  {
+    "cog": 353.3,
+    "lat": 30.5886,
+    "lon": 122.0911,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HONG YANG GONG 106",
+    "zwcm": "宏阳工106"
+  },
+  {
+    "cog": 109.8,
+    "lat": 21.15672,
+    "lon": 109.08832,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 218",
+    "zwcm": "利安218"
+  },
+  {
+    "cog": 166.5,
+    "lat": 24.38411,
+    "lon": 118.1049,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 508",
+    "zwcm": "永大508"
+  },
+  {
+    "cog": 55.8,
+    "lat": 23.816,
+    "lon": 117.8052,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 568",
+    "zwcm": "永大568"
+  },
+  {
+    "cog": 210.3,
+    "lat": 30.64289,
+    "lon": 121.90027,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 99",
+    "zwcm": "永大99"
+  },
+  {
+    "cog": 144.0,
+    "lat": 30.0688,
+    "lon": 121.8511,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIN BANG 77",
+    "zwcm": "信邦77"
+  },
+  {
+    "cog": 312.8,
+    "lat": 31.1879,
+    "lon": 121.8465,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE XIANG JI 871",
+    "zwcm": "浙象机871"
+  },
+  {
+    "cog": 252.1,
+    "lat": 30.9107,
+    "lon": 120.8553,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 138",
+    "zwcm": "荣宁138"
+  },
+  {
+    "cog": 237.7,
+    "lat": 29.93677,
+    "lon": 121.92871,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHONG HAI 2",
+    "zwcm": "中海2"
+  },
+  {
+    "cog": 350.8,
+    "lat": 29.94739,
+    "lon": 121.88967,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG GONG BO 9052",
+    "zwcm": "浙甬工驳9052"
+  },
+  {
+    "cog": 43.9,
+    "lat": 29.6092,
+    "lon": 121.7901,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 136",
+    "zwcm": "荣宁136"
+  },
+  {
+    "cog": 48.8,
+    "lat": 29.6683,
+    "lon": 122.1321,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 59",
+    "zwcm": "顺行海59"
+  },
+  {
+    "cog": 4.9,
+    "lat": 30.24748,
+    "lon": 122.15191,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 86",
+    "zwcm": "顺行海86"
+  },
+  {
+    "cog": 176.8,
+    "lat": 30.05635,
+    "lon": 121.95263,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 73",
+    "zwcm": "顺行海73"
+  },
+  {
+    "cog": 248.6,
+    "lat": 29.8061,
+    "lon": 122.0284,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 11",
+    "zwcm": "满洋11"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.92881,
+    "lon": 121.68603,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 8",
+    "zwcm": "宏达海8"
+  },
+  {
+    "cog": 102.7,
+    "lat": 29.97602,
+    "lon": 121.79193,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI AN 388",
+    "zwcm": "利安388"
+  },
+  {
+    "cog": 351.1,
+    "lat": 30.4729,
+    "lon": 121.8755,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG LAO 188",
+    "zwcm": "甬捞188"
+  },
+  {
+    "cog": 22.7,
+    "lat": 26.9138,
+    "lon": 120.2151,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HENG YUAN 161",
+    "zwcm": "恒元161"
+  },
+  {
+    "cog": 193.6,
+    "lat": 25.41623,
+    "lon": 119.69519,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "CHAO RI 2",
+    "zwcm": "朝日2"
+  },
+  {
+    "cog": 262.2,
+    "lat": 29.1161,
+    "lon": 121.6609,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN HAI LANG",
+    "zwcm": "新海狼"
+  },
+  {
+    "cog": 348.4,
+    "lat": 29.1192,
+    "lon": 121.6608,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN HAI LI",
+    "zwcm": "新海鲤"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.0688,
+    "lon": 121.851,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIN BANG 79",
+    "zwcm": "信邦79"
+  },
+  {
+    "cog": 266.1,
+    "lat": 29.98992,
+    "lon": 121.9908,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG ZHOU 6",
+    "zwcm": "通洲6"
+  },
+  {
+    "cog": 291.3,
+    "lat": 29.6661,
+    "lon": 121.9775,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 18",
+    "zwcm": "永大18"
+  },
+  {
+    "cog": 99.6,
+    "lat": 29.88904,
+    "lon": 122.05267,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 20",
+    "zwcm": "联合20"
+  },
+  {
+    "cog": 209.0,
+    "lat": 30.00846,
+    "lon": 121.98783,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 22",
+    "zwcm": "联合22"
+  },
+  {
+    "cog": 131.0,
+    "lat": 31.52412,
+    "lon": 121.40486,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHI JI FANG ZHOU 6",
+    "zwcm": "世纪方舟6"
+  },
+  {
+    "cog": 185.7,
+    "lat": 29.9141,
+    "lon": 121.4619,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "GUO HUA GONG 1",
+    "zwcm": "国华工1"
+  },
+  {
+    "cog": 38.3,
+    "lat": 29.94406,
+    "lon": 121.68964,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 28",
+    "zwcm": "联合28"
+  },
+  {
+    "cog": 317.9,
+    "lat": 30.58364,
+    "lon": 121.07875,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 30",
+    "zwcm": "联合30"
+  },
+  {
+    "cog": 344.3,
+    "lat": 30.18814,
+    "lon": 122.09061,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 662",
+    "zwcm": "浙奉662"
+  },
+  {
+    "cog": 208.7,
+    "lat": 29.19412,
+    "lon": 121.93263,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DONG YUAN 6",
+    "zwcm": "东远6"
+  },
+  {
+    "cog": 301.0,
+    "lat": 29.82668,
+    "lon": 122.22663,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 23 HAO",
+    "zwcm": "甬港引23号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.88984,
+    "lon": 121.97353,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 16",
+    "zwcm": "满洋16"
+  },
+  {
+    "cog": 205.2,
+    "lat": 29.21148,
+    "lon": 121.94441,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "YV GUANG QV 2 HAO",
+    "zwcm": "渔光曲2号"
+  },
+  {
+    "cog": 282.0,
+    "lat": 29.99375,
+    "lon": 122.0997,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIA XIN 1 HAO",
+    "zwcm": "嘉信1号"
+  },
+  {
+    "cog": 114.0,
+    "lat": 29.889,
+    "lon": 122.0519,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 21",
+    "zwcm": "联合21"
+  },
+  {
+    "cog": 71.5,
+    "lat": 29.8902,
+    "lon": 121.973,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 301",
+    "zwcm": "满洋301"
+  },
+  {
+    "cog": 304.4,
+    "lat": 38.95561,
+    "lon": 121.62757,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG GONG 9",
+    "zwcm": "港供9"
+  },
+  {
+    "cog": 4.0,
+    "lat": 34.06563,
+    "lon": 122.70035,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RUN DA 15",
+    "zwcm": "恒润达15"
+  },
+  {
+    "cog": 71.8,
+    "lat": 29.75491,
+    "lon": 122.14377,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONG MAO 6",
+    "zwcm": "众茂6"
+  },
+  {
+    "cog": 207.4,
+    "lat": 29.9809,
+    "lon": 122.0497,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "JIAN JIE 7",
+    "zwcm": "建捷7"
+  },
+  {
+    "cog": 132.0,
+    "lat": 19.81624,
+    "lon": 109.14336,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "GUANG TONG 15",
+    "zwcm": "广通15"
+  },
+  {
+    "cog": 24.6,
+    "lat": 29.41702,
+    "lon": 122.47995,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YUAN FENG 3",
+    "zwcm": "远丰3"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.14589,
+    "lon": 121.79916,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 669",
+    "zwcm": "浙奉669"
+  },
+  {
+    "cog": 323.0,
+    "lat": 31.22398,
+    "lon": 122.47574,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 19",
+    "zwcm": "永星19"
+  },
+  {
+    "cog": 167.0,
+    "lat": 30.2504,
+    "lon": 123.03836,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIU XU 36",
+    "zwcm": "九旭36"
+  },
+  {
+    "cog": 213.9,
+    "lat": 29.94468,
+    "lon": 121.99279,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 17 HAO",
+    "zwcm": "甬港众联17号"
+  },
+  {
+    "cog": 227.9,
+    "lat": 29.94614,
+    "lon": 121.99293,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 18 HAO",
+    "zwcm": "甬港众联18号"
+  },
+  {
+    "cog": 201.7,
+    "lat": 29.92827,
+    "lon": 121.68575,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 3",
+    "zwcm": "宏达海3"
+  },
+  {
+    "cog": 257.0,
+    "lat": 30.00754,
+    "lon": 121.83057,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 5",
+    "zwcm": "国海5"
+  },
+  {
+    "cog": 261.9,
+    "lat": 29.79503,
+    "lon": 121.46602,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 121",
+    "zwcm": "鄞通顺121"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.7956,
+    "lon": 121.4853,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 120",
+    "zwcm": "鄞通顺120"
+  },
+  {
+    "cog": 322.8,
+    "lat": 22.9269,
+    "lon": 116.51177,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JU FU 1",
+    "zwcm": "钜富1"
+  },
+  {
+    "cog": 1.0,
+    "lat": 32.37193,
+    "lon": 122.61171,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 21",
+    "zwcm": "兴宁21"
+  },
+  {
+    "cog": 338.4,
+    "lat": 28.09067,
+    "lon": 121.13687,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 23",
+    "zwcm": "联合23"
+  },
+  {
+    "cog": 97.5,
+    "lat": 29.88996,
+    "lon": 121.96753,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "SI JIE 11",
+    "zwcm": "思杰11"
+  },
+  {
+    "cog": 324.5,
+    "lat": 38.95933,
+    "lon": 117.71975,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG KAI YOU 11",
+    "zwcm": "东凯油11"
+  },
+  {
+    "cog": 227.9,
+    "lat": 27.4607,
+    "lon": 120.8733,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 85",
+    "zwcm": "荣宁85"
+  },
+  {
+    "cog": 0.0,
+    "lat": 38.76,
+    "lon": 117.5904,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 8",
+    "zwcm": "宏隆8"
+  },
+  {
+    "cog": 276.9,
+    "lat": 28.68095,
+    "lon": 121.52708,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 12",
+    "zwcm": "宏隆12"
+  },
+  {
+    "cog": 297.6,
+    "lat": 24.4449,
+    "lon": 118.00279,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN FU XING 66",
+    "zwcm": "金富星66"
+  },
+  {
+    "cog": 239.0,
+    "lat": 30.24605,
+    "lon": 122.28174,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING YE 68",
+    "zwcm": "明叶68"
+  },
+  {
+    "cog": 197.0,
+    "lat": 31.74026,
+    "lon": 121.04214,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RUN DA 18",
+    "zwcm": "恒润达18"
+  },
+  {
+    "cog": 151.0,
+    "lat": 29.21124,
+    "lon": 121.94428,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "YU GUANG QU 6 HAO",
+    "zwcm": "渔光曲6号"
+  },
+  {
+    "cog": 340.0,
+    "lat": 32.40972,
+    "lon": 122.4785,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 25",
+    "zwcm": "联合25"
+  },
+  {
+    "cog": 289.7,
+    "lat": 29.90836,
+    "lon": 122.11336,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG FENG 5",
+    "zwcm": "港丰5"
+  },
+  {
+    "cog": 227.3,
+    "lat": 29.982,
+    "lon": 121.73878,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YONG YOU 10 HAO",
+    "zwcm": "甬油10号"
+  },
+  {
+    "cog": 239.1,
+    "lat": 21.30923,
+    "lon": 108.54289,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG XIAO TUO 6 HAO",
+    "zwcm": "甬港消拖6号"
+  },
+  {
+    "cog": 243.4,
+    "lat": 29.9808,
+    "lon": 121.7517,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 26",
+    "zwcm": "甬港拖26"
+  },
+  {
+    "cog": 315.0,
+    "lat": 39.18148,
+    "lon": 119.1108,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JING YE 2",
+    "zwcm": "敬业2"
+  },
+  {
+    "cog": 218.7,
+    "lat": 40.25858,
+    "lon": 122.0946,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING HAO",
+    "zwcm": "铭浩"
+  },
+  {
+    "cog": 288.0,
+    "lat": 29.6147,
+    "lon": 121.8255,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 24 HAO",
+    "zwcm": "甬港引24号"
+  },
+  {
+    "cog": 77.0,
+    "lat": 29.90392,
+    "lon": 122.05155,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 25 HAO",
+    "zwcm": "甬港引25号"
+  },
+  {
+    "cog": 170.6,
+    "lat": 31.98931,
+    "lon": 120.6252,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DONG HAI 102",
+    "zwcm": "东海102"
+  },
+  {
+    "cog": 194.0,
+    "lat": 29.98182,
+    "lon": 121.73875,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 17",
+    "zwcm": "联合17"
+  },
+  {
+    "cog": 182.0,
+    "lat": 32.56355,
+    "lon": 122.57015,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 12",
+    "zwcm": "宏达海12"
+  },
+  {
+    "cog": 97.5,
+    "lat": 30.1264,
+    "lon": 121.8412,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 556",
+    "zwcm": "顺行海556"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.48352,
+    "lon": 121.48458,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIE YAO 61",
+    "zwcm": "捷耀61"
+  },
+  {
+    "cog": 210.1,
+    "lat": 29.16017,
+    "lon": 121.85316,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 27",
+    "zwcm": "兴宁27"
+  },
+  {
+    "cog": 170.7,
+    "lat": 29.88944,
+    "lon": 121.9727,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "CI HANG 2",
+    "zwcm": "慈航2"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.106,
+    "lon": 121.8251,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "GAO HUA DU 8",
+    "zwcm": "高花渡8"
+  },
+  {
+    "cog": 249.0,
+    "lat": 29.96208,
+    "lon": 121.72406,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 22 HAO",
+    "zwcm": "甬港众联22号"
+  },
+  {
+    "cog": 190.9,
+    "lat": 29.93171,
+    "lon": 121.87493,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 23 HAO",
+    "zwcm": "甬港众联23号"
+  },
+  {
+    "cog": 107.0,
+    "lat": 29.99878,
+    "lon": 122.10684,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHONG YANG 18",
+    "zwcm": "中洋18"
+  },
+  {
+    "cog": 201.3,
+    "lat": 29.94406,
+    "lon": 121.99183,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 19 HAO",
+    "zwcm": "甬港众联19号"
+  },
+  {
+    "cog": 188.3,
+    "lat": 29.93203,
+    "lon": 121.87408,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 20 HAO",
+    "zwcm": "甬港众联20号"
+  },
+  {
+    "cog": 295.0,
+    "lat": 29.88906,
+    "lon": 122.05023,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG ZHONG LIAN 21 HAO",
+    "zwcm": "甬港众联21号"
+  },
+  {
+    "cog": 211.1,
+    "lat": 26.48636,
+    "lon": 119.94345,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 62",
+    "zwcm": "兴宁62"
+  },
+  {
+    "cog": 152.7,
+    "lat": 40.80142,
+    "lon": 121.0744,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 616",
+    "zwcm": "海鑫油616"
+  },
+  {
+    "cog": 21.2,
+    "lat": 40.01435,
+    "lon": 121.51277,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 606",
+    "zwcm": "海鑫油606"
+  },
+  {
+    "cog": 44.2,
+    "lat": 38.96576,
+    "lon": 121.64998,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 11",
+    "zwcm": "航海油11"
+  },
+  {
+    "cog": 136.0,
+    "lat": 29.89971,
+    "lon": 121.98162,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YONG JIE 1",
+    "zwcm": "甬洁1"
+  },
+  {
+    "cog": 231.4,
+    "lat": 29.9026,
+    "lon": 121.9301,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG XIN TUO 50 HAO",
+    "zwcm": "甬信拖50号"
+  },
+  {
+    "cog": 299.0,
+    "lat": 38.45315,
+    "lon": 119.6571,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG XING 3",
+    "zwcm": "宏兴3"
+  },
+  {
+    "cog": 316.1,
+    "lat": 29.99632,
+    "lon": 122.01923,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 182",
+    "zwcm": "荣宁182"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.4716,
+    "lon": 121.838,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 208",
+    "zwcm": "满洋208"
+  },
+  {
+    "cog": 207.2,
+    "lat": 29.94395,
+    "lon": 121.99258,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 29",
+    "zwcm": "甬港拖29"
+  },
+  {
+    "cog": 215.5,
+    "lat": 29.76291,
+    "lon": 121.99424,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 30",
+    "zwcm": "甬港拖30"
+  },
+  {
+    "cog": 71.6,
+    "lat": 21.27033,
+    "lon": 111.88708,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 78",
+    "zwcm": "明州78"
+  },
+  {
+    "cog": 194.2,
+    "lat": 38.32539,
+    "lon": 117.8728,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 9",
+    "zwcm": "北仑9"
+  },
+  {
+    "cog": 128.9,
+    "lat": 35.07983,
+    "lon": 119.38575,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HE XIN 1",
+    "zwcm": "和新1"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.94769,
+    "lon": 122.26157,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHAN 17",
+    "zwcm": "象山17"
+  },
+  {
+    "cog": 175.3,
+    "lat": 29.88985,
+    "lon": 121.96495,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 27",
+    "zwcm": "甬港拖27"
+  },
+  {
+    "cog": 338.2,
+    "lat": 31.83877,
+    "lon": 120.9025,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE HAI 505",
+    "zwcm": "浙海505"
+  },
+  {
+    "cog": 186.8,
+    "lat": 29.93186,
+    "lon": 121.87507,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG XIN XIAO TUO 10 HAO",
+    "zwcm": "甬信消拖10号"
+  },
+  {
+    "cog": 37.4,
+    "lat": 29.89281,
+    "lon": 121.95221,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 12",
+    "zwcm": "国海12"
+  },
+  {
+    "cog": 318.2,
+    "lat": 31.79032,
+    "lon": 120.93927,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHEN YU 66",
+    "zwcm": "神鱼66"
+  },
+  {
+    "cog": 222.0,
+    "lat": 30.17129,
+    "lon": 121.75125,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RUN DA 21",
+    "zwcm": "恒润达21"
+  },
+  {
+    "cog": 0.0,
+    "lat": 32.16823,
+    "lon": 118.85632,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "BAI YANG 58",
+    "zwcm": "百洋58"
+  },
+  {
+    "cog": 218.2,
+    "lat": 30.6636,
+    "lon": 122.67518,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TONG DE 56",
+    "zwcm": "同德56"
+  },
+  {
+    "cog": 275.0,
+    "lat": 29.95012,
+    "lon": 122.19302,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YI DING 6",
+    "zwcm": "壹鼎6"
+  },
+  {
+    "cog": 1.0,
+    "lat": 38.89673,
+    "lon": 118.41408,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JING YE 6",
+    "zwcm": "敬业6"
+  },
+  {
+    "cog": 187.4,
+    "lat": 21.49242,
+    "lon": 108.63739,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 28",
+    "zwcm": "甬港拖28"
+  },
+  {
+    "cog": 21.4,
+    "lat": 29.65489,
+    "lon": 122.38758,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 12",
+    "zwcm": "北仑12"
+  },
+  {
+    "cog": 0.0,
+    "lat": 38.95544,
+    "lon": 121.62693,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHENG HAI 10",
+    "zwcm": "翔晟海10"
+  },
+  {
+    "cog": 308.2,
+    "lat": 38.10378,
+    "lon": 119.00288,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SHUN ZHOU 7",
+    "zwcm": "顺舟7"
+  },
+  {
+    "cog": 269.9,
+    "lat": 29.899,
+    "lon": 122.0328,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG GONG 6",
+    "zwcm": "港供6"
+  },
+  {
+    "cog": 110.9,
+    "lat": 31.28733,
+    "lon": 121.82194,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TIAN SHENG YOU 7",
+    "zwcm": "天盛油7"
+  },
+  {
+    "cog": 190.8,
+    "lat": 29.2081,
+    "lon": 121.7757,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "BO WEI GONG 77",
+    "zwcm": "博围工77"
+  },
+  {
+    "cog": 44.5,
+    "lat": 37.30795,
+    "lon": 119.259,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TIAN SHENG YOU 2",
+    "zwcm": "天盛油2"
+  },
+  {
+    "cog": 258.0,
+    "lat": 31.63017,
+    "lon": 121.28967,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA RONG HAI ZHOU",
+    "zwcm": "华融海洲"
+  },
+  {
+    "cog": 311.9,
+    "lat": 29.79463,
+    "lon": 121.496,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YIN TONG SHUN 216",
+    "zwcm": "鄞通顺216"
+  },
+  {
+    "cog": 158.3,
+    "lat": 30.0753,
+    "lon": 121.8496,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG KAI YOU 8",
+    "zwcm": "东凯油8"
+  },
+  {
+    "cog": 243.0,
+    "lat": 21.84898,
+    "lon": 113.26883,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHEN YANG 28",
+    "zwcm": "振洋28"
+  },
+  {
+    "cog": 24.1,
+    "lat": 29.1337,
+    "lon": 122.42158,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HAO HAI 6",
+    "zwcm": "浩海6"
+  },
+  {
+    "cog": 228.0,
+    "lat": 24.10295,
+    "lon": 118.45932,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JU FU 16",
+    "zwcm": "钜富16"
+  },
+  {
+    "cog": 73.5,
+    "lat": 34.77043,
+    "lon": 117.11271,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YA DONG 1",
+    "zwcm": "亚东1"
+  },
+  {
+    "cog": 151.4,
+    "lat": 32.49968,
+    "lon": 121.36904,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "JUN XI 1",
+    "zwcm": "军西1"
+  },
+  {
+    "cog": 1.0,
+    "lat": 32.9569,
+    "lon": 122.6469,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DONG HAI 105",
+    "zwcm": "东海105"
+  },
+  {
+    "cog": 43.0,
+    "lat": 30.0502,
+    "lon": 121.83669,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 612",
+    "zwcm": "海鑫油612"
+  },
+  {
+    "cog": 0.0,
+    "lat": 23.5226,
+    "lon": 116.38623,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE XIANG 858",
+    "zwcm": "浙象858"
+  },
+  {
+    "cog": 270.6,
+    "lat": 30.30522,
+    "lon": 122.59559,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 59",
+    "zwcm": "明州59"
+  },
+  {
+    "cog": 122.0,
+    "lat": 30.22235,
+    "lon": 122.0624,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "SHENG DA YOU 127",
+    "zwcm": "盛达油127"
+  },
+  {
+    "cog": 114.6,
+    "lat": 29.9466,
+    "lon": 121.71317,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YONG JIE 2",
+    "zwcm": "甬洁2"
+  },
+  {
+    "cog": 334.6,
+    "lat": 29.90013,
+    "lon": 121.98304,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "CI HANG 7",
+    "zwcm": "慈航7"
+  },
+  {
+    "cog": 55.7,
+    "lat": 40.7068,
+    "lon": 121.09473,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIN MING DA 28",
+    "zwcm": "新明达28"
+  },
+  {
+    "cog": 232.2,
+    "lat": 21.0815,
+    "lon": 110.5546,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 15",
+    "zwcm": "航海油15"
+  },
+  {
+    "cog": 94.3,
+    "lat": 22.08222,
+    "lon": 114.68907,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DONG HONG HANG 3",
+    "zwcm": "东红航3"
+  },
+  {
+    "cog": 113.3,
+    "lat": 30.56446,
+    "lon": 122.16355,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG YU 8",
+    "zwcm": "通宇8"
+  },
+  {
+    "cog": 221.0,
+    "lat": 24.5558,
+    "lon": 118.69376,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG ZHOU 29",
+    "zwcm": "通洲29"
+  },
+  {
+    "cog": 299.0,
+    "lat": 19.06099,
+    "lon": 108.62664,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG ZHOU 27",
+    "zwcm": "通洲27"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.23329,
+    "lon": 122.23519,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GAO YU",
+    "zwcm": "高宇"
+  },
+  {
+    "cog": 45.2,
+    "lat": 30.14366,
+    "lon": 121.84389,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "LIN LONG 001",
+    "zwcm": "林龙001"
+  },
+  {
+    "cog": 156.7,
+    "lat": 29.6931,
+    "lon": 122.08398,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "LIN LONG 002",
+    "zwcm": "林龙002"
+  },
+  {
+    "cog": 281.5,
+    "lat": 29.69628,
+    "lon": 122.07992,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "LIN LONG 003",
+    "zwcm": "林龙003"
+  },
+  {
+    "cog": 191.7,
+    "lat": 30.27662,
+    "lon": 121.94203,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "LIN LONG 005",
+    "zwcm": "林龙005"
+  },
+  {
+    "cog": 216.8,
+    "lat": 29.83714,
+    "lon": 122.11103,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "LIN LONG 006",
+    "zwcm": "林龙006"
+  },
+  {
+    "cog": 259.3,
+    "lat": 29.9754,
+    "lon": 121.7449,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "SHUN XING HAI CE 1 HAO",
+    "zwcm": "顺行海测1号"
+  },
+  {
+    "cog": 2.0,
+    "lat": 36.00243,
+    "lon": 122.83157,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN ZHOU 18",
+    "zwcm": "新洲18"
+  },
+  {
+    "cog": 0.0,
+    "lat": 32.76172,
+    "lon": 121.48426,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "MAN YANG 5011",
+    "zwcm": "满洋5011"
+  },
+  {
+    "cog": 276.6,
+    "lat": 30.50461,
+    "lon": 121.43976,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YONG WANG 517",
+    "zwcm": "涌汪517"
+  },
+  {
+    "cog": 108.9,
+    "lat": 29.6983,
+    "lon": 122.07528,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "WEI HAI 617",
+    "zwcm": "围海617"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89876,
+    "lon": 121.64289,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "WEI HAI 618",
+    "zwcm": "围海618"
+  },
+  {
+    "cog": 128.1,
+    "lat": 31.54974,
+    "lon": 121.32657,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIN FU XING 602",
+    "zwcm": "金富星602"
+  },
+  {
+    "cog": 290.5,
+    "lat": 38.95545,
+    "lon": 121.62733,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "NING FENG YOU 1",
+    "zwcm": "宁丰油1"
+  },
+  {
+    "cog": 129.1,
+    "lat": 29.9029,
+    "lon": 121.9302,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HUI TONG 66",
+    "zwcm": "惠通66"
+  },
+  {
+    "cog": 307.6,
+    "lat": 29.48447,
+    "lon": 121.47506,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "SHUN YI TUO 7",
+    "zwcm": "顺义拖7"
+  },
+  {
+    "cog": 245.3,
+    "lat": 30.41752,
+    "lon": 122.45182,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 11",
+    "zwcm": "北仑11"
+  },
+  {
+    "cog": 137.9,
+    "lat": 29.9057,
+    "lon": 121.9324,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "ZHE GANG HANG XUN 0820",
+    "zwcm": "浙港航巡0820"
+  },
+  {
+    "cog": 315.3,
+    "lat": 38.95572,
+    "lon": 121.62768,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIANG SHENG HAI 9",
+    "zwcm": "翔晟海9"
+  },
+  {
+    "cog": 244.8,
+    "lat": 29.8852,
+    "lon": 121.56,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HAI ZHONG NAI 1 HAO",
+    "zwcm": "海中耐1号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 32.06262,
+    "lon": 120.53587,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YONG YUE 25",
+    "zwcm": "永跃25"
+  },
+  {
+    "cog": 87.0,
+    "lat": 29.9,
+    "lon": 121.98265,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG JIE 18",
+    "zwcm": "甬洁18"
+  },
+  {
+    "cog": 295.0,
+    "lat": 29.82668,
+    "lon": 122.22655,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 26 HAO",
+    "zwcm": "甬港引26号"
+  },
+  {
+    "cog": 346.3,
+    "lat": 30.28108,
+    "lon": 121.84071,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 26",
+    "zwcm": "宏达海26"
+  },
+  {
+    "cog": 190.0,
+    "lat": 39.35551,
+    "lon": 120.96107,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "BAI YANG 22",
+    "zwcm": "百洋22"
+  },
+  {
+    "cog": 280.3,
+    "lat": 30.479,
+    "lon": 121.621,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE FENG GONG 1 HAO",
+    "zwcm": "浙奉工1号"
+  },
+  {
+    "cog": 311.4,
+    "lat": 29.77493,
+    "lon": 122.16841,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YI DING 7",
+    "zwcm": "壹鼎7"
+  },
+  {
+    "cog": 25.8,
+    "lat": 29.9629,
+    "lon": 121.7245,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 27 HAO",
+    "zwcm": "甬港引27号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.97239,
+    "lon": 122.15185,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GAO YU 2",
+    "zwcm": "高宇2"
+  },
+  {
+    "cog": 285.1,
+    "lat": 22.8501,
+    "lon": 113.58071,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "DA MU WAN HAO",
+    "zwcm": "大目湾号"
+  },
+  {
+    "cog": 299.0,
+    "lat": 29.99868,
+    "lon": 122.04487,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "JIA XIN 2 HAO",
+    "zwcm": "嘉信2号"
+  },
+  {
+    "cog": 30.1,
+    "lat": 29.95601,
+    "lon": 122.0968,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 16",
+    "zwcm": "航海油16"
+  },
+  {
+    "cog": 63.4,
+    "lat": 29.98322,
+    "lon": 122.11138,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "NING YE KAN HAI CE 1 HAO",
+    "zwcm": "宁冶勘海测1号"
+  },
+  {
+    "cog": 259.7,
+    "lat": 29.2118,
+    "lon": 121.9445,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "YU GUANG QU 7 HAO",
+    "zwcm": "渔光曲7号"
+  },
+  {
+    "cog": 279.8,
+    "lat": 29.89027,
+    "lon": 122.06892,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE FENG 2",
+    "zwcm": "浙奉2"
+  },
+  {
+    "cog": 1.0,
+    "lat": 29.908,
+    "lon": 122.1102,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "LE YANG 1",
+    "zwcm": "乐洋1"
+  },
+  {
+    "cog": 281.3,
+    "lat": 29.8998,
+    "lon": 121.9821,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YOU LIAN 9",
+    "zwcm": "友联9"
+  },
+  {
+    "cog": 259.0,
+    "lat": 29.94184,
+    "lon": 122.13343,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 2",
+    "zwcm": "国海2"
+  },
+  {
+    "cog": 175.8,
+    "lat": 29.98231,
+    "lon": 122.06053,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NING LIAN 1",
+    "zwcm": "宁联1"
+  },
+  {
+    "cog": 138.0,
+    "lat": 29.77647,
+    "lon": 121.94128,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "MEI SHAN WAN 1 HAO",
+    "zwcm": "梅山湾1号"
+  },
+  {
+    "cog": 115.9,
+    "lat": 36.0963,
+    "lon": 120.231,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TONG YU 11",
+    "zwcm": "通宇11"
+  },
+  {
+    "cog": 49.2,
+    "lat": 24.61632,
+    "lon": 119.07748,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN FENG NING BO",
+    "zwcm": "信风宁波"
+  },
+  {
+    "cog": 168.8,
+    "lat": 29.5279,
+    "lon": 121.688,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 19",
+    "zwcm": "甬港拖19"
+  },
+  {
+    "cog": 151.3,
+    "lat": 30.1459,
+    "lon": 121.7953,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "HANG YONG 2",
+    "zwcm": "航甬2"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.9912,
+    "lon": 121.8378,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 28 HAO",
+    "zwcm": "甬港引28号"
+  },
+  {
+    "cog": 122.6,
+    "lat": 29.90523,
+    "lon": 121.93276,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "ZHE GANG HANG XUN 0800",
+    "zwcm": "浙港航巡0800"
+  },
+  {
+    "cog": 99.2,
+    "lat": 30.08832,
+    "lon": 121.88383,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "SHUN XING HAI 178",
+    "zwcm": "顺行海178"
+  },
+  {
+    "cog": 30.5,
+    "lat": 36.09956,
+    "lon": 122.30311,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE HAI 519",
+    "zwcm": "浙海519"
+  },
+  {
+    "cog": 9.0,
+    "lat": 29.45335,
+    "lon": 121.52136,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG DA 197",
+    "zwcm": "永大197"
+  },
+  {
+    "cog": 213.5,
+    "lat": 29.829,
+    "lon": 121.5217,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YUAN YANG 12",
+    "zwcm": "远扬12"
+  },
+  {
+    "cog": 212.7,
+    "lat": 29.8276,
+    "lon": 121.5086,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YUAN YANG 11",
+    "zwcm": "远扬11"
+  },
+  {
+    "cog": 248.0,
+    "lat": 29.90465,
+    "lon": 121.60791,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN JIANG FENG 10",
+    "zwcm": "新江丰10"
+  },
+  {
+    "cog": 59.5,
+    "lat": 29.8931,
+    "lon": 121.5695,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN JIANG FENG 08",
+    "zwcm": "新江丰08"
+  },
+  {
+    "cog": 50.0,
+    "lat": 30.66888,
+    "lon": 121.33057,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG HAI 215",
+    "zwcm": "东海215"
+  },
+  {
+    "cog": 335.8,
+    "lat": 30.2285,
+    "lon": 121.82903,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 18",
+    "zwcm": "新明州18"
+  },
+  {
+    "cog": 312.7,
+    "lat": 30.01835,
+    "lon": 121.82455,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 20",
+    "zwcm": "新明州20"
+  },
+  {
+    "cog": 193.0,
+    "lat": 29.88968,
+    "lon": 121.9912,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG HAI AN 1",
+    "zwcm": "甬海安1"
+  },
+  {
+    "cog": 242.5,
+    "lat": 29.8899,
+    "lon": 121.99155,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG HAI AN 15",
+    "zwcm": "甬海安15"
+  },
+  {
+    "cog": 147.4,
+    "lat": 29.9151,
+    "lon": 121.4643,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG HAI AN 16",
+    "zwcm": "甬海安16"
+  },
+  {
+    "cog": 200.9,
+    "lat": 29.9163,
+    "lon": 121.4623,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG HAI AN 17",
+    "zwcm": "甬海安17"
+  },
+  {
+    "cog": 34.8,
+    "lat": 29.89915,
+    "lon": 121.64325,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG HAI AN 19",
+    "zwcm": "甬海安19"
+  },
+  {
+    "cog": 201.7,
+    "lat": 36.65798,
+    "lon": 122.65299,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG YUAN 02",
+    "zwcm": "鸿源02"
+  },
+  {
+    "cog": 227.1,
+    "lat": 29.93589,
+    "lon": 121.88752,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "YONG GANG TUO 31",
+    "zwcm": "甬港拖31"
+  },
+  {
+    "cog": 252.1,
+    "lat": 30.1021,
+    "lon": 121.8212,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "XIN JIANG FENG 12",
+    "zwcm": "新江丰12"
+  },
+  {
+    "cog": 115.1,
+    "lat": 29.9,
+    "lon": 121.9827,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG JIE 8",
+    "zwcm": "甬洁8"
+  },
+  {
+    "cog": 342.1,
+    "lat": 29.8995,
+    "lon": 121.9833,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG JIE 12",
+    "zwcm": "甬洁12"
+  },
+  {
+    "cog": 140.0,
+    "lat": 19.80855,
+    "lon": 109.15397,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HAI XIN YOU 618",
+    "zwcm": "海鑫油618"
+  },
+  {
+    "cog": 66.8,
+    "lat": 38.94556,
+    "lon": 121.63728,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG BO 89",
+    "zwcm": "浙甬驳89"
+  },
+  {
+    "cog": 241.9,
+    "lat": 29.8856,
+    "lon": 121.5603,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE YONG GONG BO 947",
+    "zwcm": "浙甬工驳947"
+  },
+  {
+    "cog": 251.5,
+    "lat": 29.92419,
+    "lon": 122.23531,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHENG JI 9",
+    "zwcm": "正吉9"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.89552,
+    "lon": 121.94169,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "YONG GANG YIN 29 HAO",
+    "zwcm": "甬港引29号"
+  },
+  {
+    "cog": 334.1,
+    "lat": 29.9323,
+    "lon": 121.8733,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "DONG GANG JIAO 1",
+    "zwcm": "东港交1"
+  },
+  {
+    "cog": 222.7,
+    "lat": 38.97895,
+    "lon": 117.75585,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "NING FENG YOU 6",
+    "zwcm": "宁丰油6"
+  },
+  {
+    "cog": 180.0,
+    "lat": 32.20375,
+    "lon": 122.94959,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONG LIANG YUAN HE",
+    "zwcm": "中良源和"
+  },
+  {
+    "cog": 256.1,
+    "lat": 29.8898,
+    "lon": 122.0638,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 22",
+    "zwcm": "新明州22"
+  },
+  {
+    "cog": 264.5,
+    "lat": 30.00747,
+    "lon": 121.83043,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 26",
+    "zwcm": "新明州26"
+  },
+  {
+    "cog": 174.1,
+    "lat": 37.17239,
+    "lon": 122.75965,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 18",
+    "zwcm": "宏隆18"
+  },
+  {
+    "cog": 207.7,
+    "lat": 29.25351,
+    "lon": 122.28005,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG 16",
+    "zwcm": "宏隆16"
+  },
+  {
+    "cog": 281.0,
+    "lat": 22.76441,
+    "lon": 113.65735,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA TANG 67",
+    "zwcm": "大唐67"
+  },
+  {
+    "cog": 288.0,
+    "lat": 29.30904,
+    "lon": 124.46618,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "MING YUAN 7",
+    "zwcm": "铭远7"
+  },
+  {
+    "cog": 64.5,
+    "lat": 36.79507,
+    "lon": 121.48604,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "MING YUAN 9",
+    "zwcm": "铭远9"
+  },
+  {
+    "cog": 287.9,
+    "lat": 29.90015,
+    "lon": 121.98338,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "CI HANG 9",
+    "zwcm": "慈航9"
+  },
+  {
+    "cog": 287.6,
+    "lat": 29.97825,
+    "lon": 121.93928,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 228",
+    "zwcm": "顺行海228"
+  },
+  {
+    "cog": 226.4,
+    "lat": 29.6147,
+    "lon": 121.8238,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "HUA JUN 2001",
+    "zwcm": "华浚2001"
+  },
+  {
+    "cog": 184.9,
+    "lat": 29.8304,
+    "lon": 121.5225,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN JIANG FENG 11",
+    "zwcm": "新江丰11"
+  },
+  {
+    "cog": 304.7,
+    "lat": 27.2873,
+    "lon": 121.0372,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHE HUA KAN 1",
+    "zwcm": "浙华勘1"
+  },
+  {
+    "cog": 285.3,
+    "lat": 29.93766,
+    "lon": 121.88473,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "DONG GANG JIAO 6",
+    "zwcm": "东港交6"
+  },
+  {
+    "cog": 68.0,
+    "lat": 29.97087,
+    "lon": 122.1513,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "JIA NUO 1",
+    "zwcm": "佳诺1"
+  },
+  {
+    "cog": 5.2,
+    "lat": 30.00233,
+    "lon": 122.0723,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "TIAN SHENG YOU 9",
+    "zwcm": "天盛油9"
+  },
+  {
+    "cog": 311.9,
+    "lat": 38.97831,
+    "lon": 117.78893,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 70",
+    "zwcm": "新明州70"
+  },
+  {
+    "cog": 35.2,
+    "lat": 30.55254,
+    "lon": 122.19313,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HE HAI",
+    "zwcm": "禾海"
+  },
+  {
+    "cog": 225.0,
+    "lat": 29.62246,
+    "lon": 121.75919,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BI HAI",
+    "zwcm": "碧海"
+  },
+  {
+    "cog": 125.1,
+    "lat": 29.70047,
+    "lon": 122.27944,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 688",
+    "zwcm": "顺行海688"
+  },
+  {
+    "cog": 169.3,
+    "lat": 29.48371,
+    "lon": 121.48452,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "WANG DA 7",
+    "zwcm": "旺达7"
+  },
+  {
+    "cog": 101.8,
+    "lat": 31.758,
+    "lon": 118.46587,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "WANG DA 17",
+    "zwcm": "旺达17"
+  },
+  {
+    "cog": 267.2,
+    "lat": 38.95493,
+    "lon": 118.04635,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 72",
+    "zwcm": "新明州72"
+  },
+  {
+    "cog": 283.4,
+    "lat": 29.7884,
+    "lon": 122.0263,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "HAI DAO 8",
+    "zwcm": "海岛8"
+  },
+  {
+    "cog": 284.0,
+    "lat": 27.663,
+    "lon": 120.82677,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RONG NING 191",
+    "zwcm": "荣宁191"
+  },
+  {
+    "cog": 324.7,
+    "lat": 29.93924,
+    "lon": 121.85895,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 76",
+    "zwcm": "新明州76"
+  },
+  {
+    "cog": 22.2,
+    "lat": 30.0369,
+    "lon": 122.407,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "MAN YANG 08",
+    "zwcm": "满洋08"
+  },
+  {
+    "cog": 76.7,
+    "lat": 38.97184,
+    "lon": 121.76346,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BO JI",
+    "zwcm": "博激"
+  },
+  {
+    "cog": 118.4,
+    "lat": 30.40585,
+    "lon": 122.55473,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZE RUI 1",
+    "zwcm": "泽瑞1"
+  },
+  {
+    "cog": 300.6,
+    "lat": 25.05042,
+    "lon": 119.0545,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "DONG HAI 216",
+    "zwcm": "东海216"
+  },
+  {
+    "cog": 311.9,
+    "lat": 29.63182,
+    "lon": 122.28492,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 35",
+    "zwcm": "明州35"
+  },
+  {
+    "cog": 165.6,
+    "lat": 29.8995,
+    "lon": 121.9807,
+    "mmsi": "123456",
+    "shipType": "0905",
+    "ywcm": "ZHONG GUO HAI GUAN 755",
+    "zwcm": "中国海关755"
+  },
+  {
+    "cog": 53.7,
+    "lat": 29.76486,
+    "lon": 121.99798,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG FA YUN 10",
+    "zwcm": "甬发运10"
+  },
+  {
+    "cog": 122.0,
+    "lat": 17.28208,
+    "lon": 147.55922,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG FA YUN 12",
+    "zwcm": "甬发运12"
+  },
+  {
+    "cog": 301.0,
+    "lat": 34.54646,
+    "lon": 121.89247,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING SHUN 6",
+    "zwcm": "兴顺6"
+  },
+  {
+    "cog": 76.2,
+    "lat": 37.94126,
+    "lon": 120.9278,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU 2",
+    "zwcm": "宏桥达羽2"
+  },
+  {
+    "cog": 6.9,
+    "lat": 30.91069,
+    "lon": 117.75149,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DING HAO JI 5",
+    "zwcm": "定浩记5"
+  },
+  {
+    "cog": 272.9,
+    "lat": 22.8746,
+    "lon": 113.57265,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RUI KANG 56",
+    "zwcm": "瑞康56"
+  },
+  {
+    "cog": 23.0,
+    "lat": 30.83072,
+    "lon": 122.83465,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHI HUA 66",
+    "zwcm": "实华66"
+  },
+  {
+    "cog": 338.4,
+    "lat": 30.32692,
+    "lon": 121.78617,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 80",
+    "zwcm": "新明州80"
+  },
+  {
+    "cog": 0.0,
+    "lat": 37.58342,
+    "lon": 121.38021,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU 3",
+    "zwcm": "宏桥达羽3"
+  },
+  {
+    "cog": 72.0,
+    "lat": 38.26118,
+    "lon": 118.17475,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU",
+    "zwcm": "宏桥达羽"
+  },
+  {
+    "cog": 201.0,
+    "lat": 25.41504,
+    "lon": 119.28888,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN FENG BEI LUN",
+    "zwcm": "信风北仑"
+  },
+  {
+    "cog": 11.2,
+    "lat": 30.2264,
+    "lon": 122.0341,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "HAI SHUN DA 8",
+    "zwcm": "海顺达8"
+  },
+  {
+    "cog": 84.0,
+    "lat": 37.71361,
+    "lon": 121.06629,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN NING 16",
+    "zwcm": "金宁16"
+  },
+  {
+    "cog": 172.4,
+    "lat": 29.47406,
+    "lon": 121.56506,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHENG JI 7",
+    "zwcm": "正吉7"
+  },
+  {
+    "cog": 340.0,
+    "lat": 29.89088,
+    "lon": 121.99717,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YI HAI 007",
+    "zwcm": "义海007"
+  },
+  {
+    "cog": 315.0,
+    "lat": 37.69194,
+    "lon": 121.37795,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU 5",
+    "zwcm": "宏桥达羽5"
+  },
+  {
+    "cog": 239.3,
+    "lat": 25.33943,
+    "lon": 120.25083,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "NAN YU 7",
+    "zwcm": "南屿7"
+  },
+  {
+    "cog": 308.6,
+    "lat": 29.90195,
+    "lon": 122.25738,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 10",
+    "zwcm": "宏达海10"
+  },
+  {
+    "cog": 150.7,
+    "lat": 29.90442,
+    "lon": 122.13813,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "EN YOU",
+    "zwcm": "恩佑"
+  },
+  {
+    "cog": 76.1,
+    "lat": 22.8914,
+    "lon": 117.7424,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 13",
+    "zwcm": "永星13"
+  },
+  {
+    "cog": 0.9,
+    "lat": 29.80949,
+    "lon": 122.13949,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONG MAO 3",
+    "zwcm": "众茂3"
+  },
+  {
+    "cog": 309.0,
+    "lat": 40.05927,
+    "lon": 121.58165,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN HAI ZHOU 28",
+    "zwcm": "新海洲28"
+  },
+  {
+    "cog": 12.1,
+    "lat": 29.89984,
+    "lon": 121.98245,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "YOU LIAN 66",
+    "zwcm": "友联66"
+  },
+  {
+    "cog": 40.9,
+    "lat": 38.32479,
+    "lon": 117.87155,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DONG HAI 101",
+    "zwcm": "东海101"
+  },
+  {
+    "cog": 179.5,
+    "lat": 35.56752,
+    "lon": 122.70697,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NING FENG 1",
+    "zwcm": "宁丰1"
+  },
+  {
+    "cog": 225.7,
+    "lat": 30.28724,
+    "lon": 121.87191,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "ZHE YONG YOU 12",
+    "zwcm": "浙甬油12"
+  },
+  {
+    "cog": 181.3,
+    "lat": 36.83807,
+    "lon": 122.75435,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NING FENG 2",
+    "zwcm": "宁丰2"
+  },
+  {
+    "cog": 97.2,
+    "lat": 22.11476,
+    "lon": 114.2845,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 82",
+    "zwcm": "金川82"
+  },
+  {
+    "cog": 226.4,
+    "lat": 28.49045,
+    "lon": 121.60861,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YUE FA 518",
+    "zwcm": "月发518"
+  },
+  {
+    "cog": 134.7,
+    "lat": 29.88877,
+    "lon": 121.95357,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "XIN LE 99",
+    "zwcm": "鑫乐99"
+  },
+  {
+    "cog": 88.7,
+    "lat": 30.98517,
+    "lon": 122.44318,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "LU DAO YOU 9",
+    "zwcm": "鹭岛油9"
+  },
+  {
+    "cog": 190.0,
+    "lat": 31.63728,
+    "lon": 121.28512,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN HAI ZHOU 29",
+    "zwcm": "新海洲29"
+  },
+  {
+    "cog": 319.0,
+    "lat": 39.90533,
+    "lon": 119.582,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "DA TANG 18",
+    "zwcm": "大唐18"
+  },
+  {
+    "cog": 207.0,
+    "lat": 24.99399,
+    "lon": 119.74256,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 16",
+    "zwcm": "金川16"
+  },
+  {
+    "cog": 10.4,
+    "lat": 32.05508,
+    "lon": 120.55366,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN HUI HAI 7",
+    "zwcm": "金辉海7"
+  },
+  {
+    "cog": 101.4,
+    "lat": 20.13666,
+    "lon": 109.77363,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE HAI 522",
+    "zwcm": "浙海522"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.74952,
+    "lon": 121.4678,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG HUA HUO 0208",
+    "zwcm": "浙奉化货0208"
+  },
+  {
+    "cog": 159.2,
+    "lat": 29.9669,
+    "lon": 121.7277,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG HUA HUO 0206",
+    "zwcm": "浙奉化货0206"
+  },
+  {
+    "cog": 290.6,
+    "lat": 31.49986,
+    "lon": 121.3752,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YU FAN 12",
+    "zwcm": "宇凡12"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.8524,
+    "lon": 121.539,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "HAN YA 2 HAO",
+    "zwcm": "汉雅2号"
+  },
+  {
+    "cog": 165.8,
+    "lat": 29.1023,
+    "lon": 121.8144,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "GAO HUA DU 2",
+    "zwcm": "高花渡2"
+  },
+  {
+    "cog": 0.0,
+    "lat": 31.97404,
+    "lon": 120.37063,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LANG RUN 029",
+    "zwcm": "朗润029"
+  },
+  {
+    "cog": 103.2,
+    "lat": 29.9569,
+    "lon": 120.9877,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE YV YAO HUO 001",
+    "zwcm": "浙余姚货001"
+  },
+  {
+    "cog": 115.9,
+    "lat": 31.6698,
+    "lon": 121.2128,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN OU 1",
+    "zwcm": "新欧1"
+  },
+  {
+    "cog": 244.1,
+    "lat": 31.3939,
+    "lon": 121.5136,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "TAO GONG",
+    "zwcm": "陶公"
+  },
+  {
+    "cog": 8.4,
+    "lat": 29.221,
+    "lon": 121.9468,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG NONG DU 1",
+    "zwcm": "浙象农渡1"
+  },
+  {
+    "cog": 83.1,
+    "lat": 23.1543,
+    "lon": 111.7146,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "HONG BO 8 HAO",
+    "zwcm": "泓渤8号"
+  },
+  {
+    "cog": 284.0,
+    "lat": 39.85732,
+    "lon": 119.80638,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING YU 67",
+    "zwcm": "兴宇67"
+  },
+  {
+    "cog": 327.0,
+    "lat": 30.09178,
+    "lon": 121.89819,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG HONG YANG",
+    "zwcm": "永鸿洋"
+  },
+  {
+    "cog": 181.0,
+    "lat": 34.50133,
+    "lon": 122.66496,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 5",
+    "zwcm": "联合5"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.8946,
+    "lon": 121.5718,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 27",
+    "zwcm": "天统27"
+  },
+  {
+    "cog": 114.0,
+    "lat": 30.0274,
+    "lon": 121.2225,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 28",
+    "zwcm": "天统28"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.9818,
+    "lon": 120.89331,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 51",
+    "zwcm": "天统51"
+  },
+  {
+    "cog": 301.5,
+    "lat": 30.0432,
+    "lon": 120.8297,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG HUI 803",
+    "zwcm": "甬辉803"
+  },
+  {
+    "cog": 220.9,
+    "lat": 30.0429,
+    "lon": 120.8235,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG HUI 802",
+    "zwcm": "甬辉802"
+  },
+  {
+    "cog": 61.4,
+    "lat": 38.95285,
+    "lon": 118.06289,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "FU XING 11",
+    "zwcm": "富兴11"
+  },
+  {
+    "cog": 358.0,
+    "lat": 30.05355,
+    "lon": 121.97719,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 62",
+    "zwcm": "明州62"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.0086,
+    "lon": 120.64169,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG HUI 801",
+    "zwcm": "甬辉801"
+  },
+  {
+    "cog": 56.8,
+    "lat": 20.3303,
+    "lon": 111.1674,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONGYU 6",
+    "zwcm": "中宇6"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.8523,
+    "lon": 121.5391,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "HAN YA 1 HAO",
+    "zwcm": "汉雅1号"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.94864,
+    "lon": 121.71439,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHEN DU 9",
+    "zwcm": "镇渡9"
+  },
+  {
+    "cog": 72.8,
+    "lat": 29.9487,
+    "lon": 121.7148,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHEN DU 8",
+    "zwcm": "镇渡8"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.1064,
+    "lon": 121.8239,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "XIANG NONG DU 5",
+    "zwcm": "象农渡5"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.19378,
+    "lon": 121.93103,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG NONG DU 3",
+    "zwcm": "浙象农渡3"
+  },
+  {
+    "cog": 27.8,
+    "lat": 40.68417,
+    "lon": 121.99783,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "PING AN DA 75",
+    "zwcm": "平安达75"
+  },
+  {
+    "cog": 218.2,
+    "lat": 39.20361,
+    "lon": 119.01609,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "FU XING 17",
+    "zwcm": "富兴17"
+  },
+  {
+    "cog": 283.3,
+    "lat": 30.38659,
+    "lon": 121.79691,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 7",
+    "zwcm": "联合7"
+  },
+  {
+    "cog": 63.9,
+    "lat": 30.41154,
+    "lon": 121.9396,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LIAN HE 11",
+    "zwcm": "联合11"
+  },
+  {
+    "cog": 75.8,
+    "lat": 22.67427,
+    "lon": 116.87265,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 85",
+    "zwcm": "兴宁85"
+  },
+  {
+    "cog": 99.7,
+    "lat": 30.0372,
+    "lon": 121.1591,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 3",
+    "zwcm": "天统3"
+  },
+  {
+    "cog": 175.8,
+    "lat": 29.9837,
+    "lon": 120.8879,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 5",
+    "zwcm": "天统5"
+  },
+  {
+    "cog": 298.5,
+    "lat": 29.9584,
+    "lon": 120.9691,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 6",
+    "zwcm": "天统6"
+  },
+  {
+    "cog": 41.0,
+    "lat": 29.9793,
+    "lon": 121.018,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 7",
+    "zwcm": "天统7"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.9845,
+    "lon": 120.8719,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 15",
+    "zwcm": "天统15"
+  },
+  {
+    "cog": 0.0,
+    "lat": 29.9855,
+    "lon": 120.8711,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN TONG 10",
+    "zwcm": "天统10"
+  },
+  {
+    "cog": 234.3,
+    "lat": 31.97135,
+    "lon": 120.00334,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUO LONG 518",
+    "zwcm": "硕隆518"
+  },
+  {
+    "cog": 336.2,
+    "lat": 31.01947,
+    "lon": 122.80258,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 72",
+    "zwcm": "北仑海72"
+  },
+  {
+    "cog": 194.2,
+    "lat": 29.94842,
+    "lon": 121.82901,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "FU XING 21",
+    "zwcm": "富兴21"
+  },
+  {
+    "cog": 301.8,
+    "lat": 32.07443,
+    "lon": 119.93266,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN ZENG 6",
+    "zwcm": "金增6"
+  },
+  {
+    "cog": 299.3,
+    "lat": 27.89516,
+    "lon": 121.19435,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIU XU 56",
+    "zwcm": "九旭56"
+  },
+  {
+    "cog": 232.0,
+    "lat": 31.97333,
+    "lon": 120.41858,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NING FENG 6",
+    "zwcm": "宁丰6"
+  },
+  {
+    "cog": 121.0,
+    "lat": 5.25629,
+    "lon": 120.00658,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE HAI 525",
+    "zwcm": "浙海525"
+  },
+  {
+    "cog": 168.6,
+    "lat": 31.8364,
+    "lon": 122.6257,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 55",
+    "zwcm": "明州55"
+  },
+  {
+    "cog": 54.2,
+    "lat": 30.46642,
+    "lon": 122.64273,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 57",
+    "zwcm": "明州57"
+  },
+  {
+    "cog": 256.3,
+    "lat": 29.795,
+    "lon": 122.5697,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "FU XING 22",
+    "zwcm": "富兴22"
+  },
+  {
+    "cog": 294.0,
+    "lat": 30.11648,
+    "lon": 122.17782,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN NING 18",
+    "zwcm": "金宁18"
+  },
+  {
+    "cog": 90.0,
+    "lat": 21.98732,
+    "lon": 114.33009,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG XING 5",
+    "zwcm": "永星5"
+  },
+  {
+    "cog": 13.7,
+    "lat": 22.72669,
+    "lon": 113.67473,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA RONG 2",
+    "zwcm": "华融2"
+  },
+  {
+    "cog": 305.0,
+    "lat": -3.93014,
+    "lon": 115.67185,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE HAI 511",
+    "zwcm": "浙海511"
+  },
+  {
+    "cog": 280.4,
+    "lat": 37.96723,
+    "lon": 121.10143,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA RONG 3",
+    "zwcm": "华融3"
+  },
+  {
+    "cog": 244.0,
+    "lat": 40.488,
+    "lon": 121.486,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 26",
+    "zwcm": "北仑海26"
+  },
+  {
+    "cog": 97.5,
+    "lat": 35.36398,
+    "lon": 119.54754,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RONG XING HAI",
+    "zwcm": "恒荣兴海"
+  },
+  {
+    "cog": 190.9,
+    "lat": 31.99347,
+    "lon": 120.67335,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RONG AN HAI",
+    "zwcm": "恒荣安海"
+  },
+  {
+    "cog": 189.6,
+    "lat": 40.50138,
+    "lon": 121.46463,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 28",
+    "zwcm": "北仑海28"
+  },
+  {
+    "cog": 5.0,
+    "lat": 9.50167,
+    "lon": 120.31128,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN SHENG 26",
+    "zwcm": "天盛26"
+  },
+  {
+    "cog": 112.2,
+    "lat": 30.41502,
+    "lon": 122.55338,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RONG SHENG HAI",
+    "zwcm": "恒荣盛海"
+  },
+  {
+    "cog": 208.0,
+    "lat": 28.4825,
+    "lon": 122.2205,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 10",
+    "zwcm": "北仑海10"
+  },
+  {
+    "cog": 0.3,
+    "lat": 37.67249,
+    "lon": 120.22196,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN YI 18",
+    "zwcm": "天一18"
+  },
+  {
+    "cog": 180.0,
+    "lat": 33.8329,
+    "lon": 122.91936,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NAN XIN 1",
+    "zwcm": "南鑫1"
+  },
+  {
+    "cog": 148.0,
+    "lat": 3.24444,
+    "lon": 117.80504,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN WU ZHOU 1",
+    "zwcm": "新五洲1"
+  },
+  {
+    "cog": 86.5,
+    "lat": 39.82745,
+    "lon": 124.15913,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN YUAN XIANG",
+    "zwcm": "新源祥"
+  },
+  {
+    "cog": 260.0,
+    "lat": 30.829,
+    "lon": 122.79967,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN HAO 18",
+    "zwcm": "天浩18"
+  },
+  {
+    "cog": 22.0,
+    "lat": 36.04662,
+    "lon": 120.71472,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NAN XIN 3",
+    "zwcm": "南鑫3"
+  },
+  {
+    "cog": 118.0,
+    "lat": 31.38113,
+    "lon": 121.59065,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN YUAN CHUN",
+    "zwcm": "新源春"
+  },
+  {
+    "cog": 8.6,
+    "lat": 30.33539,
+    "lon": 122.52158,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 501",
+    "zwcm": "明州501"
+  },
+  {
+    "cog": 276.0,
+    "lat": 30.99568,
+    "lon": 122.70053,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA SHENG 15",
+    "zwcm": "华盛15"
+  },
+  {
+    "cog": 186.6,
+    "lat": 0.71967,
+    "lon": 117.77476,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN NING 7",
+    "zwcm": "金宁7"
+  },
+  {
+    "cog": 225.0,
+    "lat": 28.7263,
+    "lon": 121.79175,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YI PENG",
+    "zwcm": "伊鹏"
+  },
+  {
+    "cog": 281.5,
+    "lat": 30.35299,
+    "lon": 122.50095,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 502",
+    "zwcm": "明州502"
+  },
+  {
+    "cog": 254.9,
+    "lat": 28.72775,
+    "lon": 121.81753,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YI PENG 3",
+    "zwcm": "伊鹏3"
+  },
+  {
+    "cog": 311.0,
+    "lat": 29.89367,
+    "lon": 122.07915,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHUN XING 1",
+    "zwcm": "准兴1"
+  },
+  {
+    "cog": 302.0,
+    "lat": 38.20211,
+    "lon": 121.7029,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA JIANG 801",
+    "zwcm": "华江801"
+  },
+  {
+    "cog": 156.0,
+    "lat": 2.0004,
+    "lon": 118.13792,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "WEI QIN",
+    "zwcm": "伟勤"
+  },
+  {
+    "cog": 330.0,
+    "lat": 31.3073,
+    "lon": 122.6248,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NAN XIN 7",
+    "zwcm": "南鑫7"
+  },
+  {
+    "cog": 0.0,
+    "lat": 40.80255,
+    "lon": 121.0434,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHONG ZHE 6",
+    "zwcm": "中浙6"
+  },
+  {
+    "cog": 183.0,
+    "lat": 33.58558,
+    "lon": 122.62006,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN YUAN HE",
+    "zwcm": "新源和"
+  },
+  {
+    "cog": 184.1,
+    "lat": 37.72595,
+    "lon": 120.19311,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN YI 16",
+    "zwcm": "天一16"
+  },
+  {
+    "cog": 358.2,
+    "lat": 36.3851,
+    "lon": 122.91238,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN NING 17",
+    "zwcm": "金宁17"
+  },
+  {
+    "cog": 268.0,
+    "lat": 30.3441,
+    "lon": 122.5605,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING ZHOU 503",
+    "zwcm": "明州503"
+  },
+  {
+    "cog": 318.0,
+    "lat": -3.20868,
+    "lon": 116.37787,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI SHI",
+    "zwcm": "北仑海狮"
+  },
+  {
+    "cog": 272.0,
+    "lat": 27.9044,
+    "lon": 121.19108,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LEI SHENG 1",
+    "zwcm": "雷盛1"
+  },
+  {
+    "cog": 262.0,
+    "lat": 29.79104,
+    "lon": 122.12902,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHUN XING 2",
+    "zwcm": "准兴2"
+  },
+  {
+    "cog": 278.5,
+    "lat": 39.95901,
+    "lon": 121.54817,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN FENG YANG PU",
+    "zwcm": "信风洋浦"
+  },
+  {
+    "cog": 188.6,
+    "lat": 40.03792,
+    "lon": 121.51932,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN FENG YANG ZI JIANG",
+    "zwcm": "信风扬子江"
+  },
+  {
+    "cog": 222.0,
+    "lat": 31.59063,
+    "lon": 121.31353,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN HAO 17",
+    "zwcm": "天浩17"
+  },
+  {
+    "cog": 256.0,
+    "lat": 39.5415,
+    "lon": 124.02092,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN TUO",
+    "zwcm": "鑫拓"
+  },
+  {
+    "cog": 242.0,
+    "lat": 29.94181,
+    "lon": 122.24659,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHEN YU 69",
+    "zwcm": "神鱼69"
+  },
+  {
+    "cog": 269.0,
+    "lat": 21.37403,
+    "lon": 108.58827,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LEI SHENG 2",
+    "zwcm": "雷盛2"
+  },
+  {
+    "cog": 26.9,
+    "lat": 31.62332,
+    "lon": 121.29359,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TONG DE 98",
+    "zwcm": "同德98"
+  },
+  {
+    "cog": 178.0,
+    "lat": 37.82155,
+    "lon": 121.30418,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NAN XIN 9",
+    "zwcm": "南鑫9"
+  },
+  {
+    "cog": 310.0,
+    "lat": 31.932,
+    "lon": 120.12948,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHUN XING 3",
+    "zwcm": "准兴3"
+  },
+  {
+    "cog": 162.0,
+    "lat": 29.04281,
+    "lon": 121.63864,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN ANG",
+    "zwcm": "鑫昂"
+  },
+  {
+    "cog": 268.6,
+    "lat": 29.9467,
+    "lon": 121.7137,
+    "mmsi": "123456",
+    "shipType": "05",
+    "ywcm": "YONG JIE 5",
+    "zwcm": "甬洁5"
+  },
+  {
+    "cog": 47.0,
+    "lat": 30.83533,
+    "lon": 122.81477,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA DA YUN",
+    "zwcm": "华达运"
+  },
+  {
+    "cog": 301.0,
+    "lat": 34.58289,
+    "lon": 121.77519,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG YANG",
+    "zwcm": "鸿洋"
+  },
+  {
+    "cog": 42.0,
+    "lat": 15.75468,
+    "lon": 119.88991,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG LONG ZHI XING",
+    "zwcm": "宏隆之星"
+  },
+  {
+    "cog": 180.6,
+    "lat": 31.7022,
+    "lon": 122.9338,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG HAO",
+    "zwcm": "鸿豪"
+  },
+  {
+    "cog": 291.0,
+    "lat": 21.36242,
+    "lon": 108.59628,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "NING FU",
+    "zwcm": "宁福"
+  },
+  {
+    "cog": 103.0,
+    "lat": 40.55355,
+    "lon": 121.47133,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHUN XING 7",
+    "zwcm": "准兴7"
+  },
+  {
+    "cog": 0.0,
+    "lat": 32.009,
+    "lon": 122.96423,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN SHENG 27",
+    "zwcm": "天盛27"
+  },
+  {
+    "cog": 186.6,
+    "lat": 30.99909,
+    "lon": 122.51995,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIN CHUAN 68",
+    "zwcm": "金川68"
+  },
+  {
+    "cog": 0.0,
+    "lat": 37.71455,
+    "lon": 121.10951,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HONG QIAO DA YU 6",
+    "zwcm": "宏桥达羽6"
+  },
+  {
+    "cog": 303.0,
+    "lat": 39.92952,
+    "lon": 119.66575,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA JIANG 806",
+    "zwcm": "华江806"
+  },
+  {
+    "cog": 174.3,
+    "lat": 27.2271,
+    "lon": 120.9315,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "KANG XIN 11",
+    "zwcm": "康鑫11"
+  },
+  {
+    "cog": 33.9,
+    "lat": 29.86334,
+    "lon": 122.13418,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YUAN YANG 8617",
+    "zwcm": "远扬8617"
+  },
+  {
+    "cog": 346.0,
+    "lat": 30.17356,
+    "lon": 121.79645,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN MING ZHOU 86",
+    "zwcm": "新明州86"
+  },
+  {
+    "cog": 0.0,
+    "lat": 28.35887,
+    "lon": 121.61823,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "LI BAI DA 19",
+    "zwcm": "利佰达19"
+  },
+  {
+    "cog": 210.4,
+    "lat": 23.78413,
+    "lon": 117.57575,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "ZHUO TAI 10 HAO",
+    "zwcm": "卓泰10号"
+  },
+  {
+    "cog": 348.8,
+    "lat": 30.73617,
+    "lon": 123.1552,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "SAN MAO 01",
+    "zwcm": "三毛01"
+  },
+  {
+    "cog": 262.0,
+    "lat": 30.1561,
+    "lon": 122.0119,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 76",
+    "zwcm": "兴宁76"
+  },
+  {
+    "cog": 151.2,
+    "lat": 28.4919,
+    "lon": 121.6588,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "ZHE XIANG NONG DU 7",
+    "zwcm": "浙象农渡7"
+  },
+  {
+    "cog": 296.9,
+    "lat": 34.33813,
+    "lon": 120.36616,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE FENG 667",
+    "zwcm": "浙奉667"
+  },
+  {
+    "cog": 238.7,
+    "lat": 29.81383,
+    "lon": 121.51183,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "YUAN YANG 8517",
+    "zwcm": "远扬8517"
+  },
+  {
+    "cog": 327.0,
+    "lat": 31.14343,
+    "lon": 122.77168,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHEN YU 79",
+    "zwcm": "神鱼79"
+  },
+  {
+    "cog": 324.9,
+    "lat": 29.89357,
+    "lon": 122.081,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "DONG GANG JIAO 8",
+    "zwcm": "东港交8"
+  },
+  {
+    "cog": 0.0,
+    "lat": 30.24687,
+    "lon": 122.17448,
+    "mmsi": "123456",
+    "shipType": "04",
+    "ywcm": "DONG FANG HAI GONG 01",
+    "zwcm": "东方海工01"
+  },
+  {
+    "cog": 0.0,
+    "lat": 31.91989,
+    "lon": 120.16983,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HENG RUN DA 9",
+    "zwcm": "恒润达9"
+  },
+  {
+    "cog": 181.0,
+    "lat": 22.08542,
+    "lon": 113.86887,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE XIANG 828",
+    "zwcm": "浙象828"
+  },
+  {
+    "cog": 34.6,
+    "lat": 22.58247,
+    "lon": 114.43404,
+    "mmsi": "123456",
+    "shipType": "09",
+    "ywcm": "BO HAI 02",
+    "zwcm": "博海02"
+  },
+  {
+    "cog": 49.9,
+    "lat": 30.20873,
+    "lon": 121.93339,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHUN XING HAI 568",
+    "zwcm": "顺行海568"
+  },
+  {
+    "cog": 263.8,
+    "lat": 29.47341,
+    "lon": 121.55652,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHENG JI 3",
+    "zwcm": "正吉3"
+  },
+  {
+    "cog": 258.0,
+    "lat": 30.07277,
+    "lon": 10.09731,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "KA MEI LI YA 12",
+    "zwcm": "卡美丽亚12"
+  },
+  {
+    "cog": 127.0,
+    "lat": 29.77831,
+    "lon": 121.92701,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "KA MEI LI YA 13",
+    "zwcm": "卡美丽亚13"
+  },
+  {
+    "cog": 97.3,
+    "lat": 29.7781,
+    "lon": 121.927,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "KA MEI LI YA 15",
+    "zwcm": "卡美丽亚15"
+  },
+  {
+    "cog": 350.0,
+    "lat": 29.7776,
+    "lon": 121.9269,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "KA MEI LI YA 18",
+    "zwcm": "卡美丽亚18"
+  },
+  {
+    "cog": 182.8,
+    "lat": 29.7782,
+    "lon": 121.927,
+    "mmsi": "123456",
+    "shipType": "0909",
+    "ywcm": "KA MEI LI YA 19",
+    "zwcm": "卡美丽亚19"
+  },
+  {
+    "cog": 128.0,
+    "lat": 38.97999,
+    "lon": 118.46863,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YI HANG 72",
+    "zwcm": "益航72"
+  },
+  {
+    "cog": 0.1,
+    "lat": 29.11701,
+    "lon": 122.41617,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "MING LE 1",
+    "zwcm": "明乐1"
+  },
+  {
+    "cog": 192.0,
+    "lat": 30.17953,
+    "lon": 121.80649,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "HUA YUN 12",
+    "zwcm": "华韵12"
+  },
+  {
+    "cog": 219.0,
+    "lat": 24.43285,
+    "lon": 119.33445,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "SHI HUA 17",
+    "zwcm": "实华17"
+  },
+  {
+    "cog": 181.0,
+    "lat": 34.68167,
+    "lon": 122.67333,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "JIA SHENG 16",
+    "zwcm": "佳升16"
+  },
+  {
+    "cog": 265.0,
+    "lat": 21.97925,
+    "lon": 114.58904,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "YONG HONG HAI",
+    "zwcm": "永鸿海"
+  },
+  {
+    "cog": 351.2,
+    "lat": 22.6936,
+    "lon": 113.6991,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XIN ZHE",
+    "zwcm": "鑫哲"
+  },
+  {
+    "cog": 349.2,
+    "lat": 30.0092,
+    "lon": 121.99485,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HONG DA HAI 88",
+    "zwcm": "宏达海88"
+  },
+  {
+    "cog": 167.0,
+    "lat": 31.38002,
+    "lon": 121.56528,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "HANG HAI YOU 17",
+    "zwcm": "航海油17"
+  },
+  {
+    "cog": 331.2,
+    "lat": 29.90831,
+    "lon": 122.11336,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GANG FENG 9",
+    "zwcm": "港丰9"
+  },
+  {
+    "cog": 275.8,
+    "lat": 21.71992,
+    "lon": 108.58974,
+    "mmsi": "123456",
+    "shipType": "06",
+    "ywcm": "HUA HAI TUO 5",
+    "zwcm": "华海拖5"
+  },
+  {
+    "cog": 210.0,
+    "lat": 28.08185,
+    "lon": 121.94292,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "XING NING 75",
+    "zwcm": "兴宁75"
+  },
+  {
+    "cog": 70.0,
+    "lat": 29.89195,
+    "lon": 121.94767,
+    "mmsi": "123456",
+    "shipType": "03",
+    "ywcm": "GUO HAI 15",
+    "zwcm": "国海15"
+  },
+  {
+    "cog": 281.0,
+    "lat": 25.75274,
+    "lon": 119.63244,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN HAI 17",
+    "zwcm": "北仑海17"
+  },
+  {
+    "cog": 300.0,
+    "lat": 39.9198,
+    "lon": 119.6767,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE NENG 2",
+    "zwcm": "浙能2"
+  },
+  {
+    "cog": 347.4,
+    "lat": 31.85489,
+    "lon": 120.89722,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "BEI LUN 16",
+    "zwcm": "北仑16"
+  },
+  {
+    "cog": 243.0,
+    "lat": 30.6776,
+    "lon": 122.672,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TONG DE 188",
+    "zwcm": "同德188"
+  },
+  {
+    "cog": 271.0,
+    "lat": 28.16348,
+    "lon": 121.10933,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE NENG 1",
+    "zwcm": "浙能1"
+  },
+  {
+    "cog": 256.0,
+    "lat": 29.98195,
+    "lon": 121.74132,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "ZHE NENG 5",
+    "zwcm": "浙能5"
+  },
+  {
+    "cog": 256.0,
+    "lat": 31.5998,
+    "lon": 121.31473,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "RUI KANG 66",
+    "zwcm": "瑞康66"
+  },
+  {
+    "cog": 4.0,
+    "lat": 32.02518,
+    "lon": 122.61585,
+    "mmsi": "123456",
+    "shipType": "02",
+    "ywcm": "TIAN YI 88",
+    "zwcm": "天一88"
+  },
+  {
+    "cog": 299.2,
+    "lat": 31.32016,
+    "lon": 118.35977,
+    "mmsi": "123456",
+    "shipType": "01",
+    "ywcm": "TAO GONG",
+    "zwcm": "陶公"
+  }
+]

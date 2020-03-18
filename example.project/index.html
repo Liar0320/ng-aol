@@ -19,6 +19,10 @@
       href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css"
+    />
     <!-- <link rel="stylesheet" href="22" /> -->
     <style>
       html,
@@ -31,6 +35,13 @@
         width: 100%;
         display: inline-block;
       }
+      .controlPanel {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1;
+        padding: 15px;
+      }
     </style>
   </head>
 
@@ -42,22 +53,25 @@
       </aol-view>
       <aol-layer-tile>
         <aol-source-xyz
-          url="'http://m12.shipxy.com/tile.c?l=Na&m=o&x={x}&y={y}&z={z}'"
+          instance="map.source[0]"
+          tile-grid="map.tileSource.tileGrid"
+          url="map.tileSource.src"
         ></aol-source-xyz>
       </aol-layer-tile>
       <aol-layer-group>
-        <aol-layer-vector max-resolution="0.051243">
+        <aol-layer-vector max-resolution="152.9">
           <aol-source-vector instance="map.source[1]">
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
                 <aol-coordinate
-                  x="feature.lat"
-                  y="feature.lon"
+                  x="feature.lon"
+                  y="feature.lat"
                 ></aol-coordinate>
                 <aol-style>
                   <aol-style-icon
-                    src="feature.logo"
+                    src="'./assets/ship.png'"
                     scale="0.5"
+                    color="feature.color"
                     rotation="feature.rotation"
                   ></aol-style-icon>
                 </aol-style>
@@ -65,24 +79,25 @@
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
-        <aol-layer-vector declutter="true" max-resolution="0.051243">
+        <aol-layer-vector declutter="true" max-resolution="152.9">
           <aol-source-vector>
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
                 <aol-coordinate
-                  x="feature.lat"
-                  y="feature.lon"
+                  x="feature.lon"
+                  y="feature.lat"
                 ></aol-coordinate>
                 <aol-style>
-                  <aol-style-text text="feature.name"></aol-style-text>
+                  <aol-style-text text="feature.text"></aol-style-text>
                 </aol-style>
               </aol-geometry-point>
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
         <aol-layer-webgl
+          style="map.webgl.style"
           source="map.source[1]"
-          min-resolution="0.051243"
+          min-resolution="152.9"
         ></aol-layer-webgl>
       </aol-layer-group>
       <aol-interaction-defaults
@@ -90,6 +105,18 @@
         mouse-wheel-zoom="true"
       ></aol-interaction-defaults>
     </aol-map>
+
+    <div class="panel controlPanel">
+      <map-tilesource-control
+        select-item="map.tileSource"
+      ></map-tilesource-control>
+    </div>
+
+    <script type="text/ng-template" id="mapTilesourceControl">
+      <div class="btn-group" role="group" aria-label="地图切换">
+        <button type="button" class="btn btn-sm btn-default" ng-repeat="item in $ctrl.source track by item.code" ng-click="$ctrl.change(item.code)">{{item.name}}</button>
+      </div>
+    </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>

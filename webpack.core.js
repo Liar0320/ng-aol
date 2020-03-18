@@ -29,6 +29,4 @@ const prodConfig = merge(common, {
   ],
 });
 
-console.log(prodConfig);
-
 module.exports = prodConfig;
