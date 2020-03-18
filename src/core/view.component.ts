@@ -22,7 +22,7 @@ export class ViewComponent implements angular.IController {
   zoom: number = 11;
   zoomFactor: number;
   center: Coordinate = [104.06, 30.67];
-  projection: string = 'EPSG:4326';
+  projection: string;
 
   zoomAnimation: Boolean = false;
 
