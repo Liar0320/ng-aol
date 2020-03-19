@@ -61,7 +61,10 @@
       <aol-layer-group>
         <aol-layer-vector max-resolution="152.9">
           <aol-source-vector instance="map.source[1]">
-            <aol-feature ng-repeat="feature in map.collection track by $index">
+            <aol-feature
+              ng-repeat="feature in map.collection track by $index"
+              properties="{shipType:feature.shipType}"
+            >
               <aol-geometry-point>
                 <aol-coordinate
                   x="feature.lon"

@@ -48,7 +48,10 @@
       <aol-layer-group>
         <aol-layer-vector max-resolution="0.051243">
           <aol-source-vector instance="map.source[1]">
-            <aol-feature ng-repeat="feature in map.collection track by $index">
+            <aol-feature
+              ng-repeat="feature in map.collection track by $index"
+              properties="{lon:feature.lon,lat:feature.lat}"
+            >
               <aol-geometry-point>
                 <aol-coordinate
                   x="feature.lat"
@@ -71,7 +74,7 @@
         <aol-style>
           <aol-style-circle radius="10">
             <aol-style-fill color="'#FF0000'"></aol-style-fill>
-            <aol-style-stroke width="2" ></aol-style-stroke>
+            <aol-style-stroke width="2"></aol-style-stroke>
           </aol-style-circle>
         </aol-style>
       </aol-layer-vector>
@@ -87,42 +90,41 @@
   <script type="text/javascript" src="aol.all.min.js"></script></body>
   <script>
     angular
-  .module('app', ['aol'])
-  .run([
-    '$log',
-    '$rootScope',
-    'apiCollection',
-    function($log, $rootScope, apiCollection) {
-      $log.log('项目启动');
-      const map = {};
+      .module('app', ['aol'])
+      .run([
+        '$log',
+        '$rootScope',
+        'apiCollection',
+        function($log, $rootScope, apiCollection) {
+          $log.log('项目启动');
+          const map = {};
 
-      function init() {
-        map.collection = apiCollection.queryCollection();
-      }
-      init();
+          function init() {
+            map.collection = apiCollection.queryCollection();
+          }
+          init();
 
-      $rootScope.map = map;
-    },
-  ])
-  .service('apiCollection', [
-    '$http',
-    function($http) {
-      this.queryCollection = function() {
-        return Mock.mock({
-          'list|3000': [
-            {
-              'id|+1': 1,
-              'name|2': '@first',
-              'lon|20-30.3': 1,
-              'lat|120-130.3': 1,
-              'rotation|-3-3.5': 1,
-              logo: 'https://lanshuimu.com/images/ship.png',
-            },
-          ],
-        }).list;
-      };
-    },
-  ]);
-
+          $rootScope.map = map;
+        },
+      ])
+      .service('apiCollection', [
+        '$http',
+        function($http) {
+          this.queryCollection = function() {
+            return Mock.mock({
+              'list|3000': [
+                {
+                  'id|+1': 1,
+                  'name|2': '@first',
+                  'lon|20-30.3': 1,
+                  'lat|120-130.3': 1,
+                  'rotation|-3-3.5': 1,
+                  logo: 'https://lanshuimu.com/images/ship.png',
+                },
+              ],
+            }).list;
+          };
+        },
+      ]);
   </script>
 </html>

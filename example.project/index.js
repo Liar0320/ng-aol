@@ -19,7 +19,7 @@ angular
                 [
                   'interpolate',
                   ['linear'],
-                  ['get', 'webgltype'],
+                  ['get', 'shipType'],
                   '00',
                   '#CD853F',
                   '01', // 客船

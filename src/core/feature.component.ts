@@ -5,6 +5,7 @@ export class FeatureComponent implements ng.IController {
   public componentType = 'feature';
   public instance: Feature;
   private host: SourceVectorComponent;
+  private properties: object;
 
   id: string | number | undefined;
 
@@ -15,6 +16,9 @@ export class FeatureComponent implements ng.IController {
     if (this.id !== undefined) {
       this.instance.setId(this.id);
     }
+    if (this.properties !== undefined) {
+      this.instance.setProperties(this.properties);
+    }
     this.host.instance.addFeature(this.instance);
   }
 
@@ -24,7 +28,11 @@ export class FeatureComponent implements ng.IController {
 
   $onChanges(changes: ng.IOnChangesObject) {
     if (this.instance) {
-      this.instance.setId(this.id);
+      if (changes['properties']) {
+        this.instance.setProperties(changes['properties'], true);
+      } else {
+        this.instance.setId(this.id);
+      }
     }
   }
 }
@@ -35,6 +43,7 @@ var component: angular.IComponentOptions = {
   //       `,
   bindings: {
     id: '<?',
+    properties: '<?',
   },
   require: {
     host: `^${aolSourceVector.name}`,
