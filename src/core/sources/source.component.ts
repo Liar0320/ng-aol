@@ -11,6 +11,8 @@ export class SourceComponent implements angular.IController {
   attributions: AttributionLike;
   attributionsCollapsible: boolean;
 
+  instanceDone?: Function;
+
   //   constructor()
   //   {}
 
@@ -27,6 +29,7 @@ export class SourceComponent implements angular.IController {
   protected _register(source: Source) {
     if (this.host) {
       this.host.instance.setSource(source);
+      if (this.instanceDone) this.instanceDone({ instance: source });
     }
 
     // if (this.raster) {
@@ -40,5 +43,6 @@ export const sourceComponentConfig = {
     instance: '=?',
     attributions: '<?',
     attributionsCollapsible: '<?',
+    instanceDone: '&?',
   },
 };
