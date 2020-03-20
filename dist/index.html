@@ -37,7 +37,7 @@
   <body ng-app="app" ng-cloak>
     <!-- 测试地图1 -->
     <aol-map class="map">
-      <aol-view zoom="1">
+      <aol-view zoom="8">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
       <aol-layer-tile>
@@ -46,7 +46,7 @@
         ></aol-source-xyz>
       </aol-layer-tile>
       <aol-layer-group>
-        <aol-layer-vector declutter="true">
+        <aol-layer-vector max-resolution="0.051243">
           <aol-source-vector instance="map.source[1]">
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
@@ -54,18 +54,27 @@
                   x="feature.lat"
                   y="feature.lon"
                 ></aol-coordinate>
+                <aol-style>
+                  <aol-style-icon
+                    src="feature.logo"
+                    scale="0.5"
+                    rotation="feature.rotation"
+                  ></aol-style-icon>
+                </aol-style>
               </aol-geometry-point>
-              <aol-style ng-init="::img = map.shipStyle(feature.name)">
-                <aol-style-icon
-                  img="::img"
-                  anchor="[0.5, 0.9]"
-                  color="feature.color"
-                ></aol-style-icon>
-              </aol-style>
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
       </aol-layer-group>
+      <aol-layer-vector>
+        <aol-source-cluster source="map.source[1]"></aol-source-cluster>
+        <aol-style>
+          <aol-style-circle radius="10">
+            <aol-style-fill color="'#FF0000'"></aol-style-fill>
+            <aol-style-stroke width="2" ></aol-style-stroke>
+          </aol-style-circle>
+        </aol-style>
+      </aol-layer-vector>
       <aol-interaction-defaults
         double-click-zoom="false"
         mouse-wheel-zoom="true"
@@ -78,317 +87,42 @@
   <script type="text/javascript" src="aol.all.min.js"></script></body>
   <script>
     angular
-      .module('app', ['aol'])
-      .run([
-        '$log',
-        '$rootScope',
-        'apiCollection',
-        'maputil',
-        function($log, $rootScope, apiCollection, maputil) {
-          $log.log('项目启动');
-          const map = {
-            shipStyle: function(e) {
-              return maputil.createTipMsgDom(e, { color: '#333' });
+  .module('app', ['aol'])
+  .run([
+    '$log',
+    '$rootScope',
+    'apiCollection',
+    function($log, $rootScope, apiCollection) {
+      $log.log('项目启动');
+      const map = {};
+
+      function init() {
+        map.collection = apiCollection.queryCollection();
+      }
+      init();
+
+      $rootScope.map = map;
+    },
+  ])
+  .service('apiCollection', [
+    '$http',
+    function($http) {
+      this.queryCollection = function() {
+        return Mock.mock({
+          'list|3000': [
+            {
+              'id|+1': 1,
+              'name|2': '@first',
+              'lon|20-30.3': 1,
+              'lat|120-130.3': 1,
+              'rotation|-3-3.5': 1,
+              logo: 'https://lanshuimu.com/images/ship.png',
             },
-          };
+          ],
+        }).list;
+      };
+    },
+  ]);
 
-          function init() {
-            map.collection = apiCollection.queryCollection();
-          }
-          init();
-
-          $rootScope.map = map;
-        },
-      ])
-      .service('apiCollection', [
-        '$http',
-        function($http) {
-          this.queryCollection = function() {
-            return Mock.mock({
-              'list|3000': [
-                {
-                  'id|+1': 1,
-                  'name|2': '@first',
-                  'lon|20-30.3': 1,
-                  'lat|120-130.3': 1,
-                  'rotation|-3-3.5': 1,
-                  logo: 'https://lanshuimu.com/images/ship.png',
-                },
-              ],
-            }).list;
-          };
-        },
-      ])
-      .service('maputil', function() {
-        this.createTipMsgDom = (function() {
-          function _toConsumableArray(arr) {
-            return (
-              _arrayWithoutHoles(arr) ||
-              _iterableToArray(arr) ||
-              _nonIterableSpread()
-            );
-          }
-
-          function _nonIterableSpread() {
-            throw new TypeError(
-              'Invalid attempt to spread non-iterable instance',
-            );
-          }
-
-          function _iterableToArray(iter) {
-            if (
-              Symbol.iterator in Object(iter) ||
-              Object.prototype.toString.call(iter) === '[object Arguments]'
-            )
-              return Array.from(iter);
-          }
-
-          function _arrayWithoutHoles(arr) {
-            if (Array.isArray(arr)) {
-              for (
-                var i = 0, arr2 = new Array(arr.length);
-                i < arr.length;
-                i++
-              ) {
-                arr2[i] = arr[i];
-              }
-              return arr2;
-            }
-          }
-
-          function port_classCallCheck(instance, Constructor) {
-            if (!(instance instanceof Constructor)) {
-              throw new TypeError('Cannot call a class as a function');
-            }
-          }
-
-          function port_defineProperties(target, props) {
-            for (var i = 0; i < props.length; i++) {
-              var descriptor = props[i];
-              descriptor.enumerable = descriptor.enumerable || false;
-              descriptor.configurable = true;
-              if ('value' in descriptor) descriptor.writable = true;
-              Object.defineProperty(target, descriptor.key, descriptor);
-            }
-          }
-
-          function port_createClass(Constructor, protoProps, staticProps) {
-            if (protoProps)
-              port_defineProperties(Constructor.prototype, protoProps);
-            if (staticProps) port_defineProperties(Constructor, staticProps);
-            return Constructor;
-          }
-
-          /* eslint-disable no-param-reassign */
-
-          var port_PortMsg =
-            /*#__PURE__*/
-            (function() {
-              function PortMsg(_ref) {
-                var _ref$height = _ref.height,
-                  height = _ref$height === void 0 ? 20 : _ref$height,
-                  _ref$width = _ref.width,
-                  width = _ref$width === void 0 ? 20 : _ref$width,
-                  _ref$rotation = _ref.rotation,
-                  rotation = _ref$rotation === void 0 ? 0 : _ref$rotation,
-                  _ref$color = _ref.color,
-                  color = _ref$color === void 0 ? '#FFF' : _ref$color,
-                  _ref$strokeStyle = _ref.strokeStyle,
-                  strokeStyle =
-                    _ref$strokeStyle === void 0 ? '#000' : _ref$strokeStyle,
-                  _ref$strokeWidth = _ref.strokeWidth,
-                  strokeWidth =
-                    _ref$strokeWidth === void 0 ? 1 : _ref$strokeWidth,
-                  _ref$scaleX = _ref.scaleX,
-                  scaleX = _ref$scaleX === void 0 ? 1 : _ref$scaleX,
-                  _ref$scaleY = _ref.scaleY,
-                  scaleY = _ref$scaleY === void 0 ? 1 : _ref$scaleY,
-                  _ref$triangle = _ref.triangle,
-                  triangle = _ref$triangle === void 0 ? 5 : _ref$triangle;
-
-                port_classCallCheck(this, PortMsg);
-
-                this.width = width;
-                this.height = height;
-                this.x = this.width / 2 + strokeWidth;
-                this.y = this.height / 2 + strokeWidth;
-                this.rotation = rotation;
-                this.scaleX = scaleX;
-                this.scaleY = scaleY;
-                this.strokeStyle = strokeStyle;
-                this.strokeWidth = strokeWidth;
-                this.color = color;
-                this.triangle = triangle;
-              }
-              /**
-               * @param {CanvasRenderingContext2D} context
-               */
-
-              port_createClass(PortMsg, [
-                {
-                  key: 'draw',
-                  value: function draw(context) {
-                    // @ts-ignore
-                    var nodePoint = this.createNodeByWidthHeight(
-                      this.height,
-                      this.width,
-                      this.triangle,
-                    );
-                    context.save(); // context.shadowOffsetX = 10; // 设置水平位移
-                    // context.shadowOffsetY = 10; // 设置垂直位移
-                    // context.shadowBlur = 20;
-                    // context.shadowColor = '#ffffff73';
-
-                    context.translate(this.x, this.y);
-                    context.rotate(this.rotation);
-                    context.scale(this.scaleX, this.scaleY);
-                    context.strokeStyle = this.strokeStyle;
-                    context.lineWidth = this.strokeWidth;
-                    context.fillStyle = this.color;
-                    context.beginPath(); // console.log(context);
-                    // @ts-ignore
-
-                    context.moveTo.apply(
-                      context,
-                      _toConsumableArray(nodePoint.shift()),
-                    );
-
-                    while (nodePoint.length) {
-                      // @ts-ignore
-                      context.lineTo.apply(
-                        context,
-                        _toConsumableArray(nodePoint.shift()),
-                      );
-                    }
-
-                    context.closePath();
-                    context.fill();
-                    context.stroke();
-                    context.restore();
-                  },
-                  /**
-                   * @param {CanvasRenderingContext2D} context
-                   */
-                },
-                {
-                  key: 'drawText',
-                  value: function drawText(context, text, index, _ref2) {
-                    var _ref2$color = _ref2.color,
-                      color =
-                        _ref2$color === void 0
-                          ? colorCollection.font
-                          : _ref2$color;
-                    context.save(); // context.translate(this.x, this.y);
-                    // context.rotate(this.rotation);
-                    // context.scale(this.scaleX, this.scaleY);
-
-                    context.font = 'normal 100 12px NSimSun'; // context.strokeStyle = 'red';
-                    // context.lineWidth = this.strokeWidth;
-
-                    context.fillStyle = color;
-                    /** 字体高度12 加2的行间距 */
-
-                    context.fillText(
-                      text,
-                      6,
-                      (12 + (index === 0 ? 0 : 2)) * (index + 1) + 8 / 2,
-                      this.width,
-                    ); // context.stroke();
-
-                    context.restore();
-                  },
-                  /**
-                   * 绘制气泡大小
-                   * @param {number} height
-                   * @param {number} width
-                   */
-                  // eslint-disable-next-line class-methods-use-this
-                },
-                {
-                  key: 'createNodeByWidthHeight',
-                  value: function createNodeByWidthHeight(height, width) {
-                    var triangle =
-                      arguments.length > 2 && arguments[2] !== undefined
-                        ? arguments[2]
-                        : 10;
-                    var nodePoint = [];
-                    var halfHeight = height / 2;
-                    var halfWidth = width / 2; // const triangle = 5;
-
-                    nodePoint.push([-1 * halfWidth, -1 * halfHeight]);
-                    nodePoint.push([halfWidth, -1 * halfHeight]);
-                    nodePoint.push([halfWidth, halfHeight]);
-                    nodePoint.push([triangle, halfHeight]);
-                    nodePoint.push([0, halfHeight + (1 / 2) * triangle]);
-                    nodePoint.push([-1 * triangle, halfHeight]);
-                    nodePoint.push([-1 * halfWidth, halfHeight]);
-                    nodePoint.push([-1 * halfWidth, -1 * halfHeight]);
-                    return nodePoint;
-                  },
-                },
-              ]);
-
-              return PortMsg;
-            })();
-
-          // CONCATENATED MODULE: ./src/component/ol/canvas/msg/index.js
-
-          /* eslint-disable import/prefer-default-export */
-
-          var msg_canvas = document.createElement('canvas');
-          var msg_context = msg_canvas.getContext('2d');
-          msg_context.font = 'normal 100 12px NSimSun';
-          /**
-           * 测量文字的范围
-           * @param { string } text
-           */
-
-          function measureText(text) {
-            var padding =
-              arguments.length > 1 && arguments[1] !== undefined
-                ? arguments[1]
-                : 10;
-            var result = {
-              width: 0,
-              height: 0,
-              list: [],
-            };
-            var lines = text.split('\n');
-            result.list = lines;
-            result.height = (12 + 2) * lines.length + padding;
-            var maxWidth = lines.reduce(function(prev, item) {
-              return Math.max(prev, msg_context.measureText(item).width);
-            }, 0);
-            result.width = maxWidth + padding;
-            return result;
-          }
-
-          var msg_generateMsgPopup = function generateMsgPopup(text, style) {
-            var canvas2 = document.createElement('canvas');
-            var context2 = canvas2.getContext('2d');
-            var textRect = measureText(text);
-            var triangle = 10;
-            var portMsg = new port_PortMsg({
-              height: textRect.height - 5,
-              width: textRect.width,
-              triangle: triangle,
-              strokeStyle: 'transparent',
-            });
-            /** 根据经纬度坐标 转90 */
-
-            canvas2.width = portMsg.width + 2 * portMsg.strokeWidth + 1;
-            canvas2.height =
-              portMsg.height + 2 * portMsg.strokeWidth + triangle;
-            portMsg.draw(context2);
-            textRect.list.forEach(function(item, index) {
-              portMsg.drawText(context2, item, index, {
-                color: style.color,
-              });
-            });
-            return canvas2;
-          };
-          return msg_generateMsgPopup;
-        })();
-      });
   </script>
 </html>

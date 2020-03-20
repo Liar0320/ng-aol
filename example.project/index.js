@@ -52,11 +52,57 @@ angular
             },
           },
         },
+        click(e) {
+          console.log(e);
+        },
+        featureClick(e) {
+          console.log(e);
+        },
+        featureClickFilter(layer) {
+          return layer.get('name') === 'shipLayer';
+        },
+        featureClickStyle(e) {
+          console.log(e.get('shipType'));
+
+          return [
+            new ol.style.Style({
+              image: new ol.style.Icon({
+                src: './assets/ship.png',
+                scale: '0.5',
+                color: e.get('color'),
+                rotation: e.get('rotation'),
+              }),
+            }),
+            new ol.style.Style({
+              image: new ol.style.Icon({
+                zIndex: 10,
+                src: './assets/selection.png',
+                scale: '0.6',
+                // color: e.get('color'),
+                // rotation: e.get('rotation'),
+              }),
+            }),
+          ];
+        },
+        pointerMove(e) {
+          if (e.selected.length) {
+            $rootScope.$apply(function() {
+              map.style = { cursor: 'pointer' };
+            });
+          } else {
+            $rootScope.$apply(function() {
+              map.style = { cursor: '' };
+            });
+          }
+        },
       };
 
       function init() {
         apiCollection.queryCollection().then(function(list) {
           map.collection = list;
+        });
+        apiCollection.queryTrackList().then(function(list) {
+          map.tracksSource = list;
         });
       }
       init();
@@ -91,6 +137,12 @@ angular
 
             return list;
           });
+      };
+
+      this.queryTrackList = function() {
+        return $http.get('./assets/02.json').then(function(res) {
+          return res.data;
+        });
       };
     },
   ])
@@ -496,6 +548,180 @@ angular
             this.selectItem = select;
           } else {
             throw new Error('当前不存在该地图');
+          }
+        };
+      },
+    ],
+  })
+  .component('mapTrackRoutes', {
+    templateUrl: 'mapTrackRoutes',
+    bindings: {
+      isource: '<?',
+      tracks: '=?',
+    },
+    controller: [
+      '$interval',
+      function($interval) {
+        function Animate() {
+          const aniamteInstance = this;
+
+          this.enable = false;
+          this.status = null;
+          this.frameObjs = null;
+          this.frames = 0;
+          this.currentFrameIndex = 0;
+          this.currentFrame = null;
+          this.interval = null;
+          this.speed = 1;
+          this.active = function(frameObjs) {
+            this.frameObjs = frameObjs || this.frameObjs || [];
+            if (this.frameObjs.length === 0) {
+              console.log('没有可执行帧');
+              this.enable = false;
+
+              return;
+            }
+            this.frames = this.frameObjs.length;
+            this.currentFrameIndex = 0;
+            this.enable = true;
+          };
+          this.start = function() {
+            if (!this.enable) return;
+            if (aniamteInstance.interval) {
+              $interval.cancel(aniamteInstance.interval);
+              aniamteInstance.interval = null;
+            }
+            this.status = 'going';
+            if (
+              aniamteInstance.currentFrameIndex ===
+              aniamteInstance.frames - 1
+            )
+              aniamteInstance.currentFrameIndex === 0;
+            this.interval = $interval(function() {
+              aniamteInstance.getCurrentFrameObj();
+              if (
+                aniamteInstance.currentFrameIndex ===
+                aniamteInstance.frames - 1
+              ) {
+                $interval.cancel(aniamteInstance.interval);
+                aniamteInstance.interval = null;
+                aniamteInstance.status = 'pause';
+              }
+              aniamteInstance.currentFrameIndex++;
+            }, 10 / this.speed);
+          };
+          this.pause = function() {
+            aniamteInstance.status = 'pause';
+            if (aniamteInstance.interval) {
+              $interval.cancel(aniamteInstance.interval);
+              aniamteInstance.interval = null;
+            }
+          };
+          this.cancel = function() {
+            if (this.interval) {
+              $interval.cancel(this.interval);
+              this.interval = null;
+            }
+            this.enable = false;
+            this.status = null;
+            this.frameObjs = null;
+            this.frames = 0;
+            this.currentFrameIndex = 0;
+            this.currentFrame = null;
+            this.interval = null;
+            this.speed = 1;
+          };
+          this.restart = function() {
+            this.currentFrameIndex = 0;
+            this.start();
+          };
+          this.getCurrentFrameObj = function() {
+            return (aniamteInstance.currentFrame = this.frameObjs[
+              this.currentFrameIndex
+            ]);
+          };
+        }
+
+        // 轨迹类
+        function Tracks(resource) {
+          const instance = this;
+          // 路径
+
+          this.linestring = [];
+          // 点
+          this.point = [];
+          // 线
+          this.arrow = [];
+          // 开始坐标
+          this.startMarker = null;
+          // 结束坐标
+          this.endMarker = null;
+
+          this.animate = new this.Animate();
+
+          function createMarker(point) {
+            if (!point) return null;
+            point.position = [point.lon, point.lat];
+
+            return point;
+          }
+
+          const average = function(nums) {
+            return nums.reduce(function(acc, val) {
+              return (acc + val) / nums.length;
+            }, nums[0]);
+          };
+
+          this.init = function() {
+            resource = resource || [];
+            resource.forEach(function(item, index, arr) {
+              instance.linestring.push([item.lon, item.lat]);
+              if (index !== 0) {
+                const prevItem = arr[index - 1];
+
+                item.__rotate = getRotation(
+                  [item.lon, item.lat],
+                  [prevItem.lon, prevItem.lat],
+                );
+                instance.arrow.push({
+                  lon: average.call(null, [item.lon, prevItem.lon]),
+                  lat: average.call(null, [item.lat, prevItem.lat]),
+                  rotate: item.__rotate,
+                });
+              }
+            });
+            this.startMarker = createMarker(resource[0] || null);
+            this.endMarker = createMarker(
+              resource.length > 0 ? resource[resource.length - 1] : null,
+            );
+            this.point = resource;
+
+            this.animate.frameObjs = resource;
+          };
+          this.init();
+        }
+        Tracks.prototype.Animate = Animate;
+
+        /**
+         * 处理点的方向
+         * @param {[number,number]} start;
+         * @param {[number,number]} end;
+         */
+        function getRotation(start, end) {
+          const dx = end[0] - start[0];
+          const dy = end[1] - start[1];
+          const rotation = Math.atan2(dy, dx);
+
+          return Math.PI - rotation;
+        }
+
+        this.$onInit = function() {
+          this.tracks = new Tracks(this.isource);
+        };
+
+        this.$onChanges = function(changes) {
+          if (changes.isource) {
+            this.tracks = new Tracks(this.isource);
           }
         };
       },

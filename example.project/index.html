@@ -47,7 +47,7 @@
 
   <body ng-app="app" ng-cloak>
     <!-- 测试地图1 -->
-    <aol-map class="map">
+    <aol-map class="map" ng-style="map.style">
       <aol-view zoom="8">
         <aol-coordinate x="122" y="24"></aol-coordinate>
       </aol-view>
@@ -58,31 +58,34 @@
           url="map.tileSource.src"
         ></aol-source-xyz>
       </aol-layer-tile>
-      <aol-layer-group>
-        <aol-layer-vector max-resolution="152.9">
+      <aol-layer-group visible="!trackEnable">
+        <aol-layer-vector
+          max-resolution="152.9"
+          properties="{name:'shipLayer'}"
+        >
           <aol-source-vector instance="map.source[1]">
             <aol-feature
               ng-repeat="feature in map.collection track by $index"
-              properties="{shipType:feature.shipType}"
+              properties="feature"
             >
               <aol-geometry-point>
                 <aol-coordinate
                   x="feature.lon"
                   y="feature.lat"
                 ></aol-coordinate>
-                <aol-style>
-                  <aol-style-icon
-                    src="'./assets/ship.png'"
-                    scale="0.5"
-                    color="feature.color"
-                    rotation="feature.rotation"
-                  ></aol-style-icon>
-                </aol-style>
               </aol-geometry-point>
+              <aol-style>
+                <aol-style-icon
+                  src="'./assets/ship.png'"
+                  scale="0.5"
+                  color="feature.color"
+                  rotation="feature.rotation"
+                ></aol-style-icon>
+              </aol-style>
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>
-        <aol-layer-vector declutter="true" max-resolution="152.9">
+        <aol-layer-vector declutter="true" max-resolution="152.9" opacity="0.7">
           <aol-source-vector>
             <aol-feature ng-repeat="feature in map.collection track by $index">
               <aol-geometry-point>
@@ -106,22 +109,188 @@
           min-resolution="152.9"
         ></aol-layer-webgl>
       </aol-layer-group>
+      <aol-interaction-select
+        style="map.featureClickStyle"
+        layers="map.featureClickFilter"
+        condition="'click'"
+        multi="false"
+        on-select="map.featureClick(event)"
+      ></aol-interaction-select>
+      <aol-interaction-select
+        layers="map.featureClickFilter"
+        condition="'pointerMove'"
+        multi="false"
+        on-select="map.pointerMove(event)"
+        style="null"
+      ></aol-interaction-select>
       <aol-interaction-defaults
         double-click-zoom="false"
         mouse-wheel-zoom="true"
       ></aol-interaction-defaults>
+      <map-track-routes
+        ng-if="map.tracksSource && trackEnable"
+        isource="map.tracksSource"
+        tracks="map.tracks"
+      ></map-track-routes>
     </aol-map>
 
     <div class="panel controlPanel">
       <map-tilesource-control
         select-item="map.tileSource"
       ></map-tilesource-control>
+
+      <br />
+      <button ng-click="trackEnable = !trackEnable">展示船舶轨迹</button>
+      <div ng-if="trackEnable">
+        <button
+          ng-click="map.tracks.animate.active(map.tracks.animate.point);map.tracks.animate.start()"
+        >
+          启用动画
+        </button>
+        <button ng-click="map.tracks.animate.cancel()">取消动画</button>
+        <button ng-click="map.tracks.animate.start()">开始动画</button>
+        <button ng-click="map.tracks.animate.restart()">重新开始动画</button>
+        <button ng-click="map.tracks.animate.pause()">暂停</button>
+        <p>
+          速度<input
+            type="range"
+            ng-model="map.tracks.animate.speed"
+            min="0"
+            max="1"
+            step="0.1"
+          />
+        </p>
+        <p>
+          进度<input
+            type="range"
+            ng-model="map.tracks.animate.currentFrameIndex"
+            min="0"
+            max="{{map.tracks.animate.frames - 1}}"
+            step="1"
+            ng-change="map.tracks.animate.getCurrentFrameObj()"
+          />
+        </p>
+      </div>
     </div>
 
     <script type="text/ng-template" id="mapTilesourceControl">
       <div class="btn-group" role="group" aria-label="地图切换">
         <button type="button" class="btn btn-sm btn-default" ng-repeat="item in $ctrl.source track by item.code" ng-click="$ctrl.change(item.code)">{{item.name}}</button>
       </div>
+    </script>
+
+    <script type="text/ng-template" id="mapTrackRoutes">
+       <!-- 轨迹图层 轨迹点 和 轨迹线 -->
+      <aol-layer-vector declutter="true">
+        <aol-source-vector>
+          <!-- 轨迹线 -->
+          <aol-feature>
+            <aol-geometry-linestring>
+              <aol-collection-coordinates
+                coordinates="$ctrl.tracks.linestring"
+              ></aol-collection-coordinates>
+            </aol-geometry-linestring>
+          </aol-feature>
+          <!-- 轨迹箭头 -->
+          <aol-feature ng-repeat="item in $ctrl.tracks.arrow">
+            <aol-geometry-point>
+              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-icon
+                src="'https://openlayers.org/en/latest/examples/data/arrow.png'"
+                rotation="item.rotate"
+              ></aol-style-icon>
+              <!-- <aol-style-text
+                text="item.time"
+                rotation="item.rotate"
+                offset-y="10"
+              ></aol-style-text> -->
+            </aol-style>
+          </aol-feature>
+          <!-- 轨迹点 -->
+          <aol-feature ng-repeat="item in $ctrl.tracks.point">
+            <aol-geometry-point>
+              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-circle radius="5">
+                <aol-style-fill color="'#FF0000'"></aol-style-fill>
+                <aol-style-stroke width="1" line-dash="[10]"></aol-style-stroke>
+              </aol-style-circle>
+              <aol-style-text
+                text="item.time"
+                offset-y="-15"
+                offset-x="60"
+              >
+              </aol-style-text>
+            </aol-style>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
+      <aol-layer-vector ng-if="$ctrl.tracks.animate.enable">
+        <aol-source-vector>
+          <aol-feature>
+            <aol-geometry-point>
+              <aol-coordinate
+                x="$ctrl.tracks.animate.currentFrame.lon"
+                y="$ctrl.tracks.animate.currentFrame.lat"
+              ></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-icon
+                src="'https://lanshuimu.com/images/ship.png'"
+                scale="0.5"
+                rotation="$ctrl.tracks.animate.currentFrame.__rotate"
+              ></aol-style-icon>
+              <aol-style-text
+                text="$ctrl.tracks.animate.currentFrame.time"
+                offset-y="-15"
+                offset-x="60"
+              ></aol-style-text>
+            </aol-style>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
+
+      <!-- 开始坐标 -->
+      <aol-overlay
+        ng-if="$ctrl.tracks.startMarker"
+        position="$ctrl.tracks.startMarker.position"
+        projection="'ESPG:4326'"
+        positioning="'center-center'"
+      >
+        <div style="position: relative;">
+          <img
+            src="./assets/icon-start.png"
+            width="25"
+            height="25"
+            alt=""
+          />
+          <p style="position: absolute;">
+            {{$ctrl.tracks.startMarker.msg || '开始'}}
+          </p>
+        </div>
+      </aol-overlay>
+      <!-- 截至坐标 -->
+      <aol-overlay
+        ng-if="$ctrl.tracks.endMarker && !$ctrl.tracks.animate.enable"
+        position="$ctrl.tracks.endMarker.position"
+        projection="'ESPG:4326'"
+        positioning="'center-center'"
+      >
+        <div style="position: relative;">
+          <img
+            src="./assets/icon-end.png"
+            width="25"
+            height="25"
+            alt=""
+          />
+          <p style="position: absolute;">
+            {{$ctrl.tracks.startMarker.msg || '结束'}}
+          </p>
+        </div>
+      </aol-overlay>
     </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
