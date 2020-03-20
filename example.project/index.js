@@ -553,6 +553,88 @@ angular
       },
     ],
   })
+  .component('mapShipLayer', {
+    templateUrl: 'mapShipLayer',
+    bindings: {
+      isource: '<?',
+      instance: '=?',
+    },
+    controller: [
+      'maptools',
+      function(maptools) {
+        // 创建船舶
+        function createShipList(shipList) {
+          return shipList.map(function(item) {
+            const f = new ol.Feature(
+              new ol.geom.Point(ol.proj.fromLonLat([item.lon, item.lat])),
+            );
+
+            f.setProperties(item);
+            f.setStyle(
+              new ol.style.Style({
+                image: new ol.style.Icon({
+                  src: './assets/ship.png',
+                  scale: '0.5',
+                  color: item.color,
+                  rotation: item.rotation,
+                }),
+              }),
+            );
+
+            return f;
+          });
+        }
+
+        this.addFeatures = function addFeatures(source) {
+          source = source || this.instance;
+          if (!source) return;
+          const featuresSource = createShipList(this.isource || []);
+
+          source.addFeatures(featuresSource);
+          this.instance = source;
+        };
+
+        // 创建船舶缩略
+        function createShipListTip(shipList) {
+          return shipList.map(function(item) {
+            const f = new ol.Feature(
+              new ol.geom.Point(ol.proj.fromLonLat([item.lon, item.lat])),
+            );
+
+            f.setProperties(item);
+            const img = maptools.createTipMsgDom(item.text, { color: '#333' });
+
+            f.setStyle(
+              new ol.style.Style({
+                image: new ol.style.Icon({
+                  img,
+                  imgSize: [img.width, img.height],
+                  anchor: [0.5, 0.9],
+                }),
+              }),
+            );
+
+            return f;
+          });
+        }
+        this.addFeaturesTip = function(source) {
+          source = source || this.instanceTip;
+          if (!source) return;
+          const featuresSource = createShipListTip(this.isource || []);
+
+          source.addFeatures(featuresSource);
+          this.instanceTip = source;
+        };
+
+        this.$onChanges = function(changes) {
+          if (changes.isource) {
+            this.addFeatures();
+            this.addFeaturesTip();
+          }
+        };
+      },
+    ],
+  })
   .component('mapTrackRoutes', {
     templateUrl: 'mapTrackRoutes',
     bindings: {
@@ -717,11 +799,91 @@ angular
 
         this.$onInit = function() {
           this.tracks = new Tracks(this.isource);
+
+          // 轨迹线
+        };
+
+        function createLinestring(linestring) {
+          return new ol.Feature(
+            new ol.geom.LineString(
+              linestring.map(function(item) {
+                return ol.proj.fromLonLat(item);
+              }),
+            ),
+          );
+        }
+
+        // 创建轨迹箭头
+        function createArrow(arrows) {
+          return arrows.map(function(item) {
+            const f = new ol.Feature(
+              new ol.geom.Point(ol.proj.fromLonLat([item.lon, item.lat])),
+            );
+
+            f.setStyle(
+              new ol.style.Style({
+                image: new ol.style.Icon({
+                  src:
+                    'https://openlayers.org/en/latest/examples/data/arrow.png',
+                  rotation: item.rotate,
+                }),
+              }),
+            );
+
+            return f;
+          });
+        }
+
+        // 创建轨迹点
+        function createPoints(points) {
+          return points.map(function(item) {
+            const f = new ol.Feature(
+              new ol.geom.Point(ol.proj.fromLonLat([item.lon, item.lat])),
+            );
+
+            f.setStyle(
+              new ol.style.Style({
+                image: new ol.style.Circle({
+                  radius: 5,
+                  fill: new ol.style.Fill({
+                    color: '#FF0000',
+                  }),
+                  stroke: new ol.style.Stroke({
+                    width: 1,
+                    lineDash: [10],
+                  }),
+                }),
+                text: new ol.style.Text({
+                  text: item.time,
+                  offsetY: '-15',
+                  offsetX: '60',
+                }),
+              }),
+            );
+
+            return f;
+          });
+        }
+
+        this.addFeatures = function addFeatures(source) {
+          const featuresSource = [];
+
+          featuresSource.push(createLinestring(this.tracks.linestring));
+          featuresSource.push.apply(
+            featuresSource,
+            createArrow(this.tracks.arrow),
+          );
+          featuresSource.push.apply(
+            featuresSource,
+            createPoints(this.tracks.point),
+          );
+          source.addFeatures(featuresSource);
         };
 
         this.$onChanges = function(changes) {
           if (changes.isource) {
             this.tracks = new Tracks(this.isource);
+            // addFeatures.call(this);
           }
         };
       },

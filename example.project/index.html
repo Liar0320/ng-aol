@@ -59,50 +59,10 @@
         ></aol-source-xyz>
       </aol-layer-tile>
       <aol-layer-group visible="!trackEnable">
-        <aol-layer-vector
-          max-resolution="152.9"
-          properties="{name:'shipLayer'}"
-        >
-          <aol-source-vector instance="map.source[1]">
-            <aol-feature
-              ng-repeat="feature in map.collection track by $index"
-              properties="feature"
-            >
-              <aol-geometry-point>
-                <aol-coordinate
-                  x="feature.lon"
-                  y="feature.lat"
-                ></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style>
-                <aol-style-icon
-                  src="'./assets/ship.png'"
-                  scale="0.5"
-                  color="feature.color"
-                  rotation="feature.rotation"
-                ></aol-style-icon>
-              </aol-style>
-            </aol-feature>
-          </aol-source-vector>
-        </aol-layer-vector>
-        <aol-layer-vector declutter="true" max-resolution="152.9" opacity="0.7">
-          <aol-source-vector>
-            <aol-feature ng-repeat="feature in map.collection track by $index">
-              <aol-geometry-point>
-                <aol-coordinate
-                  x="feature.lon"
-                  y="feature.lat"
-                ></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style ng-init="::img = map.shipStyle(feature.text)">
-                <aol-style-icon
-                  img="::img"
-                  anchor="[0.5, 0.9]"
-                ></aol-style-icon>
-              </aol-style>
-            </aol-feature>
-          </aol-source-vector>
-        </aol-layer-vector>
+        <map-ship-layer
+          isource="map.collection"
+          instance="map.source[1]"
+        ></map-ship-layer>
         <aol-layer-webgl
           style="map.webgl.style"
           source="map.source[1]"
@@ -182,17 +142,17 @@
     <script type="text/ng-template" id="mapTrackRoutes">
        <!-- 轨迹图层 轨迹点 和 轨迹线 -->
       <aol-layer-vector declutter="true">
-        <aol-source-vector>
-          <!-- 轨迹线 -->
-          <aol-feature>
+        <aol-source-vector  instance-done="$ctrl.addFeatures(instance)"></aol-source-vector>
+
+        <!-- <aol-source-vector >
+          <aol-feature tag="轨迹线">
             <aol-geometry-linestring>
               <aol-collection-coordinates
                 coordinates="$ctrl.tracks.linestring"
               ></aol-collection-coordinates>
             </aol-geometry-linestring>
           </aol-feature>
-          <!-- 轨迹箭头 -->
-          <aol-feature ng-repeat="item in $ctrl.tracks.arrow">
+          <aol-feature tag="轨迹箭头" ng-repeat="item in $ctrl.tracks.arrow">
             <aol-geometry-point>
               <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
             </aol-geometry-point>
@@ -201,15 +161,9 @@
                 src="'https://openlayers.org/en/latest/examples/data/arrow.png'"
                 rotation="item.rotate"
               ></aol-style-icon>
-              <!-- <aol-style-text
-                text="item.time"
-                rotation="item.rotate"
-                offset-y="10"
-              ></aol-style-text> -->
             </aol-style>
           </aol-feature>
-          <!-- 轨迹点 -->
-          <aol-feature ng-repeat="item in $ctrl.tracks.point">
+          <aol-feature tag="轨迹点" ng-repeat="item in $ctrl.tracks.point">
             <aol-geometry-point>
               <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
             </aol-geometry-point>
@@ -226,7 +180,7 @@
               </aol-style-text>
             </aol-style>
           </aol-feature>
-        </aol-source-vector>
+        </aol-source-vector> -->
       </aol-layer-vector>
       <aol-layer-vector ng-if="$ctrl.tracks.animate.enable">
         <aol-source-vector>
@@ -292,6 +246,54 @@
         </div>
       </aol-overlay>
     </script>
+
+    <script type="text/ng-template" id="mapShipLayer">
+      <aol-layer-vector
+          max-resolution="152.9"
+          properties="{name:'shipLayer'}"
+        >
+          <aol-source-vector instance-done="$ctrl.addFeatures(instance)">
+            <!-- <aol-feature
+              ng-repeat="feature in map.collection track by $index"
+              properties="feature"
+            >
+              <aol-geometry-point>
+                <aol-coordinate
+                  x="feature.lon"
+                  y="feature.lat"
+                ></aol-coordinate>
+              </aol-geometry-point>
+              <aol-style>
+                <aol-style-icon
+                  src="'./assets/ship.png'"
+                  scale="0.5"
+                  color="feature.color"
+                  rotation="feature.rotation"
+                ></aol-style-icon>
+              </aol-style>
+            </aol-feature> -->
+          </aol-source-vector>
+        </aol-layer-vector>
+        <aol-layer-vector declutter="true" max-resolution="152.9" opacity="0.7">
+          <aol-source-vector instance-done="$ctrl.addFeaturesTip(instance)">
+            <!-- <aol-feature ng-repeat="feature in map.collection track by $index">
+              <aol-geometry-point>
+                <aol-coordinate
+                  x="feature.lon"
+                  y="feature.lat"
+                ></aol-coordinate>
+              </aol-geometry-point>
+              <aol-style ng-init="::img = map.shipStyle(feature.text)">
+                <aol-style-icon
+                  img="::img"
+                  anchor="[0.5, 0.9]"
+                ></aol-style-icon>
+              </aol-style>
+            </aol-feature> -->
+          </aol-source-vector>
+        </aol-layer-vector>
+    </script>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
