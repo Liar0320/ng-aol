@@ -3,6 +3,7 @@ import { Options, PanOptions } from 'ol/Overlay';
 import OverlayPositioning from 'ol/OverlayPositioning';
 import { Coordinate } from 'ol/coordinate';
 import aolMap, { MapComponent } from './map.component';
+import { fromLonLat } from 'ol/proj';
 
 export class OverlayComponent implements ng.IController, Options {
   componentType = 'overlay';
@@ -18,6 +19,7 @@ export class OverlayComponent implements ng.IController, Options {
   offset?: number[];
   position?: Coordinate;
   positioning?: OverlayPositioning;
+  projection?: string;
   stopEvent?: boolean;
   insertFirst?: boolean;
   autoPan?: boolean;
@@ -33,6 +35,10 @@ export class OverlayComponent implements ng.IController, Options {
     /**@TODO: this.element , $element */
     if (this.$element[0]) {
       this.element = this.$element[0];
+      this.position =
+        this.projection == 'EPSG:4326'
+          ? this.position
+          : fromLonLat(this.position);
       this.instance = new Overlay(this);
       this.host.instance.addOverlay(this.instance);
     }
@@ -44,7 +50,20 @@ export class OverlayComponent implements ng.IController, Options {
       return;
     }
     for (let key in changes) {
-      properties[key] = changes[key].currentValue;
+      if (changes.hasOwnProperty(key)) {
+        switch (key) {
+          case 'position':
+            this.position =
+              this.projection == 'EPSG:4326'
+                ? this.position
+                : fromLonLat(this.position);
+            this.instance.setPosition(this.position);
+            return;
+          default:
+            properties[key] = changes[key].currentValue;
+            break;
+        }
+      }
     }
     // console.log('changes detected in aol-view, setting new properties: ', properties);
     this.instance.setProperties(properties, false);
@@ -73,6 +92,7 @@ var component: angular.IComponentOptions = {
     autoPanAnimation: '<?',
     autoPanMargin: '<?',
     className: '<',
+    projection: '<?',
   },
   require: {
     host: `^${aolMap.name}`,

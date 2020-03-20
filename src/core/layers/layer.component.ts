@@ -31,6 +31,10 @@ export abstract class LayerComponent implements angular.IController {
     if (this.postrender !== null && this.postrender !== undefined) {
       this.instance.on('postrender', this.postrender);
     }
+    if (this.instance.get('properties')) {
+      this.instance.setProperties(this.instance.get('properties'), false);
+      this.instance.set('properties', null, false);
+    }
     this.host.instance.getLayers().push(this.instance);
   }
 
@@ -60,6 +64,9 @@ export abstract class LayerComponent implements angular.IController {
           case 'style':
             this.instance.setStyle(changes[key].currentValue);
             break;
+          case 'properties':
+            this.instance.set(changes[key].currentValue, false);
+            return;
           default:
             properties[key] = changes[key].currentValue;
             break;

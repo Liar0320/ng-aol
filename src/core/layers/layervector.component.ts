@@ -52,6 +52,7 @@ var component: angular.IComponentOptions = {
     style: '<?',
     updateWhileAnimating: '<?',
     updateWhileInteracting: '<?',
+    properties: '<?',
   },
   require: layerComponentConfig.require,
   controller: [LayerVectorComponent],

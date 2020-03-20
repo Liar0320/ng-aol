@@ -1,7 +1,12 @@
 import * as angular from 'angular';
 import { Select } from 'ol/interaction';
 import aolMap, { MapComponent } from '../map.component';
-import { Options, FilterFunction, SelectEvent } from 'ol/interaction/Select';
+import {
+  Options,
+  FilterFunction,
+  SelectEvent,
+  SelectEventType,
+} from 'ol/interaction/Select';
 import { Condition } from 'ol/events/condition';
 import { Source } from 'ol/source';
 import { Layer } from 'ol/layer';
@@ -39,9 +44,20 @@ export class SelectInteractionComponent extends SelectInteractionExtend
     }
     super.initCondition();
     this.instance = new Select(this);
-    this.instance.on('select', (event: SelectEvent) =>
-      this.onSelect({ event }),
-    );
+    this.instance.on('select', (event: SelectEvent | any) => {
+      if (event.selected.length) {
+        event.remove = () => {
+          this.instance.getFeatures().remove(event.selected[0]);
+          this.instance.dispatchEvent({
+            type: 'select',
+            selected: [],
+            deselected: [event.selected[0]],
+            mapBrowserEvent: null,
+          });
+        };
+      }
+      this.onSelect({ event });
+    });
     this.instance.on('change', (event: SelectEvent) =>
       this.onChange({ event }),
     );
@@ -89,6 +105,7 @@ var component: angular.IComponentOptions = {
     onChange: '&?',
     onSelect: '&?',
     onPropertyChange: '&?',
+    instance: '=?',
   },
   require: {
     host: `^${aolMap.name}`,
