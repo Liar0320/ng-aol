@@ -9,7 +9,7 @@ import {
 } from 'ol/interaction/Select';
 import { Condition } from 'ol/events/condition';
 import { Source } from 'ol/source';
-import { Layer } from 'ol/layer';
+import { Layer, Vector } from 'ol/layer';
 import { StyleLike } from 'ol/style/Style';
 import { Collection, Feature } from 'ol';
 import { Geometry } from 'ol/geom';
@@ -30,6 +30,7 @@ export class SelectInteractionComponent extends SelectInteractionExtend
   features?: Collection<Feature<Geometry>>;
   filter?: FilterFunction;
   hitTolerance?: number;
+  selected?: (Feature | string)[];
 
   onSelect = angular.noop;
   onChange = angular.noop;
@@ -67,6 +68,57 @@ export class SelectInteractionComponent extends SelectInteractionExtend
     this.host.instance.addInteraction(this.instance);
   }
 
+  manualDispath() {
+    var filterCondition = this.selected;
+    if (!filterCondition || filterCondition.length === 0) return;
+    var result: Feature[] = [];
+    let layers: Vector[];
+
+    if (this.layers) {
+      if ((typeof this.layers as any) === 'function') {
+        layers = this.host.instance
+          .getLayers()
+          .getArray()
+          .filter(this.layers as any);
+      } else {
+        layers = this.layers as Vector[];
+      }
+    } else {
+      layers = this.host.instance.getLayers().getArray() as Vector[];
+    }
+
+    layers.forEach(function(layer) {
+      filterCondition.forEach(function(item) {
+        let selected: Feature;
+        if (typeof item === 'string') {
+          selected = layer.getSource().getFeatureById(item);
+          result.push(selected);
+        } else if (typeof item === 'function') {
+          selected = layer
+            .getSource()
+            .getFeatures()
+            .find(item);
+        } else {
+          selected = layer
+            .getSource()
+            .getFeatures()
+            .find(v => v === item);
+        }
+
+        if (selected) result.push(selected);
+      });
+    });
+
+    let deSelecteds = this.instance.getFeatures().getArray();
+    this.instance.getFeatures().clear();
+    this.instance.dispatchEvent({
+      type: 'select',
+      selected: result,
+      deselected: deSelecteds,
+      mapBrowserEvent: null,
+    });
+  }
+
   $onChanges(changes: ng.IOnChangesObject) {
     let properties: { [index: string]: any } = {};
 
@@ -75,7 +127,14 @@ export class SelectInteractionComponent extends SelectInteractionExtend
     }
     for (let key in changes) {
       if (changes.hasOwnProperty(key)) {
-        properties[key] = changes[key].currentValue;
+        switch (key) {
+          case 'selected':
+            this.manualDispath();
+            break;
+          default:
+            properties[key] = changes[key].currentValue;
+            break;
+        }
       }
     }
 
@@ -102,6 +161,7 @@ var component: angular.IComponentOptions = {
     features: '<?',
     filter: '<?',
     wrapX: '<?',
+    selected: '<?',
     onChange: '&?',
     onSelect: '&?',
     onPropertyChange: '&?',
