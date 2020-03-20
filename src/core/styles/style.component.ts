@@ -54,11 +54,38 @@ export class StyleComponent implements ng.IController {
     this.host.instance.setStyle(style);
   }
 
-  //   $onChanges(changes: ng.IOnChangesObject) {
-  //     if (this.instance) {
-  //       this.instance.setId(this.id);
-  //     }
-  //   }
+  $onChanges(changes: ng.IOnChangesObject) {
+    let properties: { [index: string]: any } = {};
+
+    if (!this.instance) {
+      return;
+    }
+    for (let key in changes) {
+      if (changes.hasOwnProperty(key)) {
+        switch (key) {
+          case 'image':
+            this.instance.setImage(changes[key].currentValue);
+            break;
+          case 'fill':
+            this.instance.setFill(changes[key].currentValue);
+            break;
+          case 'stroke':
+            this.instance.setStroke(changes[key].currentValue);
+            break;
+          case 'text':
+            this.instance.setText(changes[key].currentValue);
+          case 'zIndex':
+            this.instance.setZIndex(changes[key].currentValue);
+            break;
+          default:
+            // properties[key] = changes[key].currentValue;
+            // this.instance.set(properties, false);
+            break;
+        }
+      }
+      this.host.instance.changed();
+    }
+  }
 }
 
 var aolStyleComponent: angular.IComponentOptions = {

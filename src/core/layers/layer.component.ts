@@ -57,6 +57,9 @@ export abstract class LayerComponent implements angular.IController {
           case 'source':
             this.instance.setSource(changes[key].currentValue);
             break;
+          case 'style':
+            this.instance.setStyle(changes[key].currentValue);
+            break;
           default:
             properties[key] = changes[key].currentValue;
             break;

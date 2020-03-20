@@ -35,6 +35,10 @@ export class styleIconComponent implements ng.IController, Options {
     if (!this.host) {
       throw new Error('aol-style-icon must be applied to a style component');
     }
+    if (this.img && !this.imgSize) {
+      this.imgSize = [this.img.width, this.img.height];
+    }
+
     this.instance = new Icon(this);
     this.host.instance.setImage(this.instance);
   }
@@ -58,6 +62,17 @@ export class styleIconComponent implements ng.IController, Options {
       this.instance.setScale(changes['scale'].currentValue);
     }
     if (changes['src']) {
+      this.instance = new Icon(this);
+      this.host.instance.setImage(this.instance);
+    }
+    if (changes['img']) {
+      if (this.img && !this.imgSize) {
+        this.imgSize = [this.img.width, this.img.height];
+      }
+      this.instance = new Icon(this);
+      this.host.instance.setImage(this.instance);
+    }
+    if (changes['imgSize']) {
       this.instance = new Icon(this);
       this.host.instance.setImage(this.instance);
     }

@@ -90,10 +90,13 @@
                   x="feature.lon"
                   y="feature.lat"
                 ></aol-coordinate>
-                <aol-style>
-                  <aol-style-text text="feature.text"></aol-style-text>
-                </aol-style>
               </aol-geometry-point>
+              <aol-style ng-init="::img = map.shipStyle(feature.text)">
+                <aol-style-icon
+                  img="::img"
+                  anchor="[0.5, 0.9]"
+                ></aol-style-icon>
+              </aol-style>
             </aol-feature>
           </aol-source-vector>
         </aol-layer-vector>

@@ -9,6 +9,9 @@ angular
       $log.log('项目启动');
       const map = {
         tileSource: maptools.tileSource.DtSourceHost,
+        shipStyle(e) {
+          return maptools.createTipMsgDom(e, { color: '#333' });
+        },
         webgl: {
           style: {
             symbol: {
@@ -198,6 +201,279 @@ angular
         resolutions,
       };
     }
+
+    this.createTipMsgDom = (function() {
+      function _toConsumableArray(arr) {
+        return (
+          _arrayWithoutHoles(arr) ||
+          _iterableToArray(arr) ||
+          _nonIterableSpread()
+        );
+      }
+
+      function _nonIterableSpread() {
+        throw new TypeError('Invalid attempt to spread non-iterable instance');
+      }
+
+      function _iterableToArray(iter) {
+        if (
+          Symbol.iterator in Object(iter) ||
+          Object.prototype.toString.call(iter) === '[object Arguments]'
+        )
+          return Array.from(iter);
+      }
+
+      function _arrayWithoutHoles(arr) {
+        if (Array.isArray(arr)) {
+          for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+            arr2[i] = arr[i];
+          }
+
+          return arr2;
+        }
+      }
+
+      function port_classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError('Cannot call a class as a function');
+        }
+      }
+
+      function port_defineProperties(target, props) {
+        for (let i = 0; i < props.length; i++) {
+          const descriptor = props[i];
+
+          descriptor.enumerable = descriptor.enumerable || false;
+          descriptor.configurable = true;
+          if ('value' in descriptor) descriptor.writable = true;
+          Object.defineProperty(target, descriptor.key, descriptor);
+        }
+      }
+
+      function port_createClass(Constructor, protoProps, staticProps) {
+        if (protoProps)
+          port_defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) port_defineProperties(Constructor, staticProps);
+
+        return Constructor;
+      }
+
+      /* eslint-disable no-param-reassign */
+
+      const port_PortMsg =
+        /* #__PURE__ */
+        (function() {
+          function PortMsg(_ref) {
+            const _ref$height = _ref.height;
+            const height = _ref$height === void 0 ? 20 : _ref$height;
+            const _ref$width = _ref.width;
+            const width = _ref$width === void 0 ? 20 : _ref$width;
+            const _ref$rotation = _ref.rotation;
+            const rotation = _ref$rotation === void 0 ? 0 : _ref$rotation;
+            const _ref$color = _ref.color;
+            const color = _ref$color === void 0 ? '#FFF' : _ref$color;
+            const _ref$strokeStyle = _ref.strokeStyle;
+            const strokeStyle =
+              _ref$strokeStyle === void 0 ? '#000' : _ref$strokeStyle;
+            const _ref$strokeWidth = _ref.strokeWidth;
+            const strokeWidth =
+              _ref$strokeWidth === void 0 ? 1 : _ref$strokeWidth;
+            const _ref$scaleX = _ref.scaleX;
+            const scaleX = _ref$scaleX === void 0 ? 1 : _ref$scaleX;
+            const _ref$scaleY = _ref.scaleY;
+            const scaleY = _ref$scaleY === void 0 ? 1 : _ref$scaleY;
+            const _ref$triangle = _ref.triangle;
+            const triangle = _ref$triangle === void 0 ? 5 : _ref$triangle;
+
+            port_classCallCheck(this, PortMsg);
+
+            this.width = width;
+            this.height = height;
+            this.x = this.width / 2 + strokeWidth;
+            this.y = this.height / 2 + strokeWidth;
+            this.rotation = rotation;
+            this.scaleX = scaleX;
+            this.scaleY = scaleY;
+            this.strokeStyle = strokeStyle;
+            this.strokeWidth = strokeWidth;
+            this.color = color;
+            this.triangle = triangle;
+          }
+          /**
+           * @param {CanvasRenderingContext2D} context
+           */
+
+          port_createClass(PortMsg, [
+            {
+              key: 'draw',
+              value: function draw(context) {
+                // @ts-ignore
+                const nodePoint = this.createNodeByWidthHeight(
+                  this.height,
+                  this.width,
+                  this.triangle,
+                );
+
+                context.save(); // context.shadowOffsetX = 10; // 设置水平位移
+                // context.shadowOffsetY = 10; // 设置垂直位移
+                // context.shadowBlur = 20;
+                // context.shadowColor = '#ffffff73';
+
+                context.translate(this.x, this.y);
+                context.rotate(this.rotation);
+                context.scale(this.scaleX, this.scaleY);
+                context.strokeStyle = this.strokeStyle;
+                context.lineWidth = this.strokeWidth;
+                context.fillStyle = this.color;
+                context.beginPath(); // console.log(context);
+                // @ts-ignore
+
+                context.moveTo.apply(
+                  context,
+                  _toConsumableArray(nodePoint.shift()),
+                );
+
+                while (nodePoint.length) {
+                  // @ts-ignore
+                  context.lineTo.apply(
+                    context,
+                    _toConsumableArray(nodePoint.shift()),
+                  );
+                }
+
+                context.closePath();
+                context.fill();
+                context.stroke();
+                context.restore();
+              },
+              /**
+               * @param {CanvasRenderingContext2D} context
+               */
+            },
+            {
+              key: 'drawText',
+              value: function drawText(context, text, index, _ref2) {
+                const _ref2$color = _ref2.color;
+                const color =
+                  _ref2$color === void 0 ? colorCollection.font : _ref2$color;
+
+                context.save(); // context.translate(this.x, this.y);
+                // context.rotate(this.rotation);
+                // context.scale(this.scaleX, this.scaleY);
+
+                context.font = 'normal 100 12px NSimSun'; // context.strokeStyle = 'red';
+                // context.lineWidth = this.strokeWidth;
+
+                context.fillStyle = color;
+                /** 字体高度12 加2的行间距 */
+
+                context.fillText(
+                  text,
+                  6,
+                  (12 + (index === 0 ? 0 : 2)) * (index + 1) + 8 / 2,
+                  this.width,
+                ); // context.stroke();
+
+                context.restore();
+              },
+              /**
+               * 绘制气泡大小
+               * @param {number} height
+               * @param {number} width
+               */
+              // eslint-disable-next-line class-methods-use-this
+            },
+            {
+              key: 'createNodeByWidthHeight',
+              value: function createNodeByWidthHeight(height, width) {
+                const triangle =
+                  arguments.length > 2 && arguments[2] !== undefined
+                    ? arguments[2]
+                    : 10;
+                const nodePoint = [];
+                const halfHeight = height / 2;
+                const halfWidth = width / 2; // const triangle = 5;
+
+                nodePoint.push([-1 * halfWidth, -1 * halfHeight]);
+                nodePoint.push([halfWidth, -1 * halfHeight]);
+                nodePoint.push([halfWidth, halfHeight]);
+                nodePoint.push([triangle, halfHeight]);
+                nodePoint.push([0, halfHeight + (1 / 2) * triangle]);
+                nodePoint.push([-1 * triangle, halfHeight]);
+                nodePoint.push([-1 * halfWidth, halfHeight]);
+                nodePoint.push([-1 * halfWidth, -1 * halfHeight]);
+
+                return nodePoint;
+              },
+            },
+          ]);
+
+          return PortMsg;
+        })();
+
+      // CONCATENATED MODULE: ./src/component/ol/canvas/msg/index.js
+
+      /* eslint-disable import/prefer-default-export */
+
+      const msg_canvas = document.createElement('canvas');
+      const msg_context = msg_canvas.getContext('2d');
+
+      msg_context.font = 'normal 100 12px NSimSun';
+      /**
+       * 测量文字的范围
+       * @param { string } text
+       */
+
+      function measureText(text) {
+        const padding =
+          arguments.length > 1 && arguments[1] !== undefined
+            ? arguments[1]
+            : 10;
+        const result = {
+          width: 0,
+          height: 0,
+          list: [],
+        };
+        const lines = text.split('\n');
+
+        result.list = lines;
+        result.height = (12 + 2) * lines.length + padding;
+        const maxWidth = lines.reduce(function(prev, item) {
+          return Math.max(prev, msg_context.measureText(item).width);
+        }, 0);
+
+        result.width = maxWidth + padding;
+
+        return result;
+      }
+
+      const msg_generateMsgPopup = function generateMsgPopup(text, style) {
+        const canvas2 = document.createElement('canvas');
+        const context2 = canvas2.getContext('2d');
+        const textRect = measureText(text);
+        const triangle = 10;
+        const portMsg = new port_PortMsg({
+          height: textRect.height - 5,
+          width: textRect.width,
+          triangle,
+          strokeStyle: 'transparent',
+        });
+        /** 根据经纬度坐标 转90 */
+
+        canvas2.width = portMsg.width + 2 * portMsg.strokeWidth + 1;
+        canvas2.height = portMsg.height + 2 * portMsg.strokeWidth + triangle;
+        portMsg.draw(context2);
+        textRect.list.forEach(function(item, index) {
+          portMsg.drawText(context2, item, index, {
+            color: style.color,
+          });
+        });
+
+        return canvas2;
+      };
+
+      return msg_generateMsgPopup;
+    })();
   })
   .component('mapTilesourceControl', {
     templateUrl: 'mapTilesourceControl',
