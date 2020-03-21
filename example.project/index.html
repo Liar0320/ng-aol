@@ -75,6 +75,8 @@
         condition="'click'"
         multi="false"
         on-select="map.featureClick(event)"
+        selected="map.selected"
+
       ></aol-interaction-select>
       <aol-interaction-select
         layers="map.featureClickFilter"
@@ -100,6 +102,7 @@
       ></map-tilesource-control>
 
       <br />
+      <button ng-click="map.temp()">展示船舶轨迹</button>
       <button ng-click="trackEnable = !trackEnable">展示船舶轨迹</button>
       <div ng-if="trackEnable">
         <button

@@ -11,6 +11,9 @@ const prodConfig = merge(common, {
   output: {
     filename: 'aol.all.min.js',
   },
+  // optimization: {
+  //   minimize: false,
+  // },
   externals: [
     // 引入包里的特定部分
     function(context, request, callback) {

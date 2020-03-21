@@ -39,6 +39,7 @@ export class SelectInteractionComponent extends SelectInteractionExtend
   //   constructor(private map: MapComponent) {}
 
   $onInit() {
+    var that = this;
     if (!this.host) {
       console.error('The select interaction requires map component');
       return;
@@ -48,8 +49,8 @@ export class SelectInteractionComponent extends SelectInteractionExtend
     this.instance.on('select', (event: SelectEvent | any) => {
       if (event.selected.length) {
         event.remove = () => {
-          this.instance.getFeatures().remove(event.selected[0]);
-          this.instance.dispatchEvent({
+          that.instance.getFeatures().remove(event.selected[0]);
+          that.instance.dispatchEvent({
             type: 'select',
             selected: [],
             deselected: [event.selected[0]],
@@ -57,7 +58,7 @@ export class SelectInteractionComponent extends SelectInteractionExtend
           });
         };
       }
-      this.onSelect({ event });
+      that.onSelect({ event });
     });
     this.instance.on('change', (event: SelectEvent) =>
       this.onChange({ event }),
@@ -69,53 +70,53 @@ export class SelectInteractionComponent extends SelectInteractionExtend
   }
 
   manualDispath() {
-    var filterCondition = this.selected;
-    if (!filterCondition || filterCondition.length === 0) return;
+    var that = this;
+    var filterCondition = that.selected;
+    if (!filterCondition ) return;
     var result: Feature[] = [];
-    let layers: Vector[];
 
-    if (this.layers) {
-      if ((typeof this.layers as any) === 'function') {
-        layers = this.host.instance
-          .getLayers()
-          .getArray()
-          .filter(this.layers as any);
-      } else {
-        layers = this.layers as Vector[];
-      }
-    } else {
-      layers = this.host.instance.getLayers().getArray() as Vector[];
+    if(filterCondition.length> 0){
+      let layerStatesArray:any[] = (that.host.instance as any).frameState_.layerStatesArray;
+
+      layerStatesArray.forEach(({layer})=>{
+        if(!(that.layers as any)(layer)) return;
+  
+        filterCondition.forEach(function(item) {
+          let selected: Feature;
+          if (typeof item === 'string') {
+            selected = layer.getSource().getFeatureById(item);
+            result.push(selected);
+          } else if (typeof item === 'function') {
+            selected = layer
+              .getSource()
+              .getFeatures()
+              .find(item);
+          } else {
+            selected = layer
+              .getSource()
+              .getFeatures()
+              .find((v:any) => v === item);
+          }
+  
+          if (selected) result.push(selected);
+        });
+      })
     }
 
-    layers.forEach(function(layer) {
-      filterCondition.forEach(function(item) {
-        let selected: Feature;
-        if (typeof item === 'string') {
-          selected = layer.getSource().getFeatureById(item);
-          result.push(selected);
-        } else if (typeof item === 'function') {
-          selected = layer
-            .getSource()
-            .getFeatures()
-            .find(item);
-        } else {
-          selected = layer
-            .getSource()
-            .getFeatures()
-            .find(v => v === item);
-        }
+   
 
-        if (selected) result.push(selected);
-      });
-    });
 
-    let deSelecteds = this.instance.getFeatures().getArray();
-    this.instance.getFeatures().clear();
-    this.instance.dispatchEvent({
-      type: 'select',
-      selected: result,
-      deselected: deSelecteds,
-      mapBrowserEvent: null,
+    let  deSelecteds = that.instance.getFeatures().getArray().map(rm=>{
+       return that.instance.getFeatures().remove(rm);
+    })
+    that.instance.getFeatures().extend(result);
+    setTimeout(() => {
+      that.instance.dispatchEvent({
+        type: 'select',
+        selected: result,
+        deselected: deSelecteds,
+        mapBrowserEvent: null,
+      }); 
     });
   }
 
