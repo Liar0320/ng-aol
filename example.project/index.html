@@ -147,43 +147,6 @@
       <aol-layer-vector declutter="true">
         <aol-source-vector  instance-done="$ctrl.addFeatures(instance)"></aol-source-vector>
 
-        <!-- <aol-source-vector >
-          <aol-feature tag="轨迹线">
-            <aol-geometry-linestring>
-              <aol-collection-coordinates
-                coordinates="$ctrl.tracks.linestring"
-              ></aol-collection-coordinates>
-            </aol-geometry-linestring>
-          </aol-feature>
-          <aol-feature tag="轨迹箭头" ng-repeat="item in $ctrl.tracks.arrow">
-            <aol-geometry-point>
-              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-icon
-                src="'https://openlayers.org/en/latest/examples/data/arrow.png'"
-                rotation="item.rotate"
-              ></aol-style-icon>
-            </aol-style>
-          </aol-feature>
-          <aol-feature tag="轨迹点" ng-repeat="item in $ctrl.tracks.point">
-            <aol-geometry-point>
-              <aol-coordinate x="item.lon" y="item.lat"></aol-coordinate>
-            </aol-geometry-point>
-            <aol-style>
-              <aol-style-circle radius="5">
-                <aol-style-fill color="'#FF0000'"></aol-style-fill>
-                <aol-style-stroke width="1" line-dash="[10]"></aol-style-stroke>
-              </aol-style-circle>
-              <aol-style-text
-                text="item.time"
-                offset-y="-15"
-                offset-x="60"
-              >
-              </aol-style-text>
-            </aol-style>
-          </aol-feature>
-        </aol-source-vector> -->
       </aol-layer-vector>
       <aol-layer-vector ng-if="$ctrl.tracks.animate.enable">
         <aol-source-vector>
@@ -196,13 +159,13 @@
             </aol-geometry-point>
             <aol-style>
               <aol-style-icon
-                src="'https://lanshuimu.com/images/ship.png'"
+                src="'./assets/ship.png'"
                 scale="0.5"
                 rotation="$ctrl.tracks.animate.currentFrame.__rotate"
               ></aol-style-icon>
               <aol-style-text
                 text="$ctrl.tracks.animate.currentFrame.time"
-                offset-y="-15"
+                offset-y="0"
                 offset-x="60"
               ></aol-style-text>
             </aol-style>
@@ -251,49 +214,11 @@
     </script>
 
     <script type="text/ng-template" id="mapShipLayer">
-      <aol-layer-vector
-          max-resolution="152.9"
-          properties="{name:'shipLayer'}"
-        >
-          <aol-source-vector instance-done="$ctrl.addFeatures(instance)">
-            <!-- <aol-feature
-              ng-repeat="feature in map.collection track by $index"
-              properties="feature"
-            >
-              <aol-geometry-point>
-                <aol-coordinate
-                  x="feature.lon"
-                  y="feature.lat"
-                ></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style>
-                <aol-style-icon
-                  src="'./assets/ship.png'"
-                  scale="0.5"
-                  color="feature.color"
-                  rotation="feature.rotation"
-                ></aol-style-icon>
-              </aol-style>
-            </aol-feature> -->
-          </aol-source-vector>
+      <aol-layer-vector max-resolution="152.9"  properties="{name:'shipLayer'}">
+          <aol-source-vector instance-done="$ctrl.addFeatures(instance)"> </aol-source-vector>
         </aol-layer-vector>
         <aol-layer-vector declutter="true" max-resolution="152.9" opacity="0.7">
-          <aol-source-vector instance-done="$ctrl.addFeaturesTip(instance)">
-            <!-- <aol-feature ng-repeat="feature in map.collection track by $index">
-              <aol-geometry-point>
-                <aol-coordinate
-                  x="feature.lon"
-                  y="feature.lat"
-                ></aol-coordinate>
-              </aol-geometry-point>
-              <aol-style ng-init="::img = map.shipStyle(feature.text)">
-                <aol-style-icon
-                  img="::img"
-                  anchor="[0.5, 0.9]"
-                ></aol-style-icon>
-              </aol-style>
-            </aol-feature> -->
-          </aol-source-vector>
+          <aol-source-vector instance-done="$ctrl.addFeaturesTip(instance)"></aol-source-vector>
         </aol-layer-vector>
     </script>
 
@@ -303,5 +228,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
     <script src="../dist/aol.all.min.js"></script>
     <script src="./index.js"></script>
+    <script src="./map.service.js"></script>
   </body>
 </html>
