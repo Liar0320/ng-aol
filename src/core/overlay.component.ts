@@ -35,10 +35,12 @@ export class OverlayComponent implements ng.IController, Options {
     /**@TODO: this.element , $element */
     if (this.$element[0]) {
       this.element = this.$element[0];
-      this.position =
-        this.projection == 'EPSG:4326'
-          ? this.position
-          : fromLonLat(this.position);
+      if (this.position) {
+        this.position =
+          this.projection == 'EPSG:4326'
+            ? this.position
+            : fromLonLat(this.position);
+      }
       this.instance = new Overlay(this);
       this.host.instance.addOverlay(this.instance);
     }
@@ -53,11 +55,15 @@ export class OverlayComponent implements ng.IController, Options {
       if (changes.hasOwnProperty(key)) {
         switch (key) {
           case 'position':
-            this.position =
-              this.projection == 'EPSG:4326'
-                ? this.position
-                : fromLonLat(this.position);
-            this.instance.setPosition(this.position);
+            if (this.position) {
+              this.position =
+                this.projection == 'EPSG:4326'
+                  ? this.position
+                  : fromLonLat(this.position);
+              this.instance.setPosition(this.position);
+            } else {
+              this.instance.setPosition(undefined);
+            }
             return;
           default:
             properties[key] = changes[key].currentValue;

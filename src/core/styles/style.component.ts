@@ -21,6 +21,7 @@ export class StyleComponent implements ng.IController {
   stroke?: Stroke;
   text?: Text;
   zIndex?: number;
+  mutiple?: boolean;
 
   // constructor() {}
 
@@ -33,7 +34,16 @@ export class StyleComponent implements ng.IController {
       throw new Error('aol-style must be applied to a feature or a layer');
     }
     this.instance = new Style(this);
-    this.host.instance.setStyle(this.instance);
+    if (this.mutiple) {
+      var style = this.host.instance.getStyle();
+      if (style instanceof Array) {
+        this.host.instance.setStyle([...style, this.instance]);
+      } else {
+        this.host.instance.setStyle([this.instance]);
+      }
+    } else {
+      this.host.instance.setStyle(this.instance);
+    }
   }
 
   // $postLink(){
@@ -99,6 +109,7 @@ var aolStyleComponent: angular.IComponentOptions = {
     stroke: '<?',
     text: '<?',
     zIndex: '<?',
+    mutiple: '<?',
   },
   require: {
     layerVectorHost: `?^${aolLayerVector.name}`,

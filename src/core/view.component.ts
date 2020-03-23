@@ -3,6 +3,7 @@ import { View } from 'ol';
 import { Extent } from 'ol/extent';
 import { Coordinate } from 'ol/coordinate';
 import mapComponent, { MapComponent } from './map.component';
+import { AnimationOptions } from 'ol/View';
 
 export class ViewComponent implements angular.IController {
   public instance: View;
@@ -24,6 +25,8 @@ export class ViewComponent implements angular.IController {
   center: Coordinate = [104.06, 30.67];
   projection: string;
 
+  animationOptions?: AnimationOptions;
+
   zoomAnimation: Boolean = false;
 
   // defaultGive() {
@@ -39,6 +42,11 @@ export class ViewComponent implements angular.IController {
     // this.defaultGive();
     this.instance = new View(this);
     this.host.instance.setView(this.instance);
+
+    if (this.animationOptions) {
+      this.instance.setZoom(this.animationOptions.zoom);
+      this.instance.setCenter(this.animationOptions.center);
+    }
   }
 
   $onChanges(changes: angular.IOnChangesObject) {
@@ -55,6 +63,15 @@ export class ViewComponent implements angular.IController {
               this.instance.animate({ zoom: changes[key].currentValue });
             } else {
               this.instance.setZoom(changes[key].currentValue);
+            }
+            break;
+          case 'animationOptions':
+            /** Work-around: setting the zoom via setProperties does not work. */
+            if (this.zoomAnimation) {
+              this.instance.animate(changes[key].currentValue);
+            } else {
+              this.instance.setZoom(changes[key].currentValue.zoom);
+              this.instance.setCenter(changes[key].currentValue.center);
             }
             break;
           default:
@@ -88,6 +105,7 @@ var component: angular.IComponentOptions = {
     center: '<?',
     projection: '<?',
     zoomAnimation: '<?',
+    animationOptions: '<?',
   },
   require: {
     host: `^${mapComponent.name}`,

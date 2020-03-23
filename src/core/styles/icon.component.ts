@@ -72,6 +72,10 @@ export class styleIconComponent implements ng.IController, Options {
       this.instance = new Icon(this);
       this.host.instance.setImage(this.instance);
     }
+    if (changes['color']) {
+      this.instance = new Icon(this);
+      this.host.instance.setImage(this.instance);
+    }
     if (changes['imgSize']) {
       this.instance = new Icon(this);
       this.host.instance.setImage(this.instance);

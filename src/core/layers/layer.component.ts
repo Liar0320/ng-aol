@@ -24,6 +24,9 @@ export abstract class LayerComponent implements angular.IController {
 
   $onInit() {
     this.host = this.layerGroupComponent || this.mapComponent;
+    if (this.visible !== undefined) {
+      this.instance.setVisible(this.visible);
+    }
 
     if (this.prerender !== null && this.prerender !== undefined) {
       this.instance.on('prerender', this.prerender);
@@ -66,6 +69,9 @@ export abstract class LayerComponent implements angular.IController {
             break;
           case 'properties':
             this.instance.set(changes[key].currentValue, false);
+            return;
+          case 'visible':
+            this.instance.setVisible(this.visible);
             return;
           default:
             properties[key] = changes[key].currentValue;
