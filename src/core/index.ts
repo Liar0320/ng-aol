@@ -41,6 +41,7 @@ import {
   aolInteractionModify,
   aolInteractionSelect,
   aolInteractionDraganddrop,
+  aolInteractionMeasure,
 } from './interactions';
 import { aolInteractionDraw } from './interactions/draw.component';
 
@@ -87,6 +88,7 @@ function registerComponent(component: any) {
   aolInteractionModify,
   aolInteractionSelect,
   aolInteractionDraganddrop,
+  aolInteractionMeasure,
 ].forEach(component => {
   registerComponent(component);
 });
