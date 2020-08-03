@@ -54,7 +54,8 @@ angular
 
     function createTileGrid(offset) {
       offset = ol.proj.fromLonLat(offset);
-      var origin = [-20037508.342789244, 20037508.342789244];
+      //https://www.cnblogs.com/beniao/archive/2010/04/18/1714544.html
+      var origin = [-20037508.342789244, 20037508.342789244]; ///由于赤道半径为6378137米，则赤道周长为2*PI*r = 20037508.3427892，因此X轴的取值范围：[-20037508.3427892,20037508.3427892]。
       var origin = [origin[0] - offset[0], origin[1] - offset[1]];
       const resolutions = [
         156543.03392804097,
@@ -525,7 +526,7 @@ angular
           };
           this.start = function() {
             if (!this.enable) return;
-            if(this.startCallBack) this.startCallBack();
+            if (this.startCallBack) this.startCallBack();
             if (aniamteInstance.interval) {
               $interval.cancel(aniamteInstance.interval);
               aniamteInstance.interval = null;
@@ -557,7 +558,7 @@ angular
             }
           };
           this.cancel = function() {
-            if(this.cancelCallBack) this.cancelCallBack();
+            if (this.cancelCallBack) this.cancelCallBack();
             if (this.interval) {
               $interval.cancel(this.interval);
               this.interval = null;
@@ -599,12 +600,12 @@ angular
 
           this.animate = new this.Animate();
 
-          this.animate.startCallBack = function () {
-            mapTrackRoutes.addFeatures(null,true);
-          }
-          this.animate.cancelCallBack = function () {
+          this.animate.startCallBack = function() {
+            mapTrackRoutes.addFeatures(null, true);
+          };
+          this.animate.cancelCallBack = function() {
             mapTrackRoutes.addFeatures(null);
-          }
+          };
 
           function createMarker(point) {
             if (!point) return null;
@@ -647,7 +648,6 @@ angular
           };
           this.init();
         }
-
 
         Tracks.prototype.Animate = Animate;
 
@@ -702,37 +702,34 @@ angular
         }
 
         // 创建轨迹点
-        function createPoints(points,noText) {
+        function createPoints(points, noText) {
           return points.map(function(item) {
             const f = new ol.Feature(
               new ol.geom.Point(ol.proj.fromLonLat([item.lon, item.lat])),
             );
 
             var style = {
-                image: new ol.style.Circle({
-                  radius: 5,
-                  fill: new ol.style.Fill({
-                    color: '#FF0000',
-                  }),
-                  stroke: new ol.style.Stroke({
-                    width: 1,
-                    lineDash: [10],
-                  }),
+              image: new ol.style.Circle({
+                radius: 5,
+                fill: new ol.style.Fill({
+                  color: '#FF0000',
                 }),
-                
-              }
+                stroke: new ol.style.Stroke({
+                  width: 1,
+                  lineDash: [10],
+                }),
+              }),
+            };
 
-            if(!noText){
-                style.text =  new ol.style.Text({
-                    text: item.time,
-                    offsetY: '0',
-                    offsetX: '60',
-                })
+            if (!noText) {
+              style.text = new ol.style.Text({
+                text: item.time,
+                offsetY: '0',
+                offsetX: '60',
+              });
             }
 
-            f.setStyle(
-              new ol.style.Style(style),
-            );
+            f.setStyle(new ol.style.Style(style));
 
             return f;
           });
@@ -740,7 +737,7 @@ angular
 
         var instanceSource = null;
 
-        this.addFeatures = function addFeatures(source,noText) {
+        this.addFeatures = function addFeatures(source, noText) {
           instanceSource = source || instanceSource;
           const featuresSource = [];
 
@@ -751,7 +748,7 @@ angular
           );
           featuresSource.push.apply(
             featuresSource,
-            createPoints(this.tracks.point,noText),
+            createPoints(this.tracks.point, noText),
           );
           instanceSource.clear();
           instanceSource.addFeatures(featuresSource);
